@@ -266,3 +266,8 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+/src/server/java/myproject.iml
+/.idea/compiler.xml
+/.idea/encodings.xml
+/.idea/jarRepositories.xml
+/src/server/java/data-service.iml
