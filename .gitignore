@@ -271,3 +271,6 @@ cython_debug/
 /.idea/encodings.xml
 /.idea/jarRepositories.xml
 /src/server/java/data-service.iml
+
+# Headers and cookies config
+/src/server/aggregator/config.py
