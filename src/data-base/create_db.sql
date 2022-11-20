@@ -1,0 +1,1 @@
+CREATE DATABASE video_cards_data;
