@@ -1,0 +1,1122 @@
+[
+    {
+        "cardName": "GeForce RTX 3060 Ti Gaming X 8G LHR 8GB GDDR6",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 41999,
+        "cardPopularity": 1,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "RTX 3060 VENTUS 3X 12G OC 12GB GDDR6",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 40799,
+        "cardPopularity": 2,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3070 Ventus 3X 8G GDDR6 256B PCIE",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 59999,
+        "cardPopularity": 3,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3080 Ventus 3X 12G GDDR6X",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 84999,
+        "cardPopularity": 4,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GTX 1650 OC 4GB GDDR6 128-bit Gaming",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1650",
+        "shopName": "Mvideo",
+        "vendorName": "Zotac",
+        "cardPrice": 17999,
+        "cardPopularity": 5,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Palit Geforce RTX3090 GamingPro 24G GDDR6X",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3090",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 116999,
+        "cardPopularity": 6,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GT 730 2GB Silent LP",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GT 730",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 5599,
+        "cardPopularity": 7,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 2060 Gaming AMP 6GB GDDR6 192bit",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 2060",
+        "shopName": "Mvideo",
+        "vendorName": "Zotac",
+        "cardPrice": 35999,
+        "cardPopularity": 8,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 GT210 1GB GDDR3",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce 210",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 3599,
+        "cardPopularity": 9,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX3070Ti iChill X4 8GB LHR",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "inno3D",
+        "cardPrice": 66999,
+        "cardPopularity": 10,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "N730K-2GD3/LP",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GT 730",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 5199,
+        "cardPopularity": 11,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3070 8GB Dual Fan",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070",
+        "shopName": "Mvideo",
+        "vendorName": "PNY",
+        "cardPrice": 59999,
+        "cardPopularity": 12,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3070 Twin Edge OC 8GB GDDR6 LHR",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070",
+        "shopName": "Mvideo",
+        "vendorName": "Zotac",
+        "cardPrice": 57999,
+        "cardPopularity": 13,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3070TI Trinity OC 8GB GDDR6X LHR",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "Zotac",
+        "cardPrice": 71999,
+        "cardPopularity": 14,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX3060 12GB GDDR6 192-Bit PCI-Exps  ATX",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 44999,
+        "cardPopularity": 15,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "RTX3090 GAMING OC-24G + монитор AORUS FV43U-EK",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3090",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 269999,
+        "cardPopularity": 16,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GTX 1650 SUPER GAMING X 4G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1650 SUPER",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 24999,
+        "cardPopularity": 17,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Radeon RX6700-XT-MECH-2X",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 6700 XT",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 62999,
+        "cardPopularity": 18,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GEFORCE RTX 3070 Ti 8GB XLR8 Gaming UPRISING Edit",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "PNY",
+        "cardPrice": 66999,
+        "cardPopularity": 19,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Radeon RX 6600 XT SPEEDSTER Swift 210 8GB GDDR6",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 6600 XT",
+        "shopName": "Mvideo",
+        "vendorName": "XFX",
+        "cardPrice": 41999,
+        "cardPopularity": 20,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3090 Gaming Trinity 24GB GDDR6",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3090",
+        "shopName": "Mvideo",
+        "vendorName": "Zotac",
+        "cardPrice": 119999,
+        "cardPopularity": 21,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX3090 iChill X4 24GB GDDR6",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3090",
+        "shopName": "Mvideo",
+        "vendorName": "inno3D",
+        "cardPrice": 129999,
+        "cardPopularity": 22,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GTX 1660 SC Ultra Gaming 6GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1660",
+        "shopName": "Mvideo",
+        "vendorName": "EVGA",
+        "cardPrice": 25999,
+        "cardPopularity": 23,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 GT730 4GB DDR3",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GT 730",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 6999,
+        "cardPopularity": 24,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "VCX RTX 3050 Ventus 2X 8G OC 8GB GDDR6",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3050",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 26999,
+        "cardPopularity": 25,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX3060TI 8GB LHR",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 48999,
+        "cardPopularity": 26,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "RTX 3050 Gaming X 8G 8GB GDDR6",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3050",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 27799,
+        "cardPopularity": 27,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX3080 10GB LHR",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 87499,
+        "cardPopularity": 28,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RX6600XT 8GB GDDR6 NITRO+",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 6600 XT",
+        "shopName": "Mvideo",
+        "vendorName": "Sapphire",
+        "cardPrice": 57999,
+        "cardPopularity": 29,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PA-RTX2060 SUPER DUAL 8G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 2060 SUPER",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 42799,
+        "cardPopularity": 30,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX3070 VENTUS 3X 8G OC LHR 8GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 68499,
+        "cardPopularity": 31,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PA-GTX1660TI DUAL 6GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1660 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 24599,
+        "cardPopularity": 32,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 GTX1650 4GB GDDR6",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1650",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 21799,
+        "cardPopularity": 33,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3060 Dual 12G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 38999,
+        "cardPopularity": 34,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Radeon RX6600 8GB PULSE (11310-01-20G)",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 6600",
+        "shopName": "Mvideo",
+        "vendorName": "Sapphire",
+        "cardPrice": 35899,
+        "cardPopularity": 35,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Geforce RTX 3070 Ti Ventus 3X 8GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 59999,
+        "cardPopularity": 36,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GV-N3070GAMING OC-8GD",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 58999,
+        "cardPopularity": 37,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GTX 1660 SUPER VENTUS XS OC 6GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1660 SUPER",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 53199,
+        "cardPopularity": 38,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "RTX 3080 GAMING Z TRIO 12G LHR (912-V389-405)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 89999,
+        "cardPopularity": 39,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "RTX3070TI VISION OC 8G (GV-N307TVISION OC-8GD)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 77499,
+        "cardPopularity": 40,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3060 TI Gaming OC 8GB LHR rev 2.0",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 41499,
+        "cardPopularity": 41,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3080 Gaming OC 10G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 130999,
+        "cardPopularity": 42,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "RTX3080Ti GameRock 12GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 185999,
+        "cardPopularity": 43,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GTX 1660 SUPER GP OC 6G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1660 SUPER",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 25999,
+        "cardPopularity": 44,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "AORUS GeForce RTX 3080 Ti MASTER 12GВ",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 139999,
+        "cardPopularity": 45,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GT 730 N730-2GD3V2",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GT 730",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 5999,
+        "cardPopularity": 46,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX2060 6GB GDDR6",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 2060",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 41299,
+        "cardPopularity": 47,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX3080 VENTUS 3X 10GB LHR",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 159999,
+        "cardPopularity": 48,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "AORUS GeForce RTX 3070 Ti MASTER 8G (GV-N307TAORU",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 111999,
+        "cardPopularity": 49,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3080 VENTUS 3X PLUS 10GB OC LHR",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 73999,
+        "cardPopularity": 50,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX 3070TI VENTUS 3X 8G OC 8GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 109999,
+        "cardPopularity": 51,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX 3060TI VENTUS 2X OC LHR 8GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 59999,
+        "cardPopularity": 52,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 2060 VENTUS 12G OC(V375-684R)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 2060",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 38999,
+        "cardPopularity": 53,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3080 VENTUS 3X PLUS 12GB OC LHR",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 83999,
+        "cardPopularity": 54,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Radeon RX 6500 XT MECH 2X 4G OC",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 6500 XT",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 23199,
+        "cardPopularity": 55,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX3060TI 8GB LHR",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1650",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 91999,
+        "cardPopularity": 56,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX3060TI 8GB LHR",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 69499,
+        "cardPopularity": 57,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX3060 12GB LHR",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 44499,
+        "cardPopularity": 58,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX3070 8GB LHR",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 53999,
+        "cardPopularity": 59,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3060TI VISION 8GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 81999,
+        "cardPopularity": 60,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3070 Ti GameRock OC 8GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 86499,
+        "cardPopularity": 61,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "RTX3070 GAMING OC-8G + монитор AORUS FI27Q-X-EK",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 149990,
+        "cardPopularity": 62,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RX6700XT GDDR6 PULSE 12GB",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 6700 XT",
+        "shopName": "Mvideo",
+        "vendorName": "Sapphire",
+        "cardPrice": 105999,
+        "cardPopularity": 63,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PA-GTX1660TI DUAL OC 6GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1660 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 55999,
+        "cardPopularity": 64,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX3070 8GB LHR GAMING Z TRIO",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 80999,
+        "cardPopularity": 65,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX3070TI 8GB GAMING X TRIO",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 122999,
+        "cardPopularity": 66,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX3080 12GB LHR GamingPro",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 111499,
+        "cardPopularity": 67,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PCIE16 RTX3050 8GB GDDR6 GV-N3050GAMING OC-8GD",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3050",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 44999,
+        "cardPopularity": 68,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 2060 6GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 2060",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 27999,
+        "cardPopularity": 69,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Radeon RX 6700 XT GAMING OC 12G",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 6700 XT",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 81999,
+        "cardPopularity": 70,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3090 GAMING X TRIO 24G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3090",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 119999,
+        "cardPopularity": 71,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX3070TI GAMINGPRO 8GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 79499,
+        "cardPopularity": 72,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "RTX 3070 Ti SUPRIM X 8G (912-V505-010)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 162999,
+        "cardPopularity": 73,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "RTX3060TI 8GB TI DUAL OC (NE6306TS19P2-190AD V1)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 59799,
+        "cardPopularity": 74,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GTX 1660Ti StormX 6GB (NE6166T018J9-161F)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1660 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 25999,
+        "cardPopularity": 75,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Radeon RX6600XT EAGLE 8G (GV-R66XTEAGLE-8GD)",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 6600 XT",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 47499,
+        "cardPopularity": 76,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Radeon RX6600XT GAMING 8G(GV-R66XTGAMING OC-8GD)",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 6600 XT",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 58699,
+        "cardPopularity": 77,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GTX1650 D6 4G (GV-N1656D6-4GD 2.0)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1650",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 27999,
+        "cardPopularity": 78,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Radeon RX6600 EAGLE 8G (GV-R66EAGLE-8GD)",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 6600",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 32299,
+        "cardPopularity": 79,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX3080 GAMING 12G(GV-N3080GAMING OC-12GD",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 147999,
+        "cardPopularity": 80,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX3050 GAMING X 8G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3050",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 45999,
+        "cardPopularity": 81,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX3050 VENTUS 2X 8G OC",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3050",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 30999,
+        "cardPopularity": 82,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX3070TI GAMEROCK 8GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 74999,
+        "cardPopularity": 83,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Radeon RX 6900 XT GAMING 16G",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 6900 XT",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 165499,
+        "cardPopularity": 84,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PA-GTX1050Ti StormX 4G (NE5105T018G1-1070F)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1050 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 13999,
+        "cardPopularity": 85,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3080 Gaming Z TRIO 10G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 225499,
+        "cardPopularity": 86,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Aorus GeForce RTX 3080 MASTER 10GB",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 82999,
+        "cardPopularity": 87,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PA-RTX3070 JetStream 8G (NE63070019P2-1040J)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 106999,
+        "cardPopularity": 88,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "RTX3060 Ti Dual OC",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 120999,
+        "cardPopularity": 89,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PA-GTX1650 GP 4G (NE6165001BG1-1175A)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1650",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 17299,
+        "cardPopularity": 90,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PA-RTX3070 GamingPro 8G (NE63070S19P2-1041A)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3070",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 121499,
+        "cardPopularity": 91,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3080 Ti GamingPro 12G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 113999,
+        "cardPopularity": 92,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3060 VENTUS 2X 12G OC",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 54999,
+        "cardPopularity": 93,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Phantom Gaming D RADEON RX580 8G OC",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 580",
+        "shopName": "Mvideo",
+        "vendorName": "ASRock",
+        "cardPrice": 49999,
+        "cardPopularity": 94,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GTX 1660 SUPER GAMING X",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1660 SUPER",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 43399,
+        "cardPopularity": 95,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PA-RTX2060 Dual 6G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 2060",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 44399,
+        "cardPopularity": 96,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PA-RTX3080 GameRock 10G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 176999,
+        "cardPopularity": 97,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PA-GT1030 2G D4",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GT 1030",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 13999,
+        "cardPopularity": 98,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3060 Ti Dual 8GB (NE6306T019P2-190AD)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 87999,
+        "cardPopularity": 99,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3060 Dual OC 12G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3060",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 42899,
+        "cardPopularity": 100,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3090 GamingPro 24G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3090",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 299999,
+        "cardPopularity": 101,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GTX 1660 SUPER GP 6G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1660 SUPER",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 28999,
+        "cardPopularity": 102,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "Radeon RX 6800 XT GAMING X TRIO 16G",
+        "cardArchitecture": "AMD",
+        "cardSeries": "Radeon RX 6800XT",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 142999,
+        "cardPopularity": 103,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "PA-GTX1660 SUPER StormX 6G (NE6166S018J9-161F)",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1660 SUPER",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 21999,
+        "cardPopularity": 104,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GV-N166SOC-6GD",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1660 SUPER",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 39999,
+        "cardPopularity": 105,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GTX 1650 OC Low Profile 4G (GV-N1650OC-4G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1650",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 29999,
+        "cardPopularity": 106,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3080 12GB LHR PA-RTX3080 GAMEROCK",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3080",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 159999,
+        "cardPopularity": 107,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3050 8GB GDDR6 PA-RTX3050 DUAL",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3050",
+        "shopName": "Mvideo",
+        "vendorName": "Palit",
+        "cardPrice": 43999,
+        "cardPopularity": 108,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GTX 1050 Ti D5 4G",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1050 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 20199,
+        "cardPopularity": 109,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce GTX 1080 TI WaterforceWB Xtreme Edition 1",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce GTX 1080 Ti",
+        "shopName": "Mvideo",
+        "vendorName": "GIGABYTE",
+        "cardPrice": 94790,
+        "cardPopularity": 110,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 3090 VENTUS 3X 24G OC",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 3090",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 134499,
+        "cardPopularity": 111,
+        "date": "2022-11-20"
+    },
+    {
+        "cardName": "GeForce RTX 2060 VENTUS 12G OC",
+        "cardArchitecture": "NVIDIA",
+        "cardSeries": "GeForce RTX 2060",
+        "shopName": "Mvideo",
+        "vendorName": "MSI",
+        "cardPrice": 49990,
+        "cardPopularity": 112,
+        "date": "2022-11-20"
+    }
+]
