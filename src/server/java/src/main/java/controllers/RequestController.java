@@ -3,6 +3,7 @@ package controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,15 +14,16 @@ import tables.dto.OfferDto;
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class RequestController {
 
     @Autowired
     private DataService dataService;
 
     @PostMapping("/insert-new-data")
-    public ResponseEntity<?> putNewData(@RequestBody List<OfferDto> offerDtos) {
+    public ResponseEntity<?> putNewData(@RequestBody Map<String, List<OfferDto>> map) {
         try {
-            dataService.putNewData(offerDtos);
+            map.forEach((key, list) -> dataService.putNewData(list));
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -73,7 +75,7 @@ public class RequestController {
         }
     }
 
-    @GetMapping("/popularity/for-shop")
+    @GetMapping("/popularity/for-vendor")
     public ResponseEntity<Map<String, Map<Integer, OfferDto>>> getPopularityForVendor(@RequestParam("vendorName") String vendorName) {
         try {
             return new ResponseEntity<>(dataService.getPopularityForVendor(vendorName), HttpStatus.OK);
