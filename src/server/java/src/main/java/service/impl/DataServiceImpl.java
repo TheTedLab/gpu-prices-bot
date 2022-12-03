@@ -1,8 +1,8 @@
-package services.impl;
+package service.impl;
 
 import org.springframework.stereotype.Service;
-import services.DataService;
-import tables.dto.OfferDto;
+import service.DataService;
+import table.dto.OfferDto;
 
 import java.util.List;
 import java.util.Map;

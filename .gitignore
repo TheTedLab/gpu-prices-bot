@@ -274,3 +274,4 @@ cython_debug/
 
 # Headers and cookies config
 /src/server/aggregator/config.py
+/.idea/codeStyles/codeStyleConfig.xml

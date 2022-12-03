@@ -1,4 +1,4 @@
-package tables;
+package table;
 
 import lombok.Data;
 
@@ -7,8 +7,8 @@ import javax.persistence.Table;
 
 @Table
 @Data
-public class Architecture {
+public class Vendor {
     @Id
-    int id;
+    Integer id;
     String name;
 }

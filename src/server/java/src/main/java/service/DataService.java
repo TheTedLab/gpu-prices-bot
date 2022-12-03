@@ -1,6 +1,6 @@
-package services;
+package service;
 
-import tables.dto.OfferDto;
+import table.dto.OfferDto;
 
 import java.util.List;
 import java.util.Map;
