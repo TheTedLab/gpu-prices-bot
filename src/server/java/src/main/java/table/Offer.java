@@ -1,4 +1,4 @@
-package tables;
+package table;
 
 import lombok.Data;
 
@@ -10,12 +10,12 @@ import java.util.Date;
 @Data
 public class Offer {
     @Id
-    int id;
-    int cardId;
-    int shopId;
+    Integer id;
+    Integer cardId;
+    Integer shopId;
     String cardSeries;
-    int vendorId;
-    int cardPrice;
-    int cardPopularity;
+    Integer vendorId;
+    Integer cardPrice;
+    Integer cardPopularity;
     Date date;
 }

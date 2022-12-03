@@ -1,4 +1,4 @@
-package tables.dto;
+package table.dto;
 
 import lombok.Data;
 
@@ -11,7 +11,7 @@ public class OfferDto {
     String cardSeries;
     String shopName;
     String vendorName;
-    int cardPrice;
-    int cardPopularity;
+    Integer cardPrice;
+    Integer cardPopularity;
     Date date;
 }

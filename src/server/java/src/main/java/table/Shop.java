@@ -1,4 +1,4 @@
-package tables;
+package table;
 
 import lombok.Data;
 
@@ -9,6 +9,6 @@ import javax.persistence.Table;
 @Data
 public class Shop {
     @Id
-    int id;
+    Integer id;
     String name;
 }

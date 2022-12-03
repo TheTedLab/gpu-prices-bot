@@ -1,4 +1,4 @@
-package tables;
+package table;
 
 import lombok.Data;
 
@@ -11,8 +11,8 @@ import javax.persistence.Table;
 @Data
 public class Card {
     @Id
-    int id;
+    Integer id;
     String name;
-    int architectureId;
+    Integer architectureId;
     String cardSeries;
 }
