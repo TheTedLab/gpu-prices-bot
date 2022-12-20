@@ -1,20 +1,16 @@
-package controller;
+package com.gr3530904_90104.controller;
 
+import com.gr3530904_90104.service.DataService;
+import com.gr3530904_90104.table.dto.OfferDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import service.DataService;
-import table.dto.OfferDto;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
 
-@Service
+@RestController
 public class RequestController {
 
     @Autowired
