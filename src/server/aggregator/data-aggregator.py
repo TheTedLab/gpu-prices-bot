@@ -8,6 +8,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from selenium.common import NoSuchElementException
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium_stealth import stealth
 from selenium.webdriver.common.by import By
@@ -357,7 +358,7 @@ def get_data_dns(date):
 
     try:
         driver.get(url=url)
-        print(f'[RESPONSE] /videokarty/?order=6 - <Response 200>')
+        print(f'[RESPONSE] /videokarty/?order=6 - <Response [200]>')
 
         page_title = driver.find_element(By.CSS_SELECTOR,
                                          f'body > div.container.category-child > '
@@ -381,7 +382,7 @@ def get_data_dns(date):
             current_page_url = f'{url}&p={page}'
             time.sleep(10)
             driver.get(url=current_page_url)
-            print(f'[RESPONSE] /catalog/videokarty/?p={page} - <Response 200>')
+            print(f'[RESPONSE] /catalog/videokarty/?p={page} - <Response [200]>')
 
             collect_items_dns(driver, page_limit, page_limit, page, date, offers_list)
 
@@ -390,7 +391,7 @@ def get_data_dns(date):
         last_page_url = f'{url}&p={pages_count}'
         time.sleep(10)
         driver.get(url=last_page_url)
-        print(f'[RESPONSE] /catalog/videokarty/?p={pages_count} - <Response 200>')
+        print(f'[RESPONSE] /catalog/videokarty/?p={pages_count} - <Response [200]>')
 
         last_page_limit = total_items - (pages_count - 1) * page_limit
 
@@ -421,26 +422,45 @@ def collect_items_dns(driver, page_limit, popularity_limit, page, date, offers_l
 
     block = driver.find_element(By.CLASS_NAME, 'products-list__content')
     for item_id in range(1, page_limit + 1):
-        item = block.find_element(By.CSS_SELECTOR,
-                                  f'body > div.container.category-child > div > '
-                                  f'div.products-page__content > div > div.products-list > '
-                                  f'div > div.catalog-products.view-simple > '
-                                  f'div:nth-child({item_id})').text.split('\n')
-        popularity = (page - 1) * popularity_limit + item_id
+        tries_counter = 0
+        for attempt in range(10):
+            try:
+                item_price = driver.find_element(By.CSS_SELECTOR,
+                                                 f'body > div.container.category-child > '
+                                                 f'div > div.products-page__content > '
+                                                 f'div.products-page__list > div.products-list > '
+                                                 f'div > div.catalog-products.view-simple > '
+                                                 f'div:nth-child({item_id}) > '
+                                                 f'div.product-buy.product-buy_one-line.catalog-product__buy > '
+                                                 f'div > div.product-buy__price')
+            except NoSuchElementException:
+                tries_counter += 1
+            else:
+                break
 
-        card_name, card_architecture, card_series, card_shop, card_vendor, card_price, \
-            card_popularity, card_date = get_attributes_dns(item, popularity, date)
-        if card_price > 0:
-            offers_list.append(Offer(
-                card_name,
-                card_architecture,
-                card_series,
-                card_shop,
-                card_vendor,
-                card_price,
-                card_popularity,
-                card_date
-            ))
+        if tries_counter == 10:
+            print(f'[INFO] Item {item_id} on page {page} has no price for 10 attempts')
+        else:
+            item = block.find_element(By.CSS_SELECTOR,
+                                      f'body > div.container.category-child > div > '
+                                      f'div.products-page__content > div > div.products-list > '
+                                      f'div > div.catalog-products.view-simple > '
+                                      f'div:nth-child({item_id})').text.split('\n')
+            popularity = (page - 1) * popularity_limit + item_id
+
+            card_name, card_architecture, card_series, card_shop, card_vendor, card_price, \
+                card_popularity, card_date = get_attributes_dns(item, popularity, date)
+            if card_price > 0:
+                offers_list.append(Offer(
+                    card_name,
+                    card_architecture,
+                    card_series,
+                    card_shop,
+                    card_vendor,
+                    card_price,
+                    card_popularity,
+                    card_date
+                ))
 
 
 def insert_spaces(title):
