@@ -275,3 +275,6 @@ cython_debug/
 # Headers and cookies config
 /src/server/aggregator/config.py
 /.idea/codeStyles/codeStyleConfig.xml
+
+# Webdriver
+/src/server/aggregator/chromedriver.exe
