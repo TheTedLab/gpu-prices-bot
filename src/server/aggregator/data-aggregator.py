@@ -668,7 +668,6 @@ def main():
 
 if __name__ == '__main__':
     schedule.every().day.at("01:00").do(main)
-    schedule.every().day.at("05:15").do(main)
     while 1:
         schedule.run_pending()
         time.sleep(1)
