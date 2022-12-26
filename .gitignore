@@ -278,3 +278,6 @@ cython_debug/
 
 # Webdriver
 /src/server/aggregator/chromedriver.exe
+
+#Autorization token for bot
+/src/bot/autorization.py
