@@ -42,3 +42,4 @@ CREATE TABLE offers
 );
 
 GRANT ALL ON ALL TABLES IN SCHEMA public TO video_cards_data_user;
+GRANT ALL ON ALL SEQUENCES IN SCHEMA public TO video_cards_data_user;

@@ -18,15 +18,15 @@ public interface OfferRepository extends JpaRepository<Offer, Integer> {
                                            @Temporal(TemporalType.DATE) @Param("startDate") Date startDate,
                                            @Temporal(TemporalType.DATE) @Param("endDate") Date endDate);
 
-    List<Offer> findByCardIdAndVendorIdAndDateBetween(@Param("cardIds") List<Integer> cardIds,
-                                                      @Param("vendorId") Integer vendorId,
+    List<Offer> findByCardIdInAndVendorIdAndDateBetween(@Param("cardIds") List<Integer> cardIds,
+                                                        @Param("vendorId") Integer vendorId,
+                                                        @Temporal(TemporalType.DATE) @Param("startDate") Date startDate,
+                                                        @Temporal(TemporalType.DATE) @Param("endDate") Date endDate);
+
+    List<Offer> findByCardIdInAndShopIdAndDateBetween(@Param("cardIds") List<Integer> cardIds,
+                                                      @Param("shopId") Integer shopId,
                                                       @Temporal(TemporalType.DATE) @Param("startDate") Date startDate,
                                                       @Temporal(TemporalType.DATE) @Param("endDate") Date endDate);
-
-    List<Offer> findByCardIdAndShopIdAndDateBetween(@Param("cardIds") List<Integer> cardIds,
-                                                    @Param("shopId") Integer shopId,
-                                                    @Temporal(TemporalType.DATE) @Param("startDate") Date startDate,
-                                                    @Temporal(TemporalType.DATE) @Param("endDate") Date endDate);
 
     Page<Offer> findByShopIdAndDateOrderByCardPopularityAsc(Integer shopId, Date date, Pageable pageable);
 

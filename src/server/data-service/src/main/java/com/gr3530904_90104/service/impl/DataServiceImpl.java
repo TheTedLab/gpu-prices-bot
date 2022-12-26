@@ -56,7 +56,7 @@ public class DataServiceImpl implements DataService {
         List<Integer> cardIds = cards.stream().map(Card::getId).toList();
         Optional<Vendor> vendor = vendorRepository.findVendorByName(vendorName);
         if (!cards.isEmpty() && vendor.isPresent()) {
-            List<Offer> offers = offerRepository.findByCardIdAndVendorIdAndDateBetween(cardIds,
+            List<Offer> offers = offerRepository.findByCardIdInAndVendorIdAndDateBetween(cardIds,
                     vendor.get().getId(), startDate, endDate);
             return offers.stream().map((o) -> mapOfferToOfferDto(o, cards, vendor.get()))
                     .collect(Collectors.toList());
@@ -72,7 +72,7 @@ public class DataServiceImpl implements DataService {
         List<Integer> cardIds = cards.stream().map(Card::getId).toList();
         Optional<Shop> shop = shopRepository.findShopByName(shopName);
         if (!cards.isEmpty() && shop.isPresent()) {
-            List<Offer> offers = offerRepository.findByCardIdAndShopIdAndDateBetween(cardIds,
+            List<Offer> offers = offerRepository.findByCardIdInAndShopIdAndDateBetween(cardIds,
                     shop.get().getId(), startDate, endDate);
             return offers.stream().map((o) -> mapOfferToOfferDto(o, cards, shop.get()))
                     .collect(Collectors.toList());
@@ -148,7 +148,7 @@ public class DataServiceImpl implements DataService {
                 .shopId(shop.get().getId())
                 .vendorId(vendor.get().getId())
                 .cardPrice(offerDto.getCardPrice())
-                .date(new Date())
+                .date(offerDto.getDate())
                 .cardPopularity(offerDto.getCardPopularity())
                 .build();
     }
