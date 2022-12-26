@@ -1,3 +1,5 @@
+CREATE USER video_cards_data_user with encrypted password 'video_cards_data_password';
+
 CREATE TABLE architectures
 (
     id serial PRIMARY KEY,
@@ -38,3 +40,5 @@ CREATE TABLE offers
     aggregate_date date NOT NULL,
     popularity_place integer NOT NULL CONSTRAINT popularity_check CHECK (popularity_place > 0)
 );
+
+GRANT ALL ON ALL TABLES IN SCHEMA public TO video_cards_data_user;
