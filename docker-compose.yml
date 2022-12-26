@@ -22,7 +22,7 @@ services:
     image: aggregator:latest
     networks:
       vpcbr:
-        ipv4_address: 173.18.0.5
+        ipv4_address: 173.18.0.4
 
 networks:
   vpcbr:
