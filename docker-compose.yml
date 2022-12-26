@@ -1,0 +1,33 @@
+version: '4.15'
+
+services:
+  postgres:
+    image: postgres-custom:latest
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: postgres
+    networks:
+      vpcbr:
+        ipv4_address: 173.18.0.2
+  data-service:
+    image: data-service:latest
+    hostname: localhost
+    ports:
+      - 8080:8080
+    networks:
+      vpcbr:
+        ipv4_address: 173.18.0.3
+  aggregator:
+    image: aggregator:latest
+    networks:
+      vpcbr:
+        ipv4_address: 173.18.0.4
+
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 173.18.0.0/16
+          gateway: 173.18.0.1

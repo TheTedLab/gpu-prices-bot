@@ -4,6 +4,7 @@ import math
 import os
 import re
 import time
+import schedule
 
 import requests
 from bs4 import BeautifulSoup
@@ -339,11 +340,7 @@ def get_data_dns(date):
     options.add_experimental_option('excludeSwitches', ['enable-automation'])
     options.add_experimental_option('useAutomationExtension', False)
 
-    service = ChromeService(
-        executable_path=r'C:\Users\muhin\Documents\GitHub\gpu-prices-bot\src\server\aggregator\chromedriver.exe'
-    )
-
-    driver = webdriver.Chrome(service=service, options=options)
+    driver = webdriver.Chrome(chrome_options=options)
 
     stealth(driver,
             languages=["en-US", "en"],
@@ -359,10 +356,9 @@ def get_data_dns(date):
     try:
         driver.get(url=url)
         print(f'[RESPONSE] /videokarty/?order=6 - <Response [200]>')
-
-        page_title = driver.find_element(By.CSS_SELECTOR,
-                                         f'body > div.container.category-child > '
-                                         f'div > div.products-page__title > span').text.split(' ')
+        time.sleep(10)
+        page_title = driver.find_element(By.XPATH,
+                                         './/span[@class="products-count"]').text.split(' ')
         total_items = int(page_title[0])
 
         pagination_ref = driver.find_element(By.CSS_SELECTOR,
@@ -666,10 +662,12 @@ def main():
         file.write(json_string)
 
     # Отправка данных на сервер
-    # response = requests.post(url='http://localhost:8080/insert-new-data', json=data)
-    # response = requests.get(url='http://0.0.0.0:8080/is-card-present?=gerorce+rtx+3060+ti')
-    # print(response)
+    response = requests.post(url='http://localhost:8080/insert-new-data', json=data)
+    print(f'[INFO] Response: {response}')
 
 
 if __name__ == '__main__':
-    main()
+    schedule.every().day.at("01:00").do(main)
+    while 1:
+        schedule.run_pending()
+        time.sleep(1)
