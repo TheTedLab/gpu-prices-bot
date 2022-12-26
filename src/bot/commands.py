@@ -1221,7 +1221,7 @@ def graph_func(update: Update, context: CallbackContext) -> int:
         caption=f'submenu: {submenu_title}\n'
                 f'shop: {shop_title}\n'
                 f'vendor: {vendors_dict.get(int(vendor))}\n'
-                f'series: {series_dict.get(int(series))}\n'
+                f'series: {series_dict.get(int(series)).replace(" ", "+")}\n'
                 f'days: {str(graph_days)}\n'
                 f'level: {graph_level}\n' + select_graph_text,
         reply_markup=reply_markup_keyboard
