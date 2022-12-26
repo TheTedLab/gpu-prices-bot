@@ -23,6 +23,11 @@ services:
     networks:
       vpcbr:
         ipv4_address: 173.18.0.4
+  bot:
+    image: bot:latest
+    networks:
+      vpcbr:
+        ipv4_address: 173.18.0.5
 
 networks:
   vpcbr:
