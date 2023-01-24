@@ -224,104 +224,81 @@ def get_data_mvideo(date):
 def get_data_citilink(date):
     print('[INFO] Started CitiLink data aggregation')
 
+    options = webdriver.ChromeOptions()
+    options.add_argument('start-maximized')
+
+    options.add_argument("--headless")
+
+    options.add_argument('--disable-blink-features=AutomationControlled')
+
+    options.add_experimental_option('excludeSwitches', ['enable-automation'])
+    options.add_experimental_option('useAutomationExtension', False)
+
+    service = ChromeService(
+        executable_path=r'C:\Users\muhin\Documents\GitHub\gpu-prices-bot\src\server\aggregator\chromedriver.exe'
+    )
+
+    driver = webdriver.Chrome(service=service, options=options)
+
+    stealth(driver,
+            languages=["en-US", "en"],
+            vendor="Google Inc.",
+            platform="Win32",
+            webgl_vendor="Intel Inc.",
+            renderer="Intel Iris OpenGL Engine",
+            fix_hairline=True,
+            )
+
     url = 'https://www.citilink.ru/catalog/videokarty/?sorting=popularity_asc'
-    response = requests.get(url=url)
-    print(f'[RESPONSE] /catalog/videokarty - {response}')
-    soup = BeautifulSoup(response.text, 'html.parser')
 
-    total_items = int(soup.find('div', class_='Subcategory__count').text.split()[0])
+    try:
+        driver.get(url=url)
+        print(f'[RESPONSE] /catalog/videokarty - <Response [200]>')
 
-    page_limit = 0
-    for _ in soup.findAll('div', class_='product_data__gtm-js'):
-        page_limit += 1
+        time.sleep(10)
+        total_items = int(driver.find_element(
+            By.XPATH,
+            f'//*[@id="__next"]/div/main/section/div[1]/div[1]/div[2]/span').text.split(' ')[0]
+                          )
 
-    pages_count = math.ceil(total_items / page_limit)
+        page_limit = 48
 
-    print(f'[INFO] Total positions: {total_items} | Total pages: {pages_count}')
+        pages_count = math.ceil(total_items / page_limit)
 
-    offers_list = []
-    popularity = 0
-    for page in range(1, pages_count + 1):
-        current_page_url = f'{url}&p={page}'
-        time.sleep(3)
-        response = requests.get(url=current_page_url)
-        print(f'[RESPONSE] /catalog/videokarty/?p={page} - {response}')
-        soup = BeautifulSoup(response.text, 'html.parser')
+        print(f'[INFO] Total positions: {total_items} | Total pages: {pages_count}')
 
-        for product in soup.findAll('div', class_='product_data__gtm-js'):
-            name_title = product.find('a', class_='ProductCardHorizontal__title')['title'].split()
-            for i in range(len(name_title)):
-                name_title[i] = name_title[i].upper()
+        offers_list = []
+        popularity = 0
+        for page in range(1, pages_count):
+            current_page_url = f'{url}&p={page}'
+            driver.get(url=current_page_url)
+            print(f'[RESPONSE] /catalog/videokarty/?p={page} - <Response [200]>')
+            time.sleep(15)
 
-            if name_title[3] != 'GEFORCE':
-                if name_title[2] == 'NVIDIA':
-                    name_title.insert(3, 'GEFORCE')
-                elif name_title[2] == 'AMD':
-                    name_title.insert(3, 'RADEON')
+            collect_items_citilink(driver, page_limit, page_limit, page, date, offers_list)
 
-            name = ''
-            if 'RET' in name_title:
-                name = ' '.join(name_title[3:name_title.index('RET')])
-            elif 'RET(ВОССТАНОВЛЕННЫЙ)' in name_title:
-                name = ' '.join(name_title[3:name_title.index('RET(ВОССТАНОВЛЕННЫЙ)')])
-            elif 'BULK' in name_title:
-                name = ' '.join(name_title[3:name_title.index('BULK')])
-            elif 'OEM' in name_title:
-                name = ' '.join(name_title[3:name_title.index('OEM')])
-            else:
-                name = ' '.join(name_title[3:])
+            print(f'[+] Finished {page} of the {pages_count} pages')
 
-            if ',' in name:
-                name = name.replace(',', '')
-            if 'LHR' in name:
-                name = name.replace('LHR', '')
-            if 'LOW PROFILE' in name:
-                name = name.replace('LOW PROFILE', '')
-            if 'BULK' in name:
-                name = name.replace('BULK', '')
-            if ' RU' in name:
-                name = name.replace(' RU', '')
+        last_page_url = f'{url}&p={pages_count}'
+        driver.get(url=last_page_url)
+        print(f'[RESPONSE] /catalog/videokarty/?p={pages_count} - <Response [200]>')
+        time.sleep(15)
 
-            name = insert_spaces(name)
-            name = remove_repeats(name)
-            name = remove_extra_repeats(name)
+        last_page_limit = total_items - (pages_count - 1) * page_limit
 
-            vendor = name_title[1]
-            properties_title = product.findAll('li', class_='ProductCardHorizontal__properties_item')
+        collect_items_citilink(driver, last_page_limit, page_limit, pages_count, date, offers_list)
 
-            architecture, series = '', ''
-            for property_title in properties_title:
-                if 'Видеочипсет' in property_title.text.split()[0]:
-                    series_title = property_title.text.split(',', 1)[0].split()
-                    series = ' '.join(series_title[2:5]).upper()
-                    if series[-2:] == 'TI':
-                        series = series.replace('TI', ' TI')
-                    elif series[-5:] == 'SUPER':
-                        series = series.replace('SUPER', ' SUPER')
-                    elif series[-2:] == 'XT':
-                        series = series.replace('XT', ' XT')
-                    elif series[-2:] == 'XTX':
-                        series = series.replace('XTX', ' XTX')
+        print(f'[+] Finished {pages_count} of the {pages_count} pages')
 
-                    architecture = series_title[1]
+        print(f'[INFO] Positions with price: {popularity} | Total positions: {total_items}')
 
-            price_title = product.find('span', class_='ProductCardHorizontal__price_current-price')
-            price = 0
-            if price_title is not None:
-                popularity += 1
-                price_title = price_title.text.split()
-                price_number_str = ''
-                for num in price_title:
-                    price_number_str += num
-                price = int(price_number_str)
-                offers_list.append(Offer(name, architecture, series, 'CITILINK',
-                                         vendor, price, popularity, date))
+        return offers_list
 
-        print(f'[+] Finished {page} of the {pages_count} pages')
-
-    print(f'[INFO] Positions with price: {popularity} | Total positions: {total_items}')
-
-    return offers_list
+    except Exception as ex:
+        print(ex)
+    finally:
+        driver.close()
+        driver.quit()
 
 
 def get_data_dns(date):
@@ -360,9 +337,9 @@ def get_data_dns(date):
         driver.get(url=url)
         print(f'[RESPONSE] /videokarty/?order=6 - <Response [200]>')
 
-        page_title = driver.find_element(By.CSS_SELECTOR,
-                                         f'body > div.container.category-child > '
-                                         f'div > div.products-page__title > span').text.split(' ')
+        time.sleep(10)
+        page_title = driver.find_element(By.XPATH,
+                                         './/span[@class="products-count"]').text.split(' ')
         total_items = int(page_title[0])
 
         pagination_ref = driver.find_element(By.CSS_SELECTOR,
@@ -407,6 +384,100 @@ def get_data_dns(date):
         driver.quit()
 
     return offers_list
+
+
+def collect_items_citilink(driver, page_limit, popularity_limit, page, date, offers_list):
+    for elem_id in range(page_limit):
+        name_title = \
+            driver.find_element(
+                By.XPATH,
+                f'/html/body/div[2]/div/main/section/div[2]'
+                f'/div/div/section/div[2]/div[2]/div[{elem_id + 1}]'
+                f'/div/div[3]/div[1]/a'
+            ).text.split()
+
+        for i in range(len(name_title)):
+            name_title[i] = name_title[i].upper()
+
+        if name_title[3] != 'GEFORCE':
+            if name_title[2] == 'NVIDIA':
+                name_title.insert(3, 'GEFORCE')
+            elif name_title[2] == 'AMD':
+                name_title.insert(3, 'RADEON')
+
+        name = ''
+        if 'RET' in name_title:
+            name = ' '.join(name_title[3:name_title.index('RET')])
+        elif 'RET(ВОССТАНОВЛЕННЫЙ)' in name_title:
+            name = ' '.join(name_title[3:name_title.index('RET(ВОССТАНОВЛЕННЫЙ)')])
+        elif 'BULK' in name_title:
+            name = ' '.join(name_title[3:name_title.index('BULK')])
+        elif 'OEM' in name_title:
+            name = ' '.join(name_title[3:name_title.index('OEM')])
+        else:
+            name = ' '.join(name_title[3:])
+
+        if ',' in name:
+            name = name.replace(',', '')
+        if 'LHR' in name:
+            name = name.replace('LHR', '')
+        if 'LOW PROFILE' in name:
+            name = name.replace('LOW PROFILE', '')
+        if 'BULK' in name:
+            name = name.replace('BULK', '')
+        if ' RU' in name:
+            name = name.replace(' RU', '')
+
+        name = insert_spaces(name)
+        name = remove_repeats(name)
+        name = remove_extra_repeats(name)
+
+        vendor = name_title[1]
+        properties_title = driver.find_element(
+            By.XPATH,
+            f'/html/body/div[2]/div/main/section/div[2]'
+            f'/div/div/section/div[2]/div[2]/div[{elem_id + 1}]'
+            f'/div/div[6]/ul/li[1]'
+        )
+
+        architecture, series = '', ''
+        if 'Видеочипсет' in properties_title.text.split()[0]:
+            series_title = properties_title.text.split(',', 1)[0].split()
+            series = ' '.join(series_title[2:5]).upper()
+            if series[-2:] == 'TI':
+                series = series.replace('TI', ' TI')
+            elif series[-5:] == 'SUPER':
+                series = series.replace('SUPER', ' SUPER')
+            elif series[-2:] == 'XT':
+                series = series.replace('XT', ' XT')
+            elif series[-2:] == 'XTX':
+                series = series.replace('XTX', ' XTX')
+
+            architecture = series_title[1]
+
+        popularity = (page - 1) * popularity_limit + (elem_id + 1)
+        price_title = ''
+        try:
+            price_title = driver.find_element(
+                By.XPATH,
+                f'/html/body/div[2]/div/main/section/div[2]'
+                f'/div/div/section/div[2]/div[2]/div[{elem_id + 1}]'
+                f'/div/div[7]/div[1]/div[2]/span/span/span[1]'
+            )
+        except NoSuchElementException:
+            continue
+        except Exception as ex:
+            print(ex)
+        else:
+            price = 0
+            if price_title is not None:
+                price_title = price_title.text.split()
+                price_number_str = ''
+                for num in price_title:
+                    price_number_str += num
+                price = int(price_number_str)
+                offers_list.append(Offer(name, architecture, series, 'CITILINK',
+                                         vendor, price, popularity, date))
 
 
 def collect_items_dns(driver, page_limit, popularity_limit, page, date, offers_list):
