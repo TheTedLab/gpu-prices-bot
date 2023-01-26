@@ -1,0 +1,72 @@
+plugins {
+    id 'java'
+    id 'application'
+    id "com.github.johnrengelman.shadow" version '7.1.2'
+    id 'org.springframework.boot' version '2.7.5'
+    id 'io.spring.dependency-management' version '1.0.14.RELEASE'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+group 'com.gr3530904_90104'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+    }
+}
+
+dependencies {
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.3'
+    implementation 'org.springframework.boot:spring-boot-starter:2.2.5.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-validation:3.0.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.2.5.RELEASE'
+    implementation 'org.springframework.data:spring-data-jpa:2.2.5.RELEASE'
+    implementation 'org.hibernate:hibernate-core:5.6.10.Final'
+    implementation 'org.hibernate:hibernate-entitymanager:5.6.10.Final'
+    implementation 'org.postgresql:postgresql:42.3.3'
+    implementation 'org.apache.tomcat:tomcat:9.0.68'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+}
+
+application {
+    mainClass = 'com.gr3530904_90104.Main'
+}
+
+configurations {
+    extraLibs
+}
+
+run {
+    application
+}
+
+tasks.named("bootJar") {
+    mainClass.set("con.example.app.KotlinAppApplicationKt")
+    archiveBaseName.set("testapp")
+    archiveFileName.set("testapp.jar") }
+
+jar {
+    manifest {
+        attributes "Main-Class": "com.gr3530904_90104.Main"
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+shadowJar {
+    archiveBaseName.set("data-service")
+    archiveClassifier.set('shadow')
+    archiveVersion.set('0.0.1')
+}
