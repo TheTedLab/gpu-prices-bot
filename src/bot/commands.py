@@ -1,5 +1,8 @@
 import ast
 import logging
+import requests
+import json
+import matplotlib.pyplot as plt
 
 import telegram
 from telegram import Update, InlineKeyboardMarkup
@@ -169,7 +172,7 @@ def for_vendor_popularity(update: Update, context: CallbackContext) -> int:
 def popularity_shops_graph(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
     query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH)
+    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_POPULARITY_GRAPH)
 
     with open('images/shops_logo.jpg', 'rb') as photo:
         image = telegram.InputMediaPhoto(photo)
@@ -179,7 +182,7 @@ def popularity_shops_graph(update: Update, context: CallbackContext) -> int:
     )
 
     query.edit_message_caption(
-        caption=select_graph_text,
+        caption='Популярность по магазину',
         reply_markup=reply_markup_keyboard
     )
 
@@ -189,7 +192,7 @@ def popularity_shops_graph(update: Update, context: CallbackContext) -> int:
 def popularity_vendors_graph(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
     query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH)
+    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_POPULARITY_GRAPH)
 
     with open('images/shops_logo.jpg', 'rb') as photo:
         image = telegram.InputMediaPhoto(photo)
@@ -199,7 +202,7 @@ def popularity_vendors_graph(update: Update, context: CallbackContext) -> int:
     )
 
     query.edit_message_caption(
-        caption=select_graph_text,
+        caption='Популярность по производителю',
         reply_markup=reply_markup_keyboard
     )
 
@@ -1213,6 +1216,108 @@ def graph_func(update: Update, context: CallbackContext) -> int:
     with open('images/shops_logo.jpg', 'rb') as photo:
         image = telegram.InputMediaPhoto(photo)
 
+    shop = shop_title
+    vendor = vendors_dict.get(int(vendor)) if vendor != '' else ''
+    series = series_dict.get(int(series)).replace(" ", "+")
+
+    if vendor == "":
+        url = f'http://173.18.0.3:8080/price/for-shop?seriesName={series}&shopName={shop}'
+        response = requests.get(url=url)
+        listik = json.loads(response.text)
+
+        card_names = []
+        offers = {}
+        prices = {}
+        days = []
+        for offer in listik:
+            card_name = offer['cardName']
+            if not card_name in offers:
+                offers[card_name]={}
+            date = offer['date'].split('T')[0]
+            if not date in days:
+                days.append(date)
+            if not date in offers[card_name]:
+                offers[card_name][date] = {}
+            offers[card_name][date][offer['vendorName']] = offer['cardPrice']
+            if not card_name in card_names:
+                card_names.append(card_name)
+
+        if graph_level == 'min':
+            for card_name in card_names:
+                prices[card_name] = []
+                for day in days:
+                    vendor = min(offers[card_name][day], key=offers[card_name][day].get)
+                    prices[card_name].append(offers[card_name][day][vendor])
+        elif graph_level == 'max':
+            for card_name in card_names:
+                prices[card_name] = []
+                for day in days:
+                    vendor = max(offers[card_name][day], key=offers[card_name][day].get)
+                    prices[card_name].append(offers[card_name][day][vendor])
+        else:
+            for card_name in card_names:
+                prices[card_name] = []
+                for day in days:
+                    prices[card_name].append(sum(offers[card_name][day].values()) // len(offers[card_name][day]))
+
+
+
+        for card_name in card_names:
+            plt.plot(days, prices[card_name], label=card_name)
+        plt.legend()
+        plt.xticks(rotation=45, ha='right')
+        plt.savefig('graphic.png')
+        plt.clf()
+    else:
+        url = f'http://173.18.0.3:8080/price/for-vendor?seriesName={series}&vendorName={vendor}'
+        response = requests.get(url=url)
+        listik = json.loads(response.text)
+
+        vendor_names = []
+        offers = {}
+        prices = {}
+        days = []
+        for offer in listik:
+            vendor_name = offer['vendorName']
+            if not vendor_name in offers:
+                offers[vendor_name]={}
+            date = offer['date'].split('T')[0]
+            if not date in days:
+                days.append(date)
+            if not date in offers[vendor_name]:
+                offers[vendor_name][date] = {}
+            offers[vendor_name][date][offer['cardName']] = offer['cardPrice']
+            if not vendor_name in vendor_names:
+                vendor_names.append(vendor_name)
+
+        if graph_level == 'min':
+            for vendor_name in vendor_names:
+                prices[vendor_name] = []
+                for day in days:
+                    vendor = min(offers[vendor_name][day], key=offers[vendor_name][day].get)
+                    prices[vendor_name].append(offers[vendor_name][day][vendor])
+        elif graph_level == 'max':
+            for vendor_name in vendor_names:
+                prices[vendor_name] = []
+                for day in days:
+                    vendor = max(offers[vendor_name][day], key=offers[vendor_name][day].get)
+                    prices[vendor_name].append(offers[vendor_name][day][vendor])
+        else:
+            for vendor_name in vendor_names:
+                prices[vendor_name] = []
+                for day in days:
+                    prices[vendor_name].append(sum(offers[vendor_name][day].values()) // len(offers[vendor_name][day]))
+
+        for vendor_name in vendor_names:
+            plt.plot(days, prices[vendor_name], label=vendor_name)
+        plt.legend()
+        plt.xticks(rotation=45, ha='right')
+        plt.savefig('graphic.png')
+        plt.clf()
+
+    with open('graphic.png', 'rb') as photo:
+        image = telegram.InputMediaPhoto(photo)
+
     query.edit_message_media(
         media=image
     )
@@ -1220,8 +1325,8 @@ def graph_func(update: Update, context: CallbackContext) -> int:
     query.edit_message_caption(
         caption=f'submenu: {submenu_title}\n'
                 f'shop: {shop_title}\n'
-                f'vendor: {vendors_dict.get(int(vendor))}\n'
-                f'series: {series_dict.get(int(series)).replace(" ", "+")}\n'
+                f'vendor: {vendor}\n'
+                f'series: {series}\n'
                 f'days: {str(graph_days)}\n'
                 f'level: {graph_level}\n' + select_graph_text,
         reply_markup=reply_markup_keyboard

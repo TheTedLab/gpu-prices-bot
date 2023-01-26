@@ -107,6 +107,10 @@ keyboard_POPULARITY = [
     [InlineKeyboardButton("По Производителю", callback_data=str(POPULARITY_FOR_VENDOR))],
 ]
 
+keyboard_POPULARITY_GRAPH = [
+    [InlineKeyboardButton("Назад в меню", callback_data=str(BACK_TO_MENU))],
+]
+
 keyboard_ARCHITECTURES = [
     [
         InlineKeyboardButton("NVIDIA", callback_data=str(NVIDIA)),
