@@ -290,8 +290,6 @@ def get_data_citilink(date):
 
         print(f'[+] Finished {pages_count} of the {pages_count} pages')
 
-        print(f'[INFO] Positions with price: {popularity} | Total positions: {total_items}')
-
         return offers_list
 
     except Exception as ex:
