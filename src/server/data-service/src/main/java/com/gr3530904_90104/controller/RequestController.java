@@ -29,7 +29,8 @@ public class RequestController {
     @GetMapping("/is-card-present")
     public ResponseEntity<Boolean> getIsCardPresent(@RequestParam("cardName") String cardName) {
         try {
-            return new ResponseEntity<>(dataService.isCardPresent(cardName), HttpStatus.OK);
+            boolean response = dataService.isCardPresent(cardName);
+            return new ResponseEntity<>(response, response ? HttpStatus.OK : HttpStatus.NOT_FOUND);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -38,7 +39,8 @@ public class RequestController {
     @GetMapping("/price")
     public ResponseEntity<List<OfferDto>> getPriceForCard(@RequestParam("cardName") String cardName) {
         try {
-            return new ResponseEntity<>(dataService.getPriceForCard(cardName), HttpStatus.OK);
+            List<OfferDto> response = dataService.getPriceForCard(cardName);
+            return new ResponseEntity<>(response, !response.isEmpty() ? HttpStatus.OK : HttpStatus.NOT_FOUND);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -47,7 +49,8 @@ public class RequestController {
     @GetMapping("/price/for-shop")
     public ResponseEntity<List<OfferDto>> getPriceForShop(@RequestParam("seriesName") String seriesName, @RequestParam("shopName") String shopName) {
         try {
-            return new ResponseEntity<>(dataService.getPriceForShop(seriesName, shopName), HttpStatus.OK);
+            List<OfferDto> response = dataService.getPriceForShop(seriesName, shopName);
+            return new ResponseEntity<>(response, !response.isEmpty() ? HttpStatus.OK : HttpStatus.NOT_FOUND);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -56,7 +59,8 @@ public class RequestController {
     @GetMapping("/price/for-vendor")
     public ResponseEntity<List<OfferDto>> getPriceForVendor(@RequestParam("seriesName") String seriesName, @RequestParam("vendorName") String vendorName) {
         try {
-            return new ResponseEntity<>(dataService.getPriceForVendor(seriesName, vendorName), HttpStatus.OK);
+            List<OfferDto> response = dataService.getPriceForVendor(seriesName, vendorName);
+            return new ResponseEntity<>(response, !response.isEmpty() ? HttpStatus.OK : HttpStatus.NOT_FOUND);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -65,7 +69,8 @@ public class RequestController {
     @GetMapping("/popularity/for-shop")
     public ResponseEntity<Map<Integer, OfferDto>> getPopularityForShop(@RequestParam("shopName") String shopName) {
         try {
-            return new ResponseEntity<>(dataService.getPopularityForShop(shopName), HttpStatus.OK);
+            Map<Integer, OfferDto> response = dataService.getPopularityForShop(shopName);
+            return new ResponseEntity<>(response, !response.isEmpty() ? HttpStatus.OK : HttpStatus.NOT_FOUND);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -74,7 +79,8 @@ public class RequestController {
     @GetMapping("/popularity/for-vendor")
     public ResponseEntity<Map<String, Map<Integer, OfferDto>>> getPopularityForVendor(@RequestParam("vendorName") String vendorName) {
         try {
-            return new ResponseEntity<>(dataService.getPopularityForVendor(vendorName), HttpStatus.OK);
+            Map<String, Map<Integer, OfferDto>> response = dataService.getPopularityForVendor(vendorName);
+            return new ResponseEntity<>(response, !response.isEmpty() ? HttpStatus.OK : HttpStatus.NOT_FOUND);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
