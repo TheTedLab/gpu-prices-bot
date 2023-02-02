@@ -1,9 +1,11 @@
 import ast
-import logging
-import requests
+import datetime
 import json
-import matplotlib.pyplot as plt
+import logging
 
+import matplotlib.pyplot as plt
+import numpy
+import requests
 import telegram
 from telegram import Update, InlineKeyboardMarkup
 from telegram.ext import CallbackContext
@@ -1045,7 +1047,7 @@ def graph_func(update: Update, context: CallbackContext) -> int:
     user_data = context.user_data
     submenu = user_data[CURRENT_SUBMENU]
 
-    submenu_title, shop_title, vendor = '', '', 20
+    submenu_title, shop, vendor = '', '', 20
     if submenu == str(FOR_SHOP):
         print('submenu: for_shop')
         submenu_title = 'for_shop'
@@ -1053,13 +1055,13 @@ def graph_func(update: Update, context: CallbackContext) -> int:
 
         if shop == str(DNS_SHOP):
             print('shop: dns')
-            shop_title = "DNS"
+            shop = "DNS"
         elif shop == str(MVIDEO_SHOP):
             print('shop: mvideo')
-            shop_title = "MVIDEO"
+            shop = "MVIDEO"
         elif shop == str(CITILINK_SHOP):
             print('shop: citilink')
-            shop_title = "CITILINK"
+            shop = "CITILINK"
         else:
             print('unknown_shop')
     elif submenu == str(FOR_VENDOR):
@@ -1216,23 +1218,22 @@ def graph_func(update: Update, context: CallbackContext) -> int:
     with open('images/shops_logo.jpg', 'rb') as photo:
         image = telegram.InputMediaPhoto(photo)
 
-    shop = shop_title
     vendor = vendors_dict.get(int(vendor)) if vendor != '' else ''
     series = series_dict.get(int(series)).replace(" ", "+")
 
     if vendor == "":
         url = f'http://173.18.0.3:8080/price/for-shop?seriesName={series}&shopName={shop}'
         response = requests.get(url=url)
-        listik = json.loads(response.text)
+        graph_data = json.loads(response.text)
 
         card_names = []
         offers = {}
         prices = {}
         days = []
-        for offer in listik:
+        for offer in graph_data:
             card_name = offer['cardName']
             if not card_name in offers:
-                offers[card_name]={}
+                offers[card_name] = {}
             date = offer['date'].split('T')[0]
             if not date in days:
                 days.append(date)
@@ -1242,12 +1243,43 @@ def graph_func(update: Update, context: CallbackContext) -> int:
             if not card_name in card_names:
                 card_names.append(card_name)
 
+        # print('days:')
+        # print(days)
+        # print()
+        # print('card_names:')
+        # print(card_names)
+        # print()
+        # print('offers:')
+        # print(offers)
+        # print()
         if graph_level == 'min':
             for card_name in card_names:
                 prices[card_name] = []
                 for day in days:
-                    vendor = min(offers[card_name][day], key=offers[card_name][day].get)
-                    prices[card_name].append(offers[card_name][day][vendor])
+                    # print('card_name:', card_name)
+                    # print('day:', day)
+                    # print('offers[card_name]', offers[card_name])
+                    # print('offers[card_name].get(day)', offers[card_name].get(day))
+                    is_from_begin = True
+                    choosing_day = day
+                    while offers[card_name].get(choosing_day) is None:
+                        if choosing_day == '2022-11-20':
+                            choosing_day = list(offers[card_name].keys())[0]
+                            is_from_begin = False
+                            break
+                        date_year, date_month, date_day = [int(i) for i in choosing_day.split('-')]
+                        prev_day = str(
+                            datetime.date(
+                                date_year, date_month, date_day
+                            ) - datetime.timedelta(days=1)
+                        )
+                        # print('prev_day:', prev_day)
+                        choosing_day = prev_day
+                    if is_from_begin:
+                        vendor = min(offers[card_name][choosing_day], key=offers[card_name][choosing_day].get)
+                        prices[card_name].append(offers[card_name][choosing_day][vendor])
+                    else:
+                        prices[card_name].append(numpy.NaN)
         elif graph_level == 'max':
             for card_name in card_names:
                 prices[card_name] = []
@@ -1260,27 +1292,29 @@ def graph_func(update: Update, context: CallbackContext) -> int:
                 for day in days:
                     prices[card_name].append(sum(offers[card_name][day].values()) // len(offers[card_name][day]))
 
-
-
+        plt.figure(figsize=(23.83, 11.68), dpi=100)
+        num_days = range(len(days))
         for card_name in card_names:
-            plt.plot(days, prices[card_name], label=card_name)
-        plt.legend()
-        plt.xticks(rotation=45, ha='right')
-        plt.savefig('graphic.png')
+            plt.plot(num_days, prices[card_name], label=card_name)
+        plt.legend(bbox_to_anchor=(0.5, -0.11), loc='upper center', ncols=4)
+        plt.xlim('2022-11-20', str(datetime.date.today()))
+        plt.xticks(num_days, days, rotation=45, ha='right')
+        plt.grid(axis='x', linestyle='--')
+        plt.savefig('graphic.png', bbox_inches='tight')
         plt.clf()
     else:
         url = f'http://173.18.0.3:8080/price/for-vendor?seriesName={series}&vendorName={vendor}'
         response = requests.get(url=url)
-        listik = json.loads(response.text)
+        graph_data = json.loads(response.text)
 
         vendor_names = []
         offers = {}
         prices = {}
         days = []
-        for offer in listik:
+        for offer in graph_data:
             vendor_name = offer['vendorName']
             if not vendor_name in offers:
-                offers[vendor_name]={}
+                offers[vendor_name] = {}
             date = offer['date'].split('T')[0]
             if not date in days:
                 days.append(date)
@@ -1324,7 +1358,7 @@ def graph_func(update: Update, context: CallbackContext) -> int:
 
     query.edit_message_caption(
         caption=f'submenu: {submenu_title}\n'
-                f'shop: {shop_title}\n'
+                f'shop: {shop}\n'
                 f'vendor: {vendor}\n'
                 f'series: {series}\n'
                 f'days: {str(graph_days)}\n'

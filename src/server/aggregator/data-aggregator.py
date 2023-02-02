@@ -315,7 +315,11 @@ def get_data_dns(date):
     options.add_experimental_option('excludeSwitches', ['enable-automation'])
     options.add_experimental_option('useAutomationExtension', False)
 
-    driver = webdriver.Chrome(chrome_options=options)
+    service = ChromeService(
+        executable_path=r'C:\Users\muhin\Documents\GitHub\gpu-prices-bot\src\server\aggregator\chromedriver.exe'
+    )
+
+    driver = webdriver.Chrome(service=service, options=options)
 
     stealth(driver,
             languages=["en-US", "en"],

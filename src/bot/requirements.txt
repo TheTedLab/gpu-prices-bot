@@ -10,6 +10,8 @@ colorama==0.4.6
 exceptiongroup==1.0.4
 h11==0.14.0
 idna==3.4
+matplotlib==3.6.2
+numpy==1.24.0
 outcome==1.2.0
 packaging==22.0
 pycparser==2.21
