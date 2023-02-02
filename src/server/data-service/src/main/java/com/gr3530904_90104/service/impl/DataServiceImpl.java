@@ -6,6 +6,7 @@ import com.gr3530904_90104.table.*;
 import com.gr3530904_90104.table.dto.OfferDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor
 @Getter
+@Slf4j
 public class DataServiceImpl implements DataService {
     private static final long NINETY_DAYS = 90L * 24 * 60 * 60 * 1000; // days-hours-minutes-seconds-milliseconds
 
@@ -27,8 +29,10 @@ public class DataServiceImpl implements DataService {
 
     @Override
     public void putNewData(List<OfferDto> offerDtos) {
+        log.info("putNewData of {} offers", offerDtos.size());
         List<Offer> offers = offerDtos.stream().map(this::mapOfferDtoToOffer).collect(Collectors.toList());
         offerRepository.saveAll(offers);
+        log.info("putNewData of {} offers success", offerDtos.size());
     }
 
     @Override
@@ -43,8 +47,10 @@ public class DataServiceImpl implements DataService {
         Optional<Card> card = cardRepository.findCardByName(cardName);
         if (card.isPresent()) {
             List<Offer> offers = offerRepository.findByCardIdAndDateBetween(card.get().getId(), startDate, endDate);
+            log.info("Found {} offers", offers.size());
             return offers.stream().map((o) -> mapOfferToOfferDto(o, card.get())).collect(Collectors.toList());
         }
+        log.info("No offers found");
         return new ArrayList<>();
     }
 
@@ -58,9 +64,11 @@ public class DataServiceImpl implements DataService {
         if (!cards.isEmpty() && vendor.isPresent()) {
             List<Offer> offers = offerRepository.findByCardIdInAndVendorIdAndDateBetween(cardIds,
                     vendor.get().getId(), startDate, endDate);
+            log.info("Found {} offers", offers.size());
             return offers.stream().map((o) -> mapOfferToOfferDto(o, cards, vendor.get()))
                     .collect(Collectors.toList());
         }
+        log.info("No offers found");
         return new ArrayList<>();
     }
 
@@ -74,9 +82,11 @@ public class DataServiceImpl implements DataService {
         if (!cards.isEmpty() && shop.isPresent()) {
             List<Offer> offers = offerRepository.findByCardIdInAndShopIdAndDateBetween(cardIds,
                     shop.get().getId(), startDate, endDate);
+            log.info("Found {} offers", offers.size());
             return offers.stream().map((o) -> mapOfferToOfferDto(o, cards, shop.get()))
                     .collect(Collectors.toList());
         }
+        log.info("No offers found");
         return new ArrayList<>();
     }
 
@@ -94,9 +104,11 @@ public class DataServiceImpl implements DataService {
                 final Integer[] popularity = {1};
                 offers.forEach((o) -> temp.put(popularity[0]++, mapOfferToOfferDto(o)));
                 map.put(shop.getName(), temp);
+                log.info("Found {} offers for shop {}", map.get(shop.getName()).size(), shop.getName());
             }
             return map;
         }
+        log.info("No offers found");
         return new HashMap<>();
     }
 
@@ -109,8 +121,10 @@ public class DataServiceImpl implements DataService {
                     new Date(), pageRequest);
             Map<Integer, OfferDto> map = new HashMap<>();
             offers.forEach((o) -> map.put(o.getCardPopularity(), mapOfferToOfferDto(o)));
+            log.info("Found {} offers of 10", map.size());
             return map;
         }
+        log.info("No offers found");
         return new HashMap<>();
     }
 
