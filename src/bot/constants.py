@@ -336,6 +336,15 @@ keyboard_GRAPH_GPU = [
     [InlineKeyboardButton("Назад в меню", callback_data=str(BACK_TO_MENU))],
 ]
 
+keyboard_GRAPH_PERIODS = [
+    [
+        InlineKeyboardButton("30 дней", callback_data=str(SHOW_30_DAYS_GPU)),
+        InlineKeyboardButton("60 дней", callback_data=str(SHOW_60_DAYS_GPU)),
+        InlineKeyboardButton("90 дней", callback_data=str(SHOW_90_DAYS_GPU)),
+    ],
+    [InlineKeyboardButton("Назад в меню", callback_data=str(BACK_TO_MENU))],
+]
+
 keyboard_VENDORS = [
     [
         InlineKeyboardButton("AFOX", callback_data=str(VENDOR_AFOX)),
@@ -399,7 +408,7 @@ keyboard_ON_GPU = [
 
 keyboard_ONLY_BACK = [
     [
-        InlineKeyboardButton("Назад в Меню", callback_data=str(NO_ON_GPU))
+        InlineKeyboardButton("Назад в Меню", callback_data=str(BACK_TO_MENU))
     ]
 ]
 

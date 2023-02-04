@@ -1,9 +1,11 @@
 import ast
-import logging
-import requests
+import datetime
 import json
-import matplotlib.pyplot as plt
+import logging
 
+import matplotlib.pyplot as plt
+import numpy
+import requests
 import telegram
 from telegram import Update, InlineKeyboardMarkup
 from telegram.ext import CallbackContext
@@ -170,11 +172,42 @@ def for_vendor_popularity(update: Update, context: CallbackContext) -> int:
 
 
 def popularity_shops_graph(update: Update, context: CallbackContext) -> int:
+    """Показать график популярности видеокарт по магазину"""
     query = update.callback_query
+    shop = ''
+    if query.data == str(DNS_SHOP):
+        shop = 'DNS'
+    elif query.data == str(MVIDEO_SHOP):
+        shop = 'MVIDEO'
+    elif query.data == str(CITILINK_SHOP):
+        shop = 'CITILINK'
+
+    url = f'http://173.18.0.3:8080/popularity/for-shop?shopName={shop}'
+    response = requests.get(url=url)
+    graph_data = json.loads(response.text)
+
+    popularity_places = []
+    for offer in graph_data:
+        popularity_places.append(graph_data[offer]['cardName'])
+
+    popularity_places.reverse()
+
+    fig = plt.figure(figsize=(8, 6))
+    num_places = numpy.arange(10, 0, -1)
+    plt.barh(popularity_places, num_places, align='center')
+    plt.xticks(num_places)
+    plt.grid(axis='x', linestyle='--')
+    plt.title(f'Popularity for {shop} store')
+    plt.xlabel('Places')
+    plt.ylabel('GPUs')
+    plt.savefig('graphic.png', bbox_inches='tight')
+    plt.clf()
+    plt.close(fig)
+
     query.answer()
     reply_markup_keyboard = InlineKeyboardMarkup(keyboard_POPULARITY_GRAPH)
 
-    with open('images/shops_logo.jpg', 'rb') as photo:
+    with open('graphic.png', 'rb') as photo:
         image = telegram.InputMediaPhoto(photo)
 
     query.edit_message_media(
@@ -191,10 +224,88 @@ def popularity_shops_graph(update: Update, context: CallbackContext) -> int:
 
 def popularity_vendors_graph(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
+
+    vendor = ''
+    if query.data == str(VENDOR_AFOX):
+        vendor = 'AFOX'
+    elif query.data == str(VENDOR_ASROCK):
+        vendor = 'ASROCK'
+    elif query.data == str(VENDOR_ASUS):
+        vendor = 'ASUS'
+    elif query.data == str(VENDOR_BIOSTAR):
+        vendor = 'BIOSTAR'
+    elif query.data == str(VENDOR_COLORFUL):
+        vendor = 'COLORFUL'
+    elif query.data == str(VENDOR_DELL):
+        vendor = 'DELL'
+    elif query.data == str(VENDOR_EVGA):
+        vendor = 'EVGA'
+    elif query.data == str(VENDOR_GIGABYTE):
+        vendor = 'GIGABYTE'
+    elif query.data == str(VENDOR_INNO3D):
+        vendor = 'INNO3D'
+    elif query.data == str(VENDOR_KFA2):
+        vendor = 'KFA2'
+    elif query.data == str(VENDOR_MATROX):
+        vendor = 'MATROX'
+    elif query.data == str(VENDOR_MSI):
+        vendor = 'MSI'
+    elif query.data == str(VENDOR_NVIDIA):
+        vendor = 'NVIDIA'
+    elif query.data == str(VENDOR_PALIT):
+        vendor = 'PALIT'
+    elif query.data == str(VENDOR_PNY):
+        vendor = 'PNY'
+    elif query.data == str(VENDOR_POWERCOLOR):
+        vendor = 'POWERCOLOR'
+    elif query.data == str(VENDOR_SAPPHIRE):
+        vendor = 'SAPPHIRE'
+    elif query.data == str(VENDOR_SINOTEX):
+        vendor = 'SINOTEX'
+    elif query.data == str(VENDOR_XFX):
+        vendor = 'XFX'
+    elif query.data == str(VENDOR_ZOTAC):
+        vendor = 'ZOTAC'
+
+    url = f'http://173.18.0.3:8080/popularity/for-vendor?vendorName={vendor}'
+    response = requests.get(url=url)
+    graph_data = json.loads(response.text)
+
+    shops_names = ['MVIDEO', 'CITILINK', 'DNS']
+    places = ['1', '2', '3']
+    popularity_places_shops = {}
+    for offer in graph_data:
+        popularity_places_shops[offer] = []
+        for gpu in places:
+            popularity_places_shops[offer].append(graph_data[offer][gpu]['cardName'])
+
+    print(popularity_places_shops[shops_names[0]])
+
+    x = numpy.arange(len(shops_names))
+    width = 0.35
+
+    fig, ax = plt.subplots()
+    rects1 = ax.bar(x - width / 2, popularity_places_shops[shops_names[0]], width, label=shops_names[0])
+    rects2 = ax.bar(x + width / 2, popularity_places_shops[shops_names[1]], width, label=shops_names[1])
+    rects3 = ax.bar(x + width + width / 2, popularity_places_shops[shops_names[2]], width, label=shops_names[2])
+    ax.set_xticks(x, shops_names)
+
+    ax.bar_label(rects1, padding=3)
+    ax.bar_label(rects2, padding=3)
+    ax.bar_label(rects3, padding=3)
+
+    plt.grid(axis='y', linestyle='--')
+    plt.title(f'Popularity for {vendor}')
+    plt.xlabel('Places')
+    plt.ylabel('GPUs')
+    plt.savefig('graphic.png', bbox_inches='tight')
+    plt.clf()
+    plt.close(fig)
+
     query.answer()
     reply_markup_keyboard = InlineKeyboardMarkup(keyboard_POPULARITY_GRAPH)
 
-    with open('images/shops_logo.jpg', 'rb') as photo:
+    with open('graphic.png', 'rb') as photo:
         image = telegram.InputMediaPhoto(photo)
 
     query.edit_message_media(
@@ -979,14 +1090,11 @@ def graph_for_gpu_func(update: Update, context: CallbackContext) -> int:
     """Показать график цен по видеокарте"""
     user_data = context.user_data
 
-    print('graph_for_gpu')
-
     submenu_title, shop_title, vendor = 'for_gpu', '', 20
 
     query = update.callback_query
 
     graph_state = query.data
-    print('graph_state:', graph_state)
     if graph_state == str(SHOW_30_DAYS_GPU):
         context.user_data[CURRENT_GRAPH_GPU_DAYS] = 30
     elif graph_state == str(SHOW_60_DAYS_GPU):
@@ -1004,7 +1112,7 @@ def graph_for_gpu_func(update: Update, context: CallbackContext) -> int:
 
     graph_days = context.user_data[CURRENT_GRAPH_GPU_DAYS]
     graph_level_int = context.user_data[CURRENT_GRAPH_GPU_LEVEL] + 13
-    print(graph_level_int)
+
     graph_level = ''
     if graph_level_int == GRAPH_MIN_GPU:
         graph_level = 'min'
@@ -1013,15 +1121,30 @@ def graph_for_gpu_func(update: Update, context: CallbackContext) -> int:
     elif graph_level_int == GRAPH_MAX_GPU:
         graph_level = 'max'
 
-    print('graph days:', graph_days)
-    print('graph level:', graph_level)
+    card_name = context.user_data[CURRENT_GPU]
 
-    gpu_name = context.user_data[CURRENT_GPU]
+    url = f'http://173.18.0.3:8080/price?cardName={card_name}'
+    response = requests.get(url=url)
+    graph_data = json.loads(response.text)
+
+    offers, prices = {}, []
+    base = datetime.date(2022, 11, 20)
+    now = datetime.datetime.today().date()
+    days = [str(base + datetime.timedelta(days=x)) for x in range((now - base).days + 1)]
+
+    for offer in graph_data:
+        card_price = offer['cardPrice']
+        date = offer['date'].split('T')[0]
+        offers[date] = card_price
+
+    define_gpu_days_prices(days, offers, prices)
+
+    draw_gpu_graph(days, prices, card_name, days_mode=graph_days)
 
     query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH_GPU)
+    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH_PERIODS)
 
-    with open('images/shops_logo.jpg', 'rb') as photo:
+    with open('graphic.png', 'rb') as photo:
         image = telegram.InputMediaPhoto(photo)
 
     query.edit_message_media(
@@ -1030,9 +1153,8 @@ def graph_for_gpu_func(update: Update, context: CallbackContext) -> int:
 
     query.edit_message_caption(
         caption=f'submenu: {submenu_title}\n'
-                f'gpu: {gpu_name}\n'
-                f'days: {str(graph_days)}\n'
-                f'level: {graph_level}\n' + select_graph_text,
+                f'gpu: {card_name}\n'
+                f'days: {str(graph_days)}\n' + select_graph_text,
         reply_markup=reply_markup_keyboard
     )
 
@@ -1040,90 +1162,79 @@ def graph_for_gpu_func(update: Update, context: CallbackContext) -> int:
     return GRAPH_SUBMENU_ON_GPU
 
 
+def define_gpu_days_prices(days, offers, prices):
+    for day in days:
+        is_from_begin = True
+        choosing_day = day
+        while offers.get(choosing_day) is None:
+            if choosing_day == '2022-11-20':
+                choosing_day = list(offers.keys())[0]
+                is_from_begin = False
+                break
+            date_year, date_month, date_day = [int(i) for i in choosing_day.split('-')]
+            prev_day = str(
+                datetime.date(
+                    date_year, date_month, date_day
+                ) - datetime.timedelta(days=1)
+            )
+            choosing_day = prev_day
+        if is_from_begin:
+            prices.append(offers.get(choosing_day))
+        else:
+            prices.append(numpy.NaN)
+
+
+def draw_gpu_graph(graph_days, graph_prices, card_name, days_mode=30):
+    plt.set_loglevel('WARNING')
+    fig = plt.figure(figsize=(23.83, 11.68), dpi=100)
+    num_days = range(len(graph_days[-days_mode:]))
+    plt.plot(num_days, graph_prices[-days_mode:], label=card_name)
+    plt.legend(bbox_to_anchor=(0.5, -0.11), loc='upper center', ncols=4)
+    plt.xlim('2022-11-20', str(datetime.date.today()))
+    plt.xticks(num_days, graph_days[-days_mode:], rotation=45, ha='right')
+    plt.grid(axis='x', linestyle='--')
+    plt.title(f'Statistics for {card_name}', fontdict={'size': 16})
+    plt.xlabel(f'Period: {days_mode} days', fontdict={'size': 14})
+    plt.ylabel(f'Price, RUB', fontdict={'size': 14})
+    plt.savefig('graphic.png', bbox_inches='tight')
+    plt.clf()
+    plt.close(fig)
+
+
 def graph_func(update: Update, context: CallbackContext) -> int:
     """Показать график цен"""
     user_data = context.user_data
     submenu = user_data[CURRENT_SUBMENU]
 
-    submenu_title, shop_title, vendor = '', '', 20
+    submenu_title, shop, vendor = '', '', 20
     if submenu == str(FOR_SHOP):
-        print('submenu: for_shop')
         submenu_title = 'for_shop'
         shop = user_data[CURRENT_SHOP]
 
         if shop == str(DNS_SHOP):
-            print('shop: dns')
-            shop_title = "DNS"
+            shop = "DNS"
         elif shop == str(MVIDEO_SHOP):
-            print('shop: mvideo')
-            shop_title = "MVIDEO"
+            shop = "MVIDEO"
         elif shop == str(CITILINK_SHOP):
-            print('shop: citilink')
-            shop_title = "CITILINK"
+            shop = "CITILINK"
         else:
             print('unknown_shop')
     elif submenu == str(FOR_VENDOR):
-        print('submenu: for_vendor')
         submenu_title = 'for_vendor'
         vendor = user_data[CURRENT_VENDOR]
-        print(vendor)
-
-        if vendor == str(VENDOR_AFOX):
-            print('vendor: AFOX')
-        elif vendor == str(VENDOR_ASROCK):
-            print('vendor: ASROCK')
-        elif vendor == str(VENDOR_ASUS):
-            print('vendor: ASUS')
-        elif vendor == str(VENDOR_BIOSTAR):
-            print('vendor: BIOSTAR')
-        elif vendor == str(VENDOR_COLORFUL):
-            print('vendor: COLORFUL')
-        elif vendor == str(VENDOR_DELL):
-            print('vendor: DELL')
-        elif vendor == str(VENDOR_EVGA):
-            print('vendor: EVGA')
-        elif vendor == str(VENDOR_GIGABYTE):
-            print('vendor: GIGABYTE')
-        elif vendor == str(VENDOR_INNO3D):
-            print('vendor: INNO3D')
-        elif vendor == str(VENDOR_KFA2):
-            print('vendor: KFA2')
-        elif vendor == str(VENDOR_MATROX):
-            print('vendor: MATROX')
-        elif vendor == str(VENDOR_MSI):
-            print('vendor: MSI')
-        elif vendor == str(VENDOR_NVIDIA):
-            print('vendor: NVIDIA')
-        elif vendor == str(VENDOR_PALIT):
-            print('vendor: PALIT')
-        elif vendor == str(VENDOR_PNY):
-            print('vendor: PNY')
-        elif vendor == str(VENDOR_POWERCOLOR):
-            print('vendor: POWERCOLOR')
-        elif vendor == str(VENDOR_SAPPHIRE):
-            print('vendor: SAPPHIRE')
-        elif vendor == str(VENDOR_SINOTEX):
-            print('vendor: SINOTEX')
-        elif vendor == str(VENDOR_XFX):
-            print('vendor: XFX')
-        elif vendor == str(VENDOR_ZOTAC):
-            print('vendor: ZOTAC')
-    elif submenu == str(FOR_GPU):
-        submenu_title = 'for_gpu'
-        print('submenu: for_gpu')
     else:
         print('unknown_submenu')
 
     architecture = user_data[CURRENT_ARCH]
-
+    arch = ''
     if architecture == str(NVIDIA):
-        print('architecture: nvidia')
+        arch = 'NVIDIA'
     elif architecture == str(AMD):
-        print('architecture: amd')
+        arch = 'AMD'
     elif architecture == str(INTEL):
-        print('architecture: intel')
+        arch = 'INTEL'
     elif architecture == str(MATROX):
-        print('architecture: matrox')
+        arch = 'MATROX'
     else:
         print('unknown architecture')
 
@@ -1137,7 +1248,6 @@ def graph_func(update: Update, context: CallbackContext) -> int:
         user_data[CURRENT_GRAPH_STATE] = graph_state
 
     series = ''
-    print('graph_state:', graph_state)
     if graph_state == str(SHOW_30_DAYS):
         series = user_data[CURRENT_SERIES]
         context.user_data[CURRENT_GRAPH_DAYS] = 30
@@ -1171,149 +1281,70 @@ def graph_func(update: Update, context: CallbackContext) -> int:
     elif graph_level_int == GRAPH_MAX:
         graph_level = 'max'
 
-    print('series:', series)
-    print('graph days:', graph_days)
-    print('graph level:', graph_level)
-
-    if series == str(NVIDIA_10XX_SERIES):
-        print('series: GeForce 10XX')
-    elif series == str(NVIDIA_16XX_SERIES):
-        print('series: GeForce 16XX')
-    elif series == str(NVIDIA_20XX_SERIES):
-        print('series: GeForce 20XX')
-    elif series == str(NVIDIA_30XX_SERIES):
-        print('series: GeForce 30XX')
-    elif series == str(NVIDIA_40XX_SERIES):
-        print('series: GeForce 40XX')
-    elif series == str(NVIDIA_QUADRO_SERIES):
-        print('series: Nvidia Quadro')
-    elif series == str(NVIDIA_TESLA_SERIES):
-        print('series: Nvidia Tesla')
-    elif series == str(NVIDIA_GT_710_SERIES):
-        print('series: Nvidia GT 710')
-    elif series == str(NVIDIA_GT_730_SERIES):
-        print('series: Nvidia GT 730')
-    elif series == str(NVIDIA_210_SERIES):
-        print('series: Nvidia 210')
-    elif series == str(AMD_RX5XX_SERIES):
-        print('series: Radeon RX 5XX')
-    elif series == str(AMD_RX5XXX_SERIES):
-        print('series: Radeon RX 5XXX')
-    elif series == str(AMD_RX6XXX_SERIES):
-        print('series: Radeon RX 6XXX')
-    elif series == str(AMD_R7_240_SERIES):
-        print('series: Radeon R7 240')
-    elif series == str(ARC_A310_SERIES):
-        print('series: Intel Arc A310')
-    elif series == str(ARC_A380_SERIES):
-        print('series: Intel Arc A380')
-    elif series == str(MATROX_M9120_SERIES):
-        print('series: Matrox M9120')
-
-    query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH)
-
-    with open('images/shops_logo.jpg', 'rb') as photo:
-        image = telegram.InputMediaPhoto(photo)
-
-    shop = shop_title
     vendor = vendors_dict.get(int(vendor)) if vendor != '' else ''
     series = series_dict.get(int(series)).replace(" ", "+")
 
-    if vendor == "":
+    if submenu_title == 'for_shop':
         url = f'http://173.18.0.3:8080/price/for-shop?seriesName={series}&shopName={shop}'
         response = requests.get(url=url)
-        listik = json.loads(response.text)
+        graph_data = json.loads(response.text)
 
-        card_names = []
-        offers = {}
-        prices = {}
-        days = []
-        for offer in listik:
-            card_name = offer['cardName']
-            if not card_name in offers:
-                offers[card_name]={}
+        offers, prices, days, vendors_names = {}, {}, [], []
+        for offer in graph_data:
+            card_vendor = offer['vendorName']
+            if card_vendor not in vendors_names:
+                vendors_names.append(card_vendor)
+            if card_vendor not in offers:
+                offers[card_vendor] = {}
             date = offer['date'].split('T')[0]
-            if not date in days:
+            if date not in days:
                 days.append(date)
-            if not date in offers[card_name]:
-                offers[card_name][date] = {}
-            offers[card_name][date][offer['vendorName']] = offer['cardPrice']
-            if not card_name in card_names:
-                card_names.append(card_name)
+            if date not in offers[card_vendor]:
+                offers[card_vendor][date] = {}
+            offers[card_vendor][date][offer['cardName']] = offer['cardPrice']
 
         if graph_level == 'min':
-            for card_name in card_names:
-                prices[card_name] = []
-                for day in days:
-                    vendor = min(offers[card_name][day], key=offers[card_name][day].get)
-                    prices[card_name].append(offers[card_name][day][vendor])
+            define_names_days_prices(vendors_names, days, offers, prices, mode='min')
         elif graph_level == 'max':
-            for card_name in card_names:
-                prices[card_name] = []
-                for day in days:
-                    vendor = max(offers[card_name][day], key=offers[card_name][day].get)
-                    prices[card_name].append(offers[card_name][day][vendor])
+            define_names_days_prices(vendors_names, days, offers, prices, mode='max')
+        elif graph_level == 'average':
+            define_names_days_prices(vendors_names, days, offers, prices, mode='average')
         else:
-            for card_name in card_names:
-                prices[card_name] = []
-                for day in days:
-                    prices[card_name].append(sum(offers[card_name][day].values()) // len(offers[card_name][day]))
+            print('unknown graph level')
 
-
-
-        for card_name in card_names:
-            plt.plot(days, prices[card_name], label=card_name)
-        plt.legend()
-        plt.xticks(rotation=45, ha='right')
-        plt.savefig('graphic.png')
-        plt.clf()
-    else:
+        draw_graph(vendors_names, days, prices, series, shop, graph_mode='shop', days_mode=graph_days)
+    elif submenu_title == 'for_vendor':
         url = f'http://173.18.0.3:8080/price/for-vendor?seriesName={series}&vendorName={vendor}'
         response = requests.get(url=url)
-        listik = json.loads(response.text)
+        graph_data = json.loads(response.text)
 
-        vendor_names = []
-        offers = {}
-        prices = {}
-        days = []
-        for offer in listik:
-            vendor_name = offer['vendorName']
-            if not vendor_name in offers:
-                offers[vendor_name]={}
+        offers, prices, days, shops_names = {}, {}, [], ['MVIDEO', 'CITILINK', 'DNS']
+        for offer in graph_data:
+            shop_name = offer['shopName']
+            if shop_name not in offers:
+                offers[shop_name] = {}
             date = offer['date'].split('T')[0]
-            if not date in days:
+            if date not in days:
                 days.append(date)
-            if not date in offers[vendor_name]:
-                offers[vendor_name][date] = {}
-            offers[vendor_name][date][offer['cardName']] = offer['cardPrice']
-            if not vendor_name in vendor_names:
-                vendor_names.append(vendor_name)
+            if date not in offers[shop_name]:
+                offers[shop_name][date] = {}
+            offers[shop_name][date][offer['cardName']] = offer['cardPrice']
 
         if graph_level == 'min':
-            for vendor_name in vendor_names:
-                prices[vendor_name] = []
-                for day in days:
-                    vendor = min(offers[vendor_name][day], key=offers[vendor_name][day].get)
-                    prices[vendor_name].append(offers[vendor_name][day][vendor])
+            define_names_days_prices(shops_names, days, offers, prices, mode='min')
         elif graph_level == 'max':
-            for vendor_name in vendor_names:
-                prices[vendor_name] = []
-                for day in days:
-                    vendor = max(offers[vendor_name][day], key=offers[vendor_name][day].get)
-                    prices[vendor_name].append(offers[vendor_name][day][vendor])
+            define_names_days_prices(shops_names, days, offers, prices, mode='max')
+        elif graph_level == 'average':
+            define_names_days_prices(shops_names, days, offers, prices, mode='average')
         else:
-            for vendor_name in vendor_names:
-                prices[vendor_name] = []
-                for day in days:
-                    prices[vendor_name].append(sum(offers[vendor_name][day].values()) // len(offers[vendor_name][day]))
+            print('unknown graph level')
 
-        for vendor_name in vendor_names:
-            plt.plot(days, prices[vendor_name], label=vendor_name)
-        plt.legend()
-        plt.xticks(rotation=45, ha='right')
-        plt.savefig('graphic.png')
-        plt.clf()
+        draw_graph(shops_names, days, prices, series, vendor, graph_mode='vendor', days_mode=graph_days)
+    else:
+        print('unknown_submenu')
+
+    query.answer()
+    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH)
 
     with open('graphic.png', 'rb') as photo:
         image = telegram.InputMediaPhoto(photo)
@@ -1322,10 +1353,13 @@ def graph_func(update: Update, context: CallbackContext) -> int:
         media=image
     )
 
+    series = series.replace('+', ' ')
+
     query.edit_message_caption(
         caption=f'submenu: {submenu_title}\n'
-                f'shop: {shop_title}\n'
+                f'shop: {shop}\n'
                 f'vendor: {vendor}\n'
+                f'arch: {arch}\n'
                 f'series: {series}\n'
                 f'days: {str(graph_days)}\n'
                 f'level: {graph_level}\n' + select_graph_text,
@@ -1334,6 +1368,64 @@ def graph_func(update: Update, context: CallbackContext) -> int:
 
     # Переход в состояние GRAPH_SUBMENU
     return GRAPH_SUBMENU
+
+
+def draw_graph(vendors, days, prices, series, shop, graph_mode='shop', days_mode=30):
+
+    series = series.replace('+', ' ')
+
+    plt.set_loglevel('WARNING')
+    fig = plt.figure(figsize=(23.83, 11.68), dpi=100)
+    num_days = range(len(days[-days_mode:]))
+    for card_vendor in vendors:
+        plt.plot(num_days, prices[card_vendor][-days_mode:], label=card_vendor)
+    plt.legend(bbox_to_anchor=(0.5, -0.11), loc='upper center', ncols=4)
+    plt.xlim('2022-11-20', str(datetime.date.today()))
+    plt.xticks(num_days, days[-days_mode:], rotation=45, ha='right')
+    plt.grid(axis='x', linestyle='--')
+    if graph_mode == 'shop':
+        plt.title(f'Statistics for {series} in {shop} store', fontdict={'size': 16})
+    elif graph_mode == 'vendor':
+        plt.title(f'Statistics for {shop} {series} in stores', fontdict={'size': 16})
+    plt.xlabel(f'Period: {days_mode} days', fontdict={'size': 14})
+    plt.ylabel(f'Price, RUB', fontdict={'size': 14})
+    plt.savefig('graphic.png', bbox_inches='tight')
+    plt.clf()
+    plt.close(fig)
+
+
+def define_names_days_prices(vendors, days, offers, prices, mode='min'):
+    for card_vendor in vendors:
+        prices[card_vendor] = []
+        for day in days:
+            is_from_begin = True
+            choosing_day = day
+            while offers[card_vendor].get(choosing_day) is None:
+                if choosing_day == '2022-11-20':
+                    choosing_day = list(offers[card_vendor].keys())[0]
+                    is_from_begin = False
+                    break
+                date_year, date_month, date_day = [int(i) for i in choosing_day.split('-')]
+                prev_day = str(
+                    datetime.date(
+                        date_year, date_month, date_day
+                    ) - datetime.timedelta(days=1)
+                )
+                choosing_day = prev_day
+            if is_from_begin:
+                if mode == 'min':
+                    vendor = min(offers[card_vendor][choosing_day], key=offers[card_vendor][choosing_day].get)
+                    prices[card_vendor].append(offers[card_vendor][choosing_day][vendor])
+                elif mode == 'max':
+                    vendor = max(offers[card_vendor][choosing_day], key=offers[card_vendor][choosing_day].get)
+                    prices[card_vendor].append(offers[card_vendor][choosing_day][vendor])
+                elif mode == 'average':
+                    prices[card_vendor].append(
+                        sum(offers[card_vendor][choosing_day].values()) // len(offers[card_vendor][choosing_day]))
+                else:
+                    print('unknown mode')
+            else:
+                prices[card_vendor].append(numpy.NaN)
 
 
 def help_func(update: Update, context: CallbackContext):
@@ -1350,7 +1442,12 @@ def gpu_search_func(update: Update, context: CallbackContext) -> int:
     logger.info("User <%s> entered <%s>.", user, gpu_name)
     gpu_search_list.clear()
     # Запрос gpu_name в БД
-    gpu_search_list.append(gpu_name)
+    url = f'http://173.18.0.3:8080/is-card-present?cardName={gpu_name}'
+    response = requests.get(url=url)
+    is_card_present = json.loads(response.text)
+
+    if is_card_present:
+        gpu_search_list.append(gpu_name)
 
     if len(gpu_search_list) != 0:
         gpu_search_list.reverse()
@@ -1389,7 +1486,7 @@ def gpu_info(update: Update, context: CallbackContext) -> int:
         logger.info("User chose gpu <%s>.", gpu_name)
         context.user_data[CURRENT_GPU] = gpu_name
 
-        reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH_GPU)
+        reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH_PERIODS)
 
         with open('images/shops_logo.jpg', 'rb') as photo:
             image = telegram.InputMediaPhoto(photo)
@@ -1399,7 +1496,7 @@ def gpu_info(update: Update, context: CallbackContext) -> int:
         )
 
         call.edit_message_caption(
-            caption=gpu_name,
+            caption=select_graph_text,
             reply_markup=reply_markup_keyboard
         )
 

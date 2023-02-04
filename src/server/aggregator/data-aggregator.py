@@ -315,7 +315,11 @@ def get_data_dns(date):
     options.add_experimental_option('excludeSwitches', ['enable-automation'])
     options.add_experimental_option('useAutomationExtension', False)
 
-    driver = webdriver.Chrome(chrome_options=options)
+    service = ChromeService(
+        executable_path=r'C:\Users\muhin\Documents\GitHub\gpu-prices-bot\src\server\aggregator\chromedriver.exe'
+    )
+
+    driver = webdriver.Chrome(service=service, options=options)
 
     stealth(driver,
             languages=["en-US", "en"],
@@ -729,7 +733,7 @@ def main():
 
     json_string = json.dumps(shops_list, indent=4, ensure_ascii=False, default=lambda x: x.__dict__)
     with open(f'data/offers-{date}.json', 'w', encoding='utf-8') as file:
-        file.write(json_string)
+        data = file.write(json_string)
 
     # Отправка данных на сервер
     response = requests.post(url='http://localhost:8080/insert-new-data', json=data)

@@ -27,9 +27,6 @@ def main() -> None:
                 CallbackQueryHandler(gpu_info, pattern=Filters.text),
             ],
             GRAPH_SUBMENU_ON_GPU: [
-                CallbackQueryHandler(graph_for_gpu_func, pattern='^' + str(GRAPH_MIN_GPU) + '$'),
-                CallbackQueryHandler(graph_for_gpu_func, pattern='^' + str(GRAPH_AVERAGE_GPU) + '$'),
-                CallbackQueryHandler(graph_for_gpu_func, pattern='^' + str(GRAPH_MAX_GPU) + '$'),
                 CallbackQueryHandler(graph_for_gpu_func, pattern='^' + str(SHOW_30_DAYS_GPU) + '$'),
                 CallbackQueryHandler(graph_for_gpu_func, pattern='^' + str(SHOW_60_DAYS_GPU) + '$'),
                 CallbackQueryHandler(graph_for_gpu_func, pattern='^' + str(SHOW_90_DAYS_GPU) + '$'),
