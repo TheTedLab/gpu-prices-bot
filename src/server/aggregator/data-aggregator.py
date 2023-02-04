@@ -733,7 +733,7 @@ def main():
 
     json_string = json.dumps(shops_list, indent=4, ensure_ascii=False, default=lambda x: x.__dict__)
     with open(f'data/offers-{date}.json', 'w', encoding='utf-8') as file:
-        file.write(json_string)
+        data = file.write(json_string)
 
     # Отправка данных на сервер
     response = requests.post(url='http://localhost:8080/insert-new-data', json=data)
