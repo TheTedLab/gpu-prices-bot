@@ -19,7 +19,8 @@ import java.util.stream.Collectors;
 @Getter
 @Slf4j
 public class DataServiceImpl implements DataService {
-    private static final long NINETY_DAYS = 90L * 24 * 60 * 60 * 1000; // days-hours-minutes-seconds-milliseconds
+    private static final long ONE_DAY = 24L * 60 * 60 * 1000; // hours-minutes-seconds-milliseconds
+    private static final long NINETY_DAYS = 90L * ONE_DAY; // days * hours-minutes-seconds-milliseconds
 
     private ArchitectureRepository architectureRepository;
     private CardRepository cardRepository;
@@ -113,19 +114,26 @@ public class DataServiceImpl implements DataService {
     }
 
     @Override
-    public Map<Integer, OfferDto> getPopularityForShop(String shopName) {
+    public List<Map<Integer, OfferDto>> getPopularityForShop(String shopName) {
         Optional<Shop> shop = shopRepository.findShopByName(shopName);
+        Date endDate = new Date();
+        Date startDate = new Date(endDate.getTime() - NINETY_DAYS);
+        List<Map<Integer, OfferDto>> result = new ArrayList<>();
         if (shop.isPresent()) {
-            PageRequest pageRequest = PageRequest.of(0, 10);
-            Page<Offer> offers = offerRepository.findByShopIdAndDateOrderByCardPopularityAsc(shop.get().getId(),
-                    new Date(), pageRequest);
-            Map<Integer, OfferDto> map = new HashMap<>();
-            offers.forEach((o) -> map.put(o.getCardPopularity(), mapOfferToOfferDto(o)));
-            log.info("Found {} offers of 10", map.size());
-            return map;
+            while (!startDate.equals(endDate)) {
+                PageRequest pageRequest = PageRequest.of(0, 10);
+                Page<Offer> offers = offerRepository.findByShopIdAndDateOrderByCardPopularityAsc(shop.get().getId(),
+                        startDate, pageRequest);
+                Map<Integer, OfferDto> map = new HashMap<>();
+                offers.forEach((o) -> map.put(o.getCardPopularity(), mapOfferToOfferDto(o)));
+                log.info("Found {} offers of 10", map.size());
+                result.add(map);
+                startDate.setTime(startDate.getTime() + ONE_DAY);
+            }
+            return result;
         }
         log.info("No offers found");
-        return new HashMap<>();
+        return result;
     }
 
     private Offer mapOfferDtoToOffer(OfferDto offerDto) {

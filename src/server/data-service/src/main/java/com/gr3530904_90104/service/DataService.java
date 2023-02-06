@@ -12,5 +12,5 @@ public interface DataService {
     List<OfferDto> getPriceForVendor(String cardName, String vendorName);
     List<OfferDto> getPriceForShop(String cardName, String shopName);
     Map<String, Map<Integer, OfferDto>> getPopularityForVendor(String vendorName);
-    Map<Integer, OfferDto> getPopularityForShop(String shopName);
+    List<Map<Integer, OfferDto>> getPopularityForShop(String shopName);
 }
