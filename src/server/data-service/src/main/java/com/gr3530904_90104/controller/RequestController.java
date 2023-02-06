@@ -83,10 +83,10 @@ public class RequestController {
     }
 
     @GetMapping("/popularity/for-shop")
-    public ResponseEntity<Map<Integer, OfferDto>> getPopularityForShop(@RequestParam("shopName") String shopName) {
+    public ResponseEntity<List<Map<Integer, OfferDto>>> getPopularityForShop(@RequestParam("shopName") String shopName) {
         try {
             log.info("GET /popularity/for-shop?shopName={}", shopName);
-            Map<Integer, OfferDto> response = dataService.getPopularityForShop(shopName);
+            List<Map<Integer, OfferDto>> response = dataService.getPopularityForShop(shopName);
             log.debug("response: {}", response);
             return new ResponseEntity<>(response, !response.isEmpty() ? HttpStatus.OK : HttpStatus.NOT_FOUND);
         } catch (Exception e) {
