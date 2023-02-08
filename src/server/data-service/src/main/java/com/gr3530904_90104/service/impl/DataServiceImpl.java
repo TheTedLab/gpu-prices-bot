@@ -120,7 +120,7 @@ public class DataServiceImpl implements DataService {
         Date startDate = new Date(endDate.getTime() - NINETY_DAYS);
         List<Map<Integer, OfferDto>> result = new ArrayList<>();
         if (shop.isPresent()) {
-            while (!startDate.equals(endDate)) {
+            while (startDate.compareTo(endDate) <= 0) {
                 PageRequest pageRequest = PageRequest.of(0, 10);
                 Page<Offer> offers = offerRepository.findByShopIdAndDateOrderByCardPopularityAsc(shop.get().getId(),
                         startDate, pageRequest);
