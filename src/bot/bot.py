@@ -286,7 +286,7 @@ def main() -> None:
         },
         fallbacks=[
             CommandHandler('start', start),
-            MessageHandler(Filters.text, error_attention),
+            MessageHandler(Filters.text & ~Filters.command, error_attention),
         ],
     )
 
