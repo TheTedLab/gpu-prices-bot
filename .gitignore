@@ -270,7 +270,15 @@ cython_debug/
 /.idea/compiler.xml
 /.idea/encodings.xml
 /.idea/jarRepositories.xml
-/src/server/java/data-service.iml
+/src/server/java/data-com.gr3530904_90104.service.iml
+/src/server/data-service/.gradle/
 
 # Headers and cookies config
 /src/server/aggregator/config.py
+/.idea/codeStyles/codeStyleConfig.xml
+
+# Webdriver
+/src/server/aggregator/chromedriver.exe
+
+#Autorization token for bot
+/src/bot/autorization.py

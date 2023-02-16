@@ -1,0 +1,5398 @@
+{
+    "MVIDEO": [
+        {
+            "cardName": "GEFORCE RTX 3060 TI GAMING X 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 41999,
+            "cardPopularity": 1,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 VENTUS 3X OC 12GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 40799,
+            "cardPopularity": 2,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 VENTUS 3X 8G 256B",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 59999,
+            "cardPopularity": 3,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 VENTUS 3X 12G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 84999,
+            "cardPopularity": 4,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SC ULTRA GAMING 6GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660",
+            "shopName": "MVIDEO",
+            "vendorName": "EVGA",
+            "cardPrice": 25999,
+            "cardPopularity": 5,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 OC 4GB 128-BIT GAMING",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "MVIDEO",
+            "vendorName": "ZOTAC",
+            "cardPrice": 17999,
+            "cardPopularity": 6,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2060 GAMING AMP 6GB 192BIT",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "MVIDEO",
+            "vendorName": "ZOTAC",
+            "cardPrice": 35999,
+            "cardPopularity": 7,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE PALIT RTX 3090 GAMINGPRO 24G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3090",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 116999,
+            "cardPopularity": 8,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 210 1GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE 210",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 3599,
+            "cardPopularity": 9,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 730 2GB SILENT LP",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 730",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 5599,
+            "cardPopularity": 10,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TWIN EDGE OC 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "MVIDEO",
+            "vendorName": "ZOTAC",
+            "cardPrice": 57999,
+            "cardPopularity": 11,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 12GB 192-BIT ATX",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 44999,
+            "cardPopularity": 12,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3090 GAMING OC-24G + МОНИТОР AORUS FV43U-EK",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3090",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 269999,
+            "cardPopularity": 13,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE N730K-2GD3/LP",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 730",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 5199,
+            "cardPopularity": 14,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 SUPER GAMING X 4G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650 SUPER",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 24999,
+            "cardPopularity": 15,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6700-XT-MECH-2X",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 62999,
+            "cardPopularity": 16,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI 8GB XLR8 GAMING UPRISING EDIT",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PNY",
+            "cardPrice": 66999,
+            "cardPopularity": 17,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 8GB DUAL FAN",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "MVIDEO",
+            "vendorName": "PNY",
+            "cardPrice": 59999,
+            "cardPopularity": 18,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6600 XT SPEEDSTER SWIFT 210 8GB",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600 XT",
+            "shopName": "MVIDEO",
+            "vendorName": "XFX",
+            "cardPrice": 41999,
+            "cardPopularity": 19,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3090 GAMING TRINITY 24GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3090",
+            "shopName": "MVIDEO",
+            "vendorName": "ZOTAC",
+            "cardPrice": 119999,
+            "cardPopularity": 20,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI TRINITY OC 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "ZOTAC",
+            "cardPrice": 71999,
+            "cardPopularity": 21,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3090 ICHILL X4 24GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3090",
+            "shopName": "MVIDEO",
+            "vendorName": "INNO3D",
+            "cardPrice": 129999,
+            "cardPopularity": 22,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 730 4GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 730",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 6999,
+            "cardPopularity": 23,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE VCX RTX 3050 VENTUS 2X OC 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 26999,
+            "cardPopularity": 24,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 GAMING X 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 27799,
+            "cardPopularity": 25,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6600 XT 8GB NITRO+",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600 XT",
+            "shopName": "MVIDEO",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 57999,
+            "cardPopularity": 26,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 10GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 87499,
+            "cardPopularity": 27,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 VENTUS 3X OC 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 68499,
+            "cardPopularity": 28,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 4GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 21799,
+            "cardPopularity": 29,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GV-N3070GAMING OC-8GD",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 58999,
+            "cardPopularity": 30,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 DUAL 12G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 38999,
+            "cardPopularity": 31,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI VENTUS 3X 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 59999,
+            "cardPopularity": 32,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE PA-RTX 2060 SUPER DUAL 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060 SUPER",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 42799,
+            "cardPopularity": 33,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER VENTUS XS OC 6GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 53199,
+            "cardPopularity": 34,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 GAMING Z TRIO 12G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 89999,
+            "cardPopularity": 35,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6600 8GB PULSE",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600",
+            "shopName": "MVIDEO",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 35899,
+            "cardPopularity": 36,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI VISION OC 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 77499,
+            "cardPopularity": 37,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI GAMING OC 8GB REV 2.0",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 41499,
+            "cardPopularity": 38,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 TI VENTUS 12G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 89999,
+            "cardPopularity": 39,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 GAMING OC 10G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 130999,
+            "cardPopularity": 40,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE AORUS RTX 3080 TI MASTER 12GВ",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 139999,
+            "cardPopularity": 41,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 48999,
+            "cardPopularity": 42,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 730 N730-2GD3V2",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 730",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 5999,
+            "cardPopularity": 43,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2060 6GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 41299,
+            "cardPopularity": 44,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 VENTUS 3X 10GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 159999,
+            "cardPopularity": 45,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI VENTUS 3X OC 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 109999,
+            "cardPopularity": 46,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI VENTUS 2X OC 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 59999,
+            "cardPopularity": 47,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE AORUS RTX 3070 TI MASTER 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 111999,
+            "cardPopularity": 48,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 VENTUS 3X PLUS 10GB OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 73999,
+            "cardPopularity": 49,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2060 VENTUS 12G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 38999,
+            "cardPopularity": 50,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 VENTUS 3X PLUS 12GB OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 83999,
+            "cardPopularity": 51,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6500 XT MECH 2X 4G OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 23199,
+            "cardPopularity": 52,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 GAMING OC-8G + МОНИТОР AORUS FI27Q-X-EK",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 149990,
+            "cardPopularity": 53,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI GAMEROCK OC 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 86499,
+            "cardPopularity": 54,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 53999,
+            "cardPopularity": 55,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI VISION 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 81999,
+            "cardPopularity": 56,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 91999,
+            "cardPopularity": 57,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 69499,
+            "cardPopularity": 58,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 12GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 44499,
+            "cardPopularity": 59,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 8GB GV-N3050GAMING",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 44999,
+            "cardPopularity": 60,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 8GB GAMING Z TRIO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 80999,
+            "cardPopularity": 61,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI 8GB GAMING X TRIO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 122999,
+            "cardPopularity": 62,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 12GB GAMINGPRO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 111499,
+            "cardPopularity": 63,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6700 XT PULSE 12GB",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "MVIDEO",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 105999,
+            "cardPopularity": 64,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE PA-GTX 1660 TI DUAL 6GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 24599,
+            "cardPopularity": 65,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE PA-GTX 1660 TI DUAL OC 6GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 55999,
+            "cardPopularity": 66,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2060 6GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 27999,
+            "cardPopularity": 67,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6700 XT GAMING OC 12G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 81999,
+            "cardPopularity": 68,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3090 GAMING X TRIO 24G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3090",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 119999,
+            "cardPopularity": 69,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI GAMINGPRO 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 79499,
+            "cardPopularity": 70,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI SUPRIM X 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 162999,
+            "cardPopularity": 71,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI 8GB DUAL OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 59799,
+            "cardPopularity": 72,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 TI STORMX 6GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 25999,
+            "cardPopularity": 73,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6600 XT EAGLE 8G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600 XT",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 47499,
+            "cardPopularity": 74,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6600 XT GAMING 8G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600 XT",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 58699,
+            "cardPopularity": 75,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 D6 4G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 27999,
+            "cardPopularity": 76,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6600 EAGLE 8G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 32299,
+            "cardPopularity": 77,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 GAMING 12G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 147999,
+            "cardPopularity": 78,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 GAMING X 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 45999,
+            "cardPopularity": 79,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 VENTUS 2X 8G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 30999,
+            "cardPopularity": 80,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 VENTUS 3X PLUS OC 10G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 77999,
+            "cardPopularity": 81,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI DUAL OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 120999,
+            "cardPopularity": 82,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE PA-RTX 3070 GAMINGPRO 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 121499,
+            "cardPopularity": 83,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE PA-RTX 2060 DUAL 6G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 44399,
+            "cardPopularity": 84,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 TI GAMEROCK 12GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 185999,
+            "cardPopularity": 85,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE PA-RTX 3070 JETSTREAM 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 106999,
+            "cardPopularity": 86,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE PA-GTX 1650 GP 4G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 17299,
+            "cardPopularity": 87,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE AORUS RTX 3080 MASTER 10GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 82999,
+            "cardPopularity": 88,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE PA-GTX 1050 TI STORMX 4G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1050 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 13999,
+            "cardPopularity": 89,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI GAMEROCK 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 74999,
+            "cardPopularity": 90,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6900 XT GAMING 16G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6900 XT",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 165499,
+            "cardPopularity": 91,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 GAMING Z TRIO 10G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 225499,
+            "cardPopularity": 92,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE PA-RTX 3080 GAMEROCK 10G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 176999,
+            "cardPopularity": 93,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE PA-GT 1030 2G D4",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 1030",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 13999,
+            "cardPopularity": 94,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI DUAL 8GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 87999,
+            "cardPopularity": 95,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 VENTUS 2X 12G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 54999,
+            "cardPopularity": 96,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 DUAL OC 12G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 42899,
+            "cardPopularity": 97,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3090 GAMINGPRO 24G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3090",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 299999,
+            "cardPopularity": 98,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER GP 6G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 28999,
+            "cardPopularity": 99,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER GP OC 6G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 25999,
+            "cardPopularity": 100,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE PA-GTX 1660 SUPER STORMX 6G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 21999,
+            "cardPopularity": 101,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GV-N166SOC-6GD",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 39999,
+            "cardPopularity": 102,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 OC 4G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 29999,
+            "cardPopularity": 103,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER GAMING X",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 43399,
+            "cardPopularity": 104,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 12GB PA-RTX3080 GAMEROCK",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 159999,
+            "cardPopularity": 105,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 8GB PA-RTX3050 DUAL",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 43999,
+            "cardPopularity": 106,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6800 XT GAMING X TRIO 16G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6800 XT",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 142999,
+            "cardPopularity": 107,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON PHANTOM GAMING D RX 580 8G OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 580",
+            "shopName": "MVIDEO",
+            "vendorName": "ASROCK",
+            "cardPrice": 49999,
+            "cardPopularity": 108,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 TI GAMINGPRO 12G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "PALIT",
+            "cardPrice": 113999,
+            "cardPopularity": 109,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1050 TI D5 4G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1050 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 20199,
+            "cardPopularity": 110,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1080 TI WATERFORCEWB XTREME EDITION 1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1080 TI",
+            "shopName": "MVIDEO",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 94790,
+            "cardPopularity": 111,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3090 VENTUS 3X 24G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3090",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 134499,
+            "cardPopularity": 112,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2060 VENTUS 12G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "MVIDEO",
+            "vendorName": "MSI",
+            "cardPrice": 49990,
+            "cardPopularity": 113,
+            "date": "2022-11-24"
+        }
+    ],
+    "CITILINK": [
+        {
+            "cardName": "GEFORCE RTX 2060 SUPER PA-RTX2060 DUAL 8G NO LED",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 28990,
+            "cardPopularity": 1,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI PA-RTX3060 DUAL 8G V1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 35990,
+            "cardPopularity": 2,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI PA-RTX3060 DUAL OC 8G V1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 35990,
+            "cardPopularity": 3,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER PA-GTX1660 GP OC 6G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 22590,
+            "cardPopularity": 4,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 PA-RTX3050 DUAL OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 25790,
+            "cardPopularity": 5,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI PA-RTX3060 DUAL 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 35990,
+            "cardPopularity": 6,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI PA-RTX3070 GAMINGPRO 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 50990,
+            "cardPopularity": 7,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2060 SUPER VENTUS GP OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 35790,
+            "cardPopularity": 8,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 TI PA-GTX1660 DUAL 6G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 23190,
+            "cardPopularity": 9,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 PA-GTX1650 GP 4G D6",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 13990,
+            "cardPopularity": 10,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 GV-N3060VISION OC-12GD 2.0 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 34990,
+            "cardPopularity": 11,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 PA-GTX1650 GP OC 4G D6",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 14990,
+            "cardPopularity": 12,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1050 TI PA-GTX1050 STORMX 4G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1050 TI",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 13590,
+            "cardPopularity": 13,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER PA-GTX1660 GP 6G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 21790,
+            "cardPopularity": 14,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 GV-N3050EAGLE OC-8GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 24990,
+            "cardPopularity": 15,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI GV-N306TVISION OC-8GD 2.0 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 41390,
+            "cardPopularity": 16,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 GV-N3050GAMING OC-8GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 27590,
+            "cardPopularity": 17,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI PA-RTX3070 GAMEROCK OC 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 53990,
+            "cardPopularity": 18,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER PA-GTX1660 STORMX 6G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 19190,
+            "cardPopularity": 19,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 PA-RTX3070 GAMINGPRO 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 44990,
+            "cardPopularity": 20,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 PA-RTX3070 GAMINGPRO OC 8G V1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 45590,
+            "cardPopularity": 21,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER VENTUS XS OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 23990,
+            "cardPopularity": 22,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2060 GV-N2060D6-6GD",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 26990,
+            "cardPopularity": 23,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1630 PA-GTX1630 DUAL 4G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1630",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 11490,
+            "cardPopularity": 24,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER PA-GTX1660 STORMX 6G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 19590,
+            "cardPopularity": 25,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 D6 VENTUS XS OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 15690,
+            "cardPopularity": 26,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER GAMING X",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 24990,
+            "cardPopularity": 27,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 PA-GTX1650 STORMX 4G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 12490,
+            "cardPopularity": 28,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 PA-RTX3070 GAMEROCK 8G V1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 43990,
+            "cardPopularity": 29,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 PA-RTX3070 GAMEROCK OC 8G V1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 44790,
+            "cardPopularity": 30,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6400 GV-R64EAGLE-4GD",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6400",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 13490,
+            "cardPopularity": 31,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI GV-N306TEAGLE OC-8GD 2.0 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 39590,
+            "cardPopularity": 32,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER GAMING",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 24790,
+            "cardPopularity": 33,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2060 VENTUS GP OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 28790,
+            "cardPopularity": 34,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI PA-RTX3070 GAMEROCK 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 50590,
+            "cardPopularity": 35,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI DUAL-RTX3060TI-O8G-V2 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 39990,
+            "cardPopularity": 36,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 550 AERO ITX 4G OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 550",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 8390,
+            "cardPopularity": 37,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 PA-RTX3080 GAMEROCK 10G V1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 69990,
+            "cardPopularity": 38,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI VENTUS 2X 8G OCV1 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 40590,
+            "cardPopularity": 39,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 1030 AERO ITX 2GD4 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 1030",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 6990,
+            "cardPopularity": 40,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 GV-N3050EAGLE-8GD",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 24790,
+            "cardPopularity": 41,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6750 XT GV-R675XTAORUS E-12GD",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6750 XT",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 45590,
+            "cardPopularity": 42,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 1030 GV-N1030D5-2GL",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 1030",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 7790,
+            "cardPopularity": 43,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 730 GT730-SL-2GD5-BRK",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 730",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 6090,
+            "cardPopularity": 44,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 1030 PA-GT1030 2GD4",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 1030",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 6290,
+            "cardPopularity": 45,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6650 XT DUAL-RX6650XT-O8G OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 34190,
+            "cardPopularity": 46,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 1030 PH-GT1030-O2G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 1030",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 7490,
+            "cardPopularity": 47,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 730 PA-GT730K-2GD3H",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 730",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 5190,
+            "cardPopularity": 48,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6500 XT GV-R65XTEAGLE-4GD",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 16290,
+            "cardPopularity": 49,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6500 XT MECH 2X 4G OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 16490,
+            "cardPopularity": 50,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 GV-N1650OC-4GL OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 13390,
+            "cardPopularity": 51,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 VENTUS 3X 8G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 53990,
+            "cardPopularity": 52,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 VENTUS XS 4G OCV1 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 14990,
+            "cardPopularity": 53,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI VENTUS 3X 8G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 59990,
+            "cardPopularity": 54,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI VENTUS 2X 8G V1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 39890,
+            "cardPopularity": 55,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 GV-N1656OC-4GL OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 14890,
+            "cardPopularity": 56,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 PA-RTX3080 GAMINGPRO OC 12G V1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 77990,
+            "cardPopularity": 57,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6500 XT GV-R65XTEAGLE-4GD",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 16190,
+            "cardPopularity": 58,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 TI PA-GTX1660 STORMX 6G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 23990,
+            "cardPopularity": 59,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 DUAL-RTX3050-O8G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 27590,
+            "cardPopularity": 60,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 1030 PA-GT1030 2GD4",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 1030",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 6090,
+            "cardPopularity": 61,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 PA-RTX3070 JETSTREAM OC 8G V1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 45990,
+            "cardPopularity": 62,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6400 GV-R64D6-4GL",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6400",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 13190,
+            "cardPopularity": 63,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 730 N730K-2GD3H/LP",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 730",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 5190,
+            "cardPopularity": 64,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 GV-N3070EAGLE-8GD 2.0",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 45990,
+            "cardPopularity": 65,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6750 XT GV-R675XTGAMING OC-12GD OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6750 XT",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 44590,
+            "cardPopularity": 66,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 GV-N1656OC-4GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 15290,
+            "cardPopularity": 67,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI GV-N306TWF2OC-8GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 38790,
+            "cardPopularity": 68,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6500 XT AXRX 4GBD6-DH",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "CITILINK",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 14190,
+            "cardPopularity": 69,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2060 SUPER VENTUS OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 30990,
+            "cardPopularity": 70,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 GV-N3070VISION OC-8GD 2.0 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 49590,
+            "cardPopularity": 71,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 730 GT730-4H-SL-2GD5",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 730",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 6350,
+            "cardPopularity": 72,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 GV-N3050AORUS E-8GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 28390,
+            "cardPopularity": 73,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1630 GV-N1630OC-4GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1630",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 11790,
+            "cardPopularity": 74,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6400 DUAL-RX6400-4G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6400",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 14590,
+            "cardPopularity": 75,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6500 XT DUAL-RX6500XT-O4G OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 16990,
+            "cardPopularity": 76,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI TUF-RTX3060TI-O8G-V2-GAMING OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 43990,
+            "cardPopularity": 77,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2060 DUAL-RTX2060-12G-EVO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 33190,
+            "cardPopularity": 78,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER PH-GTX1660S-O6G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 22990,
+            "cardPopularity": 79,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI DUAL-RTX3060TI-O8G-MINI-V2 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 38990,
+            "cardPopularity": 80,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1630 VENTUS XS 4G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1630",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 11690,
+            "cardPopularity": 81,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6700 XT GV-R67XTEAGLE-12GD",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 41590,
+            "cardPopularity": 82,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 550 PH-RX550-4G-EVO",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 550",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 8890,
+            "cardPopularity": 83,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 TI GV-N308TVISION OC-12GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080 TI",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 98590,
+            "cardPopularity": 84,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 VENTUS XS 4G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 14890,
+            "cardPopularity": 85,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3090 PA-RTX3090 GAMINGPRO 24G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3090",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 107990,
+            "cardPopularity": 86,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 1030 GV-N1030D4-2GL",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 1030",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 7190,
+            "cardPopularity": 87,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 GV-N1656D6-4GD",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 14990,
+            "cardPopularity": 88,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3090 PA-RTX3090 GAMINGPRO OC 24G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3090",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 108990,
+            "cardPopularity": 89,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3090 TI PA-RTX3090 GAMEROCK",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3090 TI",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 123990,
+            "cardPopularity": 90,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON 550 PH-550-2G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON 550",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 7990,
+            "cardPopularity": 91,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2060 DUAL-RTX2060-O6G-EVO OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 29990,
+            "cardPopularity": 92,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 PH-GTX1650-O4GD6-P OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 14990,
+            "cardPopularity": 93,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI GV-N306TEAGLE-8GD 2.0",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 40990,
+            "cardPopularity": 94,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6700 XT AXRX 12GBD6-3DHL",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "CITILINK",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 43990,
+            "cardPopularity": 95,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 AERO ITX 8G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 25990,
+            "cardPopularity": 96,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI TWIN FAN 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 39990,
+            "cardPopularity": 97,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6650 XT ROG-STRIX-RX6650XT-O8G-GAMING OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 36590,
+            "cardPopularity": 98,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER DUAL-GTX1660S-6G-EVO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 25990,
+            "cardPopularity": 99,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 560 DUAL-RX560-4G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 560",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 11990,
+            "cardPopularity": 100,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 PH-GTX1650-O4GD6 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 15990,
+            "cardPopularity": 101,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6700 XT DUAL-RX6700XT-12G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 44990,
+            "cardPopularity": 102,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6500 XT TUF-RX6500XT-O4G-GAMING OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 19290,
+            "cardPopularity": 103,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI AERO ITX 8G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 37990,
+            "cardPopularity": 104,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6700 AXRX 10GBD6-3DH/OC OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700",
+            "shopName": "CITILINK",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 34190,
+            "cardPopularity": 105,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 SUPER TUF-GTX1650S-O4G-GAMING OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 24590,
+            "cardPopularity": 106,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 SUPER AERO ITX",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 23590,
+            "cardPopularity": 107,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6700 XT GAMING X 12G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 46990,
+            "cardPopularity": 108,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6800 AXRX 16GBD6-3DHR/OC OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6800",
+            "shopName": "CITILINK",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 57990,
+            "cardPopularity": 109,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6650 XT GAMING X 8G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 33990,
+            "cardPopularity": 110,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6750 XT DUAL-RX6750XT-O12G OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6750 XT",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 46990,
+            "cardPopularity": 111,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6650 XT AXRX 8GBD6-3DHLV3/OC OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "CITILINK",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 32890,
+            "cardPopularity": 112,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6800 GAMING Z TRIO 16G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6800",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 56990,
+            "cardPopularity": 113,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6750 XT AXRX 12GBD6-3DHE/OC OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6750 XT",
+            "shopName": "CITILINK",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 45590,
+            "cardPopularity": 114,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6700 XT DUAL-RX6700XT-O12G OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 45990,
+            "cardPopularity": 115,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6800 AXRX 16GBD6-3DH/OC OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6800",
+            "shopName": "CITILINK",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 49990,
+            "cardPopularity": 116,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX A4500",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "RTX A4500",
+            "shopName": "CITILINK",
+            "vendorName": "PNY",
+            "cardPrice": 191790,
+            "cardPopularity": 117,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TWIN FAN 8G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 53990,
+            "cardPopularity": 118,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 PH-GTX1650-O4G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 15990,
+            "cardPopularity": 119,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 PA-RTX3050 DUAL",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 25590,
+            "cardPopularity": 120,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 GV-N3060GAMING OC-12GD 2.0 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 38590,
+            "cardPopularity": 121,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 GV-N3060EAGLE OC-12GD 2.0 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 36590,
+            "cardPopularity": 122,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3050 VENTUS 2X 8G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 28990,
+            "cardPopularity": 123,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GT 1030 GV-N1030OC-2GI OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 1030",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 7790,
+            "cardPopularity": 124,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI GAMING X 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 41590,
+            "cardPopularity": 125,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 TI GV-N166TOC-6GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 29990,
+            "cardPopularity": 126,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6600 DUAL-RX6600-8G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 28590,
+            "cardPopularity": 127,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1050 TI 4GT LP",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1050 TI",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 12990,
+            "cardPopularity": 128,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6650 XT GV-R665XTEAGLE-8GD",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 31990,
+            "cardPopularity": 129,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 TI GV-N307TGAMING OC-8GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 55990,
+            "cardPopularity": 130,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 TI PA-RTX3060 DUAL 8G V1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 34990,
+            "cardPopularity": 131,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 TI PA-RTX3080 GAMINGPRO 12GB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080 TI",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 94990,
+            "cardPopularity": 132,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 GV-N3070EAGLE OC-8GD 2.0 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 48990,
+            "cardPopularity": 133,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 PA-RTX3060 STORMX 12G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 31990,
+            "cardPopularity": 134,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 GV-N1650OC-4GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 14990,
+            "cardPopularity": 135,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2060 SUPER GV-N206SWF2OC-8GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 34990,
+            "cardPopularity": 136,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 DUAL-GTX1650-O4G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 15690,
+            "cardPopularity": 137,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3080 PA-RTX3080 GAMINGPRO 12G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 75990,
+            "cardPopularity": 138,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3060 GV-N3060EAGLE-12GD 2.0",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 35990,
+            "cardPopularity": 139,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 TUF-GTX1650-O4GD6-P-GAMING",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 15990,
+            "cardPopularity": 140,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1050 TI 4GT OCV1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1050 TI",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 13490,
+            "cardPopularity": 141,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 5700 XT 11293-03-40G NITRO+ 8G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 5700 XT",
+            "shopName": "CITILINK",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 25990,
+            "cardPopularity": 142,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 580 11265-05-20G PULSE 8G OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 580",
+            "shopName": "CITILINK",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 18910,
+            "cardPopularity": 143,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 PA-RTX3070 GAMINGPRO OC 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 38990,
+            "cardPopularity": 144,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 TI GV-N166TOC-6GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 19490,
+            "cardPopularity": 145,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3090 PA-RTX3090 GAMINGPRO 24G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3090",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 70190,
+            "cardPopularity": 146,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 TI GV-N166TOC-6GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 19490,
+            "cardPopularity": 147,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2080 SUPER GV-N208SAORUS W-8GC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2080 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 46440,
+            "cardPopularity": 148,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 3070 PA-RTX3070 JETSTREAM 8G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 40128,
+            "cardPopularity": 149,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2080 SUPER GV-N208SWF3OC-8GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2080 SUPER",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 39815,
+            "cardPopularity": 150,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX 2080 TI GV-N208TAORUS X-11GC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2080 TI",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 50068,
+            "cardPopularity": 151,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 TI GAMING X 6G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 27161,
+            "cardPopularity": 152,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6650 XT AXRX 8GBD6-3DHL/OC OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "CITILINK",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 32590,
+            "cardPopularity": 153,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1630 AERO ITX 4G OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1630",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 11790,
+            "cardPopularity": 154,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6650 XT AXRX 8GBD6-3DHLV2/OC OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "CITILINK",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 32890,
+            "cardPopularity": 155,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6400 AXRX LP 4GBD6-DH",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6400",
+            "shopName": "CITILINK",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 11990,
+            "cardPopularity": 156,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 6400 PH-RX6400-4G",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6400",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 13590,
+            "cardPopularity": 157,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE RTX A5000 490-BGYC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "RTX A5000",
+            "shopName": "CITILINK",
+            "vendorName": "DELL",
+            "cardPrice": 179990,
+            "cardPopularity": 158,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 D6 VENTUS XS",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "MSI",
+            "cardPrice": 15190,
+            "cardPopularity": 159,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 TUF-GTX1650-4GD6-GAMING",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 15990,
+            "cardPopularity": 160,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 TUF-GTX1650-O4GD6-GAMING OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 15990,
+            "cardPopularity": 161,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1660 PA-GTX1660 STORMX 6G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660",
+            "shopName": "CITILINK",
+            "vendorName": "PALIT",
+            "cardPrice": 24990,
+            "cardPopularity": 162,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 DUAL-GTX1650-4G",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "ASUS",
+            "cardPrice": 15590,
+            "cardPopularity": 163,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GEFORCE GTX 1650 GV-N1650IXOC-4GD OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "CITILINK",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 14890,
+            "cardPopularity": 164,
+            "date": "2022-11-24"
+        }
+    ],
+    "DNS": [
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3070 GAMING OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 51499,
+            "cardPopularity": 1,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "KFA2 GEFORCE RTX 3060 X BLACK (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "KFA2",
+            "cardPrice": 35559,
+            "cardPopularity": 2,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3070 TI GAMINGPRO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 51149,
+            "cardPopularity": 3,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3060 DUAL OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 30340,
+            "cardPopularity": 4,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE GTX 1660 SUPER GAMING PRO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 21999,
+            "cardPopularity": 5,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3070 TI GAMING OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 56999,
+            "cardPopularity": 6,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 TI GAMING OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 43999,
+            "cardPopularity": 7,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "KFA2 GEFORCE RTX 3060 TI X BLACK (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "KFA2",
+            "cardPrice": 39999,
+            "cardPopularity": 8,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3050 GAMING OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 26528,
+            "cardPopularity": 9,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 TI EAGLE OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 39999,
+            "cardPopularity": 10,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "KFA2 GEFORCE RTX 3050 X BLACK",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "KFA2",
+            "cardPrice": 26999,
+            "cardPopularity": 11,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3050 EAGLE",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 26999,
+            "cardPopularity": 12,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "KFA2 GEFORCE GTX 1660 SUPER 1-CLICK OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "KFA2",
+            "cardPrice": 19999,
+            "cardPopularity": 13,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 GAMING OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 38999,
+            "cardPopularity": 14,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3050 DUAL",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 25499,
+            "cardPopularity": 15,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 6600 FIGHTER",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 26999,
+            "cardPopularity": 16,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 580 RED DRAGON OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 580",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 15499,
+            "cardPopularity": 17,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3070 EAGLE OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 41694,
+            "cardPopularity": 18,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 GAMING X (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 36345,
+            "cardPopularity": 19,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3080 GAMING OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 66999,
+            "cardPopularity": 20,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3070 TI GAMEROCK OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 56999,
+            "cardPopularity": 21,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "KFA2 GEFORCE GTX 1630",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1630",
+            "shopName": "DNS",
+            "vendorName": "KFA2",
+            "cardPrice": 10999,
+            "cardPopularity": 22,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 2060 D6 6G (REV. 2.0)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 25999,
+            "cardPopularity": 23,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1660 SUPER D6",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 19732,
+            "cardPopularity": 24,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 VENTUS 2X OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 35999,
+            "cardPopularity": 25,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "KFA2 GEFORCE GTX 1650 EX (1-CLICK OC)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "KFA2",
+            "cardPrice": 12799,
+            "cardPopularity": 26,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "SAPPHIRE AMD RADEON RX 6600 PULSE",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600",
+            "shopName": "DNS",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 22899,
+            "cardPopularity": 27,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 VISION OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 35299,
+            "cardPopularity": 28,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 580 RED DRAGON",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 580",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 13837,
+            "cardPopularity": 29,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3070 TI AORUS MASTER",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 65999,
+            "cardPopularity": 30,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE GTX 1660 SUPER STORMX",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 20299,
+            "cardPopularity": 31,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1660 TI D6",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 22899,
+            "cardPopularity": 32,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3080 TI GAMINGPRO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080 TI",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 98999,
+            "cardPopularity": 33,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE GTX 1650 GAMING PRO OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 14565,
+            "cardPopularity": 34,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 2060 SUPER DUAL",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060 SUPER",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 35999,
+            "cardPopularity": 35,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "KFA2 GEFORCE RTX 3060 TI CORE (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "KFA2",
+            "cardPrice": 34499,
+            "cardPopularity": 36,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3070 TI GAMEROCK",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 55999,
+            "cardPopularity": 37,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AMD RADEON RX 6650 XT GAMING OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 33499,
+            "cardPopularity": 38,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3060 DUAL (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 34999,
+            "cardPopularity": 39,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AMD RADEON RX 6600 EAGLE",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 26999,
+            "cardPopularity": 40,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3080 TI EAGLE OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 98999,
+            "cardPopularity": 41,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "KFA2 GEFORCE RTX 3050 CORE",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "KFA2",
+            "cardPrice": 23499,
+            "cardPopularity": 42,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3050 EAGLE OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 24899,
+            "cardPopularity": 43,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 EAGLE OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 29523,
+            "cardPopularity": 44,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3070 VISION OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 44299,
+            "cardPopularity": 45,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 EAGLE (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 35999,
+            "cardPopularity": 46,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE GTX 1050 TI STORMX",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1050 TI",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 13899,
+            "cardPopularity": 47,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AMD RADEON RX 6700 XT EAGLE",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 36999,
+            "cardPopularity": 48,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 TI VISION OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 42999,
+            "cardPopularity": 49,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3070 AORUS MASTER (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 56999,
+            "cardPopularity": 50,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "SAPPHIRE AMD RADEON RX 6700",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700",
+            "shopName": "DNS",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 31999,
+            "cardPopularity": 51,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 2060 SUPER VENTUS GP OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060 SUPER",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 40999,
+            "cardPopularity": 52,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE GTX 1660 SUPER GAMING X",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 24999,
+            "cardPopularity": 53,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3050 VENTUS 2X OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 24217,
+            "cardPopularity": 54,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1650 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 13139,
+            "cardPopularity": 55,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "SAPPHIRE AMD RADEON RX 6650 XT NITRO+ GAMING",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "DNS",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 36999,
+            "cardPopularity": 56,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3070 TI GAMING X TRIO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 69999,
+            "cardPopularity": 57,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3070 GAMING PRO OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 47319,
+            "cardPopularity": 58,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 TI GAMING X (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 43999,
+            "cardPopularity": 59,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3070 TI VENTUS 3X OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 66999,
+            "cardPopularity": 60,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR HELLHOUND RADEON RX 6650 XT OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 34799,
+            "cardPopularity": 61,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE GTX 1660 SUPER VENTUS XS OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 23999,
+            "cardPopularity": 62,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1660 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 20499,
+            "cardPopularity": 63,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE GTX 1650 GAMING PRO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 14499,
+            "cardPopularity": 64,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 WINDFORCE OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 37299,
+            "cardPopularity": 65,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AMD RADEON RX 6500 XT EAGLE",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 15849,
+            "cardPopularity": 66,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1050 TI",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1050 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 11959,
+            "cardPopularity": 67,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "KFA2 GEFORCE GTX 1660",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660",
+            "shopName": "DNS",
+            "vendorName": "KFA2",
+            "cardPrice": 22299,
+            "cardPopularity": 68,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE GTX 1050 TI GAMING X",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1050 TI",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 13599,
+            "cardPopularity": 69,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3060 TI DUAL OC V1 (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 40999,
+            "cardPopularity": 70,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AMD RADEON RX 6650 XT EAGLE",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 38999,
+            "cardPopularity": 71,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 6650 XT RED DEVIL OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 38499,
+            "cardPopularity": 72,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "INNO3D GEFORCE RTX 3060 TWIN X2 OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "INNO3D",
+            "cardPrice": 37999,
+            "cardPopularity": 73,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 AORUS ELITE (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 41299,
+            "cardPopularity": 74,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "SAPPHIRE PULSE AMD RADEON RX 6500 XT",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "DNS",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 16224,
+            "cardPopularity": 75,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AMD RADEON RX 6500 XT GAMING OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 18999,
+            "cardPopularity": 76,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL GEFORCE RTX 3070 V2 OC EDITION (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 54999,
+            "cardPopularity": 77,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON R7 240",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON R7 240",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 4499,
+            "cardPopularity": 78,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL GEFORCE RTX 3060 TI V2 OC EDITION (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 47799,
+            "cardPopularity": 79,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE GTX 1660 SUPER GAMING PRO OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 21082,
+            "cardPopularity": 80,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3050 DUAL OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 25999,
+            "cardPopularity": 81,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE GTX 1650 D6 GAMING X",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 16999,
+            "cardPopularity": 82,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "RADEON RX 580 ARMOR 8G OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 580",
+            "shopName": "DNS",
+            "vendorName": "RADEON",
+            "cardPrice": 12999,
+            "cardPopularity": 83,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3050 GAMING X",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 28082,
+            "cardPopularity": 84,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3070 JETSTREAM OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 47999,
+            "cardPopularity": 85,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE GTX 1650 STORMX",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 12999,
+            "cardPopularity": 86,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1650 D6 WINDFORCE OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 14999,
+            "cardPopularity": 87,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 VENTUS 3X OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 34999,
+            "cardPopularity": 88,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3070 TI VISION OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 63999,
+            "cardPopularity": 89,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 6700 XT FIGHTER",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 43499,
+            "cardPopularity": 90,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE RADEON RX 6400 EAGLE",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6400",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 12899,
+            "cardPopularity": 91,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AORUS GEFORCE RTX 3050 ELITE",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 33999,
+            "cardPopularity": 92,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL GEFORCE RTX 3050 OC EDITION",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 33499,
+            "cardPopularity": 93,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 TI GAMING Z TRIO (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 44999,
+            "cardPopularity": 94,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE GTX 1660 SUPER GAMING",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 25499,
+            "cardPopularity": 95,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS TUF GAMING GEFORCE RTX 3050 OC EDITION",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 35299,
+            "cardPopularity": 96,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 550 RED DRAGON LP",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 550",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 10299,
+            "cardPopularity": 97,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3080 GAMINGPRO (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 66799,
+            "cardPopularity": 98,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 6500 XT FIGHTER",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 14349,
+            "cardPopularity": 99,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE GTX 1630 DUAL",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1630",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 11999,
+            "cardPopularity": 100,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 2060 VENTUS GP OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 27999,
+            "cardPopularity": 101,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "INNO3D GEFORCE RTX 3060 ICHILL X3 RED (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "INNO3D",
+            "cardPrice": 39299,
+            "cardPopularity": 102,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AORUS RADEON RX 6750 XT ELITE",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6750 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 43174,
+            "cardPopularity": 103,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 TI VENTUS 2X OCV1 (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 38499,
+            "cardPopularity": 104,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1650 D6 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 13999,
+            "cardPopularity": 105,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 2060 D6",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 27699,
+            "cardPopularity": 106,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE GTX 1650 D6 VENTUS XS OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 16999,
+            "cardPopularity": 107,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3070 JETSTREAM (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 46999,
+            "cardPopularity": 108,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI AMD RADEON RX 550 AERO ITX OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 550",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 6999,
+            "cardPopularity": 109,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 TI AERO ITX OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 41999,
+            "cardPopularity": 110,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1650 D6 OC LOW PROFILE",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 15599,
+            "cardPopularity": 111,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 6750 XT RED DEVIL OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6750 XT",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 47999,
+            "cardPopularity": 112,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "INNO3D GEFORCE RTX 3050 TWIN X2",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "INNO3D",
+            "cardPrice": 25999,
+            "cardPopularity": 113,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "SAPPHIRE PULSE AMD RADEON RX 6400",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6400",
+            "shopName": "DNS",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 10399,
+            "cardPopularity": 114,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI AMD RADEON RX 6500 XT MECH 2X OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 13999,
+            "cardPopularity": 115,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 6500 XT ITX",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 15999,
+            "cardPopularity": 116,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3070 VENTUS 3X PLUS OC LHR",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 59499,
+            "cardPopularity": 117,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE GTX 1650 VENTUS XS OC V1",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 14799,
+            "cardPopularity": 118,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI AMD RADEON RX 6700 XT MECH 2X",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 41499,
+            "cardPopularity": 119,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AORUS RADEON RX 6900 XT MASTER",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6900 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 82799,
+            "cardPopularity": 120,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE GT 1030",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 1030",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 5699,
+            "cardPopularity": 121,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 TI AORUS ELITE (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 44799,
+            "cardPopularity": 122,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3070 GAMEROCK OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 45649,
+            "cardPopularity": 123,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AMD RADEON RX 6750 XT GAMING OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6750 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 42374,
+            "cardPopularity": 124,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE GTX 1050 TI 4GT",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1050 TI",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 12999,
+            "cardPopularity": 125,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "SAPPHIRE PULSE AMD RADEON RX 6750 XT",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6750 XT",
+            "shopName": "DNS",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 38999,
+            "cardPopularity": 126,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE RADEON RX 6400 D6 LOW PROFILE",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6400",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 12299,
+            "cardPopularity": 127,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS TUF GAMING GEFORCE GTX 1650 OC EDITION",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 17499,
+            "cardPopularity": 128,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 550 LP",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 550",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 5359,
+            "cardPopularity": 129,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 TI VENTUS 2X V1 LHR",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 38499,
+            "cardPopularity": 130,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 2060 WINDFORCE OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 36999,
+            "cardPopularity": 131,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 TI WINDFORCE OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 41999,
+            "cardPopularity": 132,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "INNO3D GEFORCE RTX 3050 GAMING OC X2",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "INNO3D",
+            "cardPrice": 24999,
+            "cardPopularity": 133,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3070 TI EAGLE OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 62999,
+            "cardPopularity": 134,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1650 LOW PROFILE OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 12499,
+            "cardPopularity": 135,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1630 OC LOW PROFILE",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1630",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 12199,
+            "cardPopularity": 136,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1650 D6 OC (REV. 2.0)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 17999,
+            "cardPopularity": 137,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 6800 FIGHTER",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6800",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 46499,
+            "cardPopularity": 138,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI RADEON RX 6400 AERO ITX",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6400",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 12899,
+            "cardPopularity": 139,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASROCK AMD RADEON RX 6700 XT CHALLENGER D OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "ASROCK",
+            "cardPrice": 43799,
+            "cardPopularity": 140,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ZOTAC GAMING GEFORCE RTX 3080 TRINITY OC LHR",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "DNS",
+            "vendorName": "ZOTAC",
+            "cardPrice": 79999,
+            "cardPopularity": 141,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS TUF GAMING GEFORCE GTX 1660 TI EVO OC EDITION",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 28199,
+            "cardPopularity": 142,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1650 D6 (REV. 2.0)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 13899,
+            "cardPopularity": 143,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE GT 710 SILENT LP",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 710",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 3799,
+            "cardPopularity": 144,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "INNO3D GEFORCE RTX 3050 TWIN X2 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "INNO3D",
+            "cardPrice": 24899,
+            "cardPopularity": 145,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 6700 FIGHTER OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 34299,
+            "cardPopularity": 146,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 2060 SUPER WINDFORCE OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060 SUPER",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 35499,
+            "cardPopularity": 147,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3070 VENTUS 3X OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 49499,
+            "cardPopularity": 148,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE GT 730 SILENT LP",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GT 730",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 5299,
+            "cardPopularity": 149,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AMD RADEON RX 6700 XT GAMING OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 49799,
+            "cardPopularity": 150,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON 550 LP",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON 550 LP",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 5899,
+            "cardPopularity": 151,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AMD RADEON RX 6600 XT GAMING OC PRO",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 30499,
+            "cardPopularity": 152,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS AMD RADEON RX 6900 XT TUF GAMING OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6900 XT",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 102999,
+            "cardPopularity": 153,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3070 GAMEROCK V1 (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 50499,
+            "cardPopularity": 154,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL GEFORCE RTX 2060 OC EVO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 26999,
+            "cardPopularity": 155,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PNY QUADRO P2000",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "QUADRO P2000",
+            "shopName": "DNS",
+            "vendorName": "PNY",
+            "cardPrice": 46999,
+            "cardPopularity": 156,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL RADEON RX 560",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 560",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 12999,
+            "cardPopularity": 157,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PNY QUADRO T400",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "QUADRO T400",
+            "shopName": "DNS",
+            "vendorName": "PNY",
+            "cardPrice": 14399,
+            "cardPopularity": 158,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL GEFORCE RTX 2060 OC EVO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 29999,
+            "cardPopularity": 159,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1630 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1630",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 12999,
+            "cardPopularity": 160,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL RADEON RX 6600",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 35299,
+            "cardPopularity": 161,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1660 TI OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 25899,
+            "cardPopularity": 162,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 TI VENTUS 3X OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 39999,
+            "cardPopularity": 163,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL GEFORCE RTX 2060 EVO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 31499,
+            "cardPopularity": 164,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR HELLHOUND RADEON RX 6650 XT OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 31999,
+            "cardPopularity": 165,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "SAPPHIRE AMD RADEON RX 6700 XT GAMING OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 42499,
+            "cardPopularity": 166,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS ROG STRIX RADEON RX 6750 XT OC EDITION",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6750 XT",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 55499,
+            "cardPopularity": 167,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS GEFORCE GTX 1650 PHOENIX OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 16999,
+            "cardPopularity": 168,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS TUF GAMING GEFORCE GTX 1660 TI EVO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 TI",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 27699,
+            "cardPopularity": 169,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS AMD RADEON RX 6800 XT TUF GAMING OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6800 XT",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 94999,
+            "cardPopularity": 170,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS GEFORCE GTX 1650 DUAL OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 16999,
+            "cardPopularity": 171,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3050 AERO ITX OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 21999,
+            "cardPopularity": 172,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1650 MINI ITX OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 13499,
+            "cardPopularity": 173,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1660 SUPER OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 23999,
+            "cardPopularity": 174,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI INTEL ARC A380 LOW PROFILE 6G",
+            "cardArchitecture": "INTEL",
+            "cardSeries": "INTEL ARC A380",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 13699,
+            "cardPopularity": 175,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1660 D5",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 19899,
+            "cardPopularity": 176,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE RADEON RX 6900 XT AORUS XTREME WATERFORCE WB",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6900 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 83999,
+            "cardPopularity": 177,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS GEFORCE GTX 1660 SUPER TUF GAMING OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 22999,
+            "cardPopularity": 178,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PNY QUADRO RTX A5000",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "QUADRO RTX A5000",
+            "shopName": "DNS",
+            "vendorName": "PNY",
+            "cardPrice": 194999,
+            "cardPopularity": 179,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE GTX 1630 VENTUS XS OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1630",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 11499,
+            "cardPopularity": 180,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AORUS RADEON RX 6700 XT ELITE",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 47999,
+            "cardPopularity": 181,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PNY QUADRO RTX A4500",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "QUADRO RTX A4500",
+            "shopName": "DNS",
+            "vendorName": "PNY",
+            "cardPrice": 148999,
+            "cardPopularity": 182,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASROCK AMD RADEON RX 6800 XT PHANTOM GAMING D OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6800 XT",
+            "shopName": "DNS",
+            "vendorName": "ASROCK",
+            "cardPrice": 73999,
+            "cardPopularity": 183,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL RADEON RX 6600 XT OC EDITION",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600 XT",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 35999,
+            "cardPopularity": 184,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3050 VENTUS 2X",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 28299,
+            "cardPopularity": 185,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS PHOENIX GEFORCE RTX 3050",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 31499,
+            "cardPopularity": 186,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 2060 SUPER DUAL",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060 SUPER",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 29089,
+            "cardPopularity": 187,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "INNO3D GEFORCE RTX 3070 TI X3",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "DNS",
+            "vendorName": "INNO3D",
+            "cardPrice": 61999,
+            "cardPopularity": 188,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR AMD RADEON RX 6400 LOW PROFILE",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6400",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 11999,
+            "cardPopularity": 189,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1650 D5 LOW PROFILE",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 18199,
+            "cardPopularity": 190,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL RADEON RX 6700 XT OC EDITION",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 48999,
+            "cardPopularity": 191,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS TUF GAMING GEFORCE GTX 1650 OC EDITION",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 19199,
+            "cardPopularity": 192,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL RADEON RX 6700 XT",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 49999,
+            "cardPopularity": 193,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "INNO3D GEFORCE RTX 3070 TI X3 OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "DNS",
+            "vendorName": "INNO3D",
+            "cardPrice": 62999,
+            "cardPopularity": 194,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS GEFORCE RTX 3060 DUAL OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 37999,
+            "cardPopularity": 195,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PNY GEFORCE RTX 3060 TI UPRISING (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "PNY",
+            "cardPrice": 46999,
+            "cardPopularity": 196,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI AMD RADEON RX 6600 MECH 2X",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 28999,
+            "cardPopularity": 197,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL RADEON RX 6650 XT OC EDITION",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6650 XT",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 32799,
+            "cardPopularity": 198,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "POWERCOLOR RED DRAGON AMD RADEON RX 6800",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6800",
+            "shopName": "DNS",
+            "vendorName": "POWERCOLOR",
+            "cardPrice": 70999,
+            "cardPopularity": 199,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 2060 DUAL",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 34999,
+            "cardPopularity": 200,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AORUS RADEON RX 6800 MASTER",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6800",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 56999,
+            "cardPopularity": 201,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "EVGA GEFORCE RTX 2060 SC OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "DNS",
+            "vendorName": "EVGA",
+            "cardPrice": 24999,
+            "cardPopularity": 202,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL RADEON RX 6500 XT OC EDITION",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 16999,
+            "cardPopularity": 203,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS TUF GAMING RADEON RX 6500 XT OC EDITION",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6500 XT",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 17999,
+            "cardPopularity": 204,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL GEFORCE RTX 2060 EVO",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 27499,
+            "cardPopularity": 205,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "SINOTEX NINJA RX 580",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 580",
+            "shopName": "DNS",
+            "vendorName": "SINOTEX",
+            "cardPrice": 16199,
+            "cardPopularity": 206,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "AFOX RADEON R9 370",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON R9 370",
+            "shopName": "DNS",
+            "vendorName": "AFOX",
+            "cardPrice": 13699,
+            "cardPopularity": 207,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "AFOX AMD RADEON RX 6600XT",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600 XT",
+            "shopName": "DNS",
+            "vendorName": "AFOX",
+            "cardPrice": 40299,
+            "cardPopularity": 208,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "AFOX GTX 1650",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "AFOX",
+            "cardPrice": 19699,
+            "cardPopularity": 209,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "AFOX NVIDIA GEFORCE RTX 3080",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "DNS",
+            "vendorName": "AFOX",
+            "cardPrice": 74999,
+            "cardPopularity": 210,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASROCK AMD RADEON RX 6800 PHANTOM GAMING D OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6800",
+            "shopName": "DNS",
+            "vendorName": "ASROCK",
+            "cardPrice": 65999,
+            "cardPopularity": 211,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL GEFORCE RTX 3060 TI MINI OC EDITION V2 (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 59999,
+            "cardPopularity": 212,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL RADEON RX 6750 XT OC EDITION",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6750 XT",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 50799,
+            "cardPopularity": 213,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS DUAL RADEON RX 6750 XT OC EDITION {90YV0HK0-M0NA00]",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6750 XT",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 70799,
+            "cardPopularity": 214,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS GEFORCE GTX 1650 PHOENIX OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 18999,
+            "cardPopularity": 215,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS GEFORCE GTX 1660 SUPER PHOENIX OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 25999,
+            "cardPopularity": 216,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS GEFORCE GTX 1660 SUPER PHOENIX",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 31499,
+            "cardPopularity": 217,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS PHOENIX GEFORCE RTX 3060",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 42999,
+            "cardPopularity": 218,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ASUS TESLA NVIDIA GEFORCE A10",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "TESLA GEFORCE A10",
+            "shopName": "DNS",
+            "vendorName": "ASUS",
+            "cardPrice": 221999,
+            "cardPopularity": 219,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "BIOSTAR RADEON RX 6700 XT OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "BIOSTAR",
+            "cardPrice": 64299,
+            "cardPopularity": 220,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "COLORFUL GEFORCE RTX 2060 BATTLE-AX NB V",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 2060",
+            "shopName": "DNS",
+            "vendorName": "COLORFUL",
+            "cardPrice": 32999,
+            "cardPopularity": 221,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "COLORFUL IGAME GEFORCE RTX 3060 MINI OC L-V",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "COLORFUL",
+            "cardPrice": 40799,
+            "cardPopularity": 222,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "COLORFUL GEFORCE GTX 1660 SUPER BATTLE-AX NB V2-V",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1660 SUPER",
+            "shopName": "DNS",
+            "vendorName": "COLORFUL",
+            "cardPrice": 18399,
+            "cardPopularity": 223,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AMD RADEON RX 6600 XT GAMING OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6600 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 39799,
+            "cardPopularity": 224,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE AMD RADEON RX 6700 XT EAGLE OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 41999,
+            "cardPopularity": 225,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE GTX 1650 D6 LOW PROFILE",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE GTX 1650",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 14599,
+            "cardPopularity": 226,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 GAMING OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 28832,
+            "cardPopularity": 227,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3060 TI GAMING OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 41999,
+            "cardPopularity": 228,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 3080 GAMING OC WATERFORCE WB",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 74999,
+            "cardPopularity": 229,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 4080 EAGLE OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 4080",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 112999,
+            "cardPopularity": 230,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE GEFORCE RTX 4080 GAMING OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 4080",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 115999,
+            "cardPopularity": 231,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE INTEL ARC A310 WINDFORCE",
+            "cardArchitecture": "INTEL",
+            "cardSeries": "INTEL ARC A310",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 10999,
+            "cardPopularity": 232,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE INTEL ARC A380 GAMING OC",
+            "cardArchitecture": "INTEL",
+            "cardSeries": "INTEL ARC A380",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 14999,
+            "cardPopularity": 233,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "GIGABYTE INTEL ARC A380 WINDFORCE OC",
+            "cardArchitecture": "INTEL",
+            "cardSeries": "INTEL ARC A380",
+            "shopName": "DNS",
+            "vendorName": "GIGABYTE",
+            "cardPrice": 13999,
+            "cardPopularity": 234,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "HP NVIDIA RTX A2000",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "QUADRO RTX A2000",
+            "shopName": "DNS",
+            "vendorName": "HP",
+            "cardPrice": 65299,
+            "cardPopularity": 235,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "INNO3D GEFORCE RTX 3070 TWIN X2",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "INNO3D",
+            "cardPrice": 48499,
+            "cardPopularity": 236,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "INNO3D GEFORCE RTX 3070 TWIN X2 OC (LHR)",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "INNO3D",
+            "cardPrice": 51499,
+            "cardPopularity": 237,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI AMD RADEON RX 6800 GAMING Z TRIO",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6800",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 65799,
+            "cardPopularity": 238,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3050 GAMING",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3050",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 28999,
+            "cardPopularity": 239,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 GAMING",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 35999,
+            "cardPopularity": 240,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 TI VENTUS 2X OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 40999,
+            "cardPopularity": 241,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 TI VENTUS 3X OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 42999,
+            "cardPopularity": 242,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3060 VENTUS 2X OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 29999,
+            "cardPopularity": 243,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 3080 GAMING TRIO PLUS",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3080",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 71999,
+            "cardPopularity": 244,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI GEFORCE RTX 4090 VENTUS 3X",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 4090",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 139999,
+            "cardPopularity": 245,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MSI INTEL ARC A310 LP 2X",
+            "cardArchitecture": "INTEL",
+            "cardSeries": "INTEL ARC A310",
+            "shopName": "DNS",
+            "vendorName": "MSI",
+            "cardPrice": 11299,
+            "cardPopularity": 246,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "MATROX M9120",
+            "cardArchitecture": "MATROX",
+            "cardSeries": "M9120",
+            "shopName": "DNS",
+            "vendorName": "MATROX",
+            "cardPrice": 31799,
+            "cardPopularity": 247,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PNY QUADRO RTX 6000",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "QUADRO RTX 6000",
+            "shopName": "DNS",
+            "vendorName": "PNY",
+            "cardPrice": 287999,
+            "cardPopularity": 248,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PNY QUADRO RTX A5000",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "QUADRO RTX A5000",
+            "shopName": "DNS",
+            "vendorName": "PNY",
+            "cardPrice": 232999,
+            "cardPopularity": 249,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PNY TESLA A2",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "TESLA A2",
+            "shopName": "DNS",
+            "vendorName": "PNY",
+            "cardPrice": 88499,
+            "cardPopularity": 250,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PNY TESLA T4",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "TESLA T4",
+            "shopName": "DNS",
+            "vendorName": "PNY",
+            "cardPrice": 181999,
+            "cardPopularity": 251,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 3060 STORMX",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 25999,
+            "cardPopularity": 252,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 4080 GAMEROCK OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 4080",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 109999,
+            "cardPopularity": 253,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 4080 GAMEROCK OMNIBLACK",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 4080",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 103999,
+            "cardPopularity": 254,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "PALIT GEFORCE RTX 4080 GAMEROCK",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 4080",
+            "shopName": "DNS",
+            "vendorName": "PALIT",
+            "cardPrice": 106332,
+            "cardPopularity": 255,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "SAPPHIRE AMD RADEON RX 6700 XT NITRO+ GAMING OC",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "SAPPHIRE",
+            "cardPrice": 42999,
+            "cardPopularity": 256,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "XFX SPEEDSTER SWFT 309 AMD RADEON RX 6700 XT CORE",
+            "cardArchitecture": "AMD",
+            "cardSeries": "RADEON RX 6700 XT",
+            "shopName": "DNS",
+            "vendorName": "XFX",
+            "cardPrice": 48999,
+            "cardPopularity": 257,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ZOTAC GAMING GEFORCE RTX 3060 TI AMP LHR WHITE EDITION",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060 TI",
+            "shopName": "DNS",
+            "vendorName": "ZOTAC",
+            "cardPrice": 67499,
+            "cardPopularity": 258,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ZOTAC GAMING GEFORCE RTX 3060 TWIN EDGE OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "ZOTAC",
+            "cardPrice": 42799,
+            "cardPopularity": 259,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ZOTAC GAMING GEFORCE RTX 3060 TWIN EDGE",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3060",
+            "shopName": "DNS",
+            "vendorName": "ZOTAC",
+            "cardPrice": 40499,
+            "cardPopularity": 260,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ZOTAC GAMING GEFORCE RTX 3070 TI TRINITY OC",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070 TI",
+            "shopName": "DNS",
+            "vendorName": "ZOTAC",
+            "cardPrice": 68999,
+            "cardPopularity": 261,
+            "date": "2022-11-24"
+        },
+        {
+            "cardName": "ZOTAC GAMING GEFORCE RTX 3070 TWIN EDGE OC LHR",
+            "cardArchitecture": "NVIDIA",
+            "cardSeries": "GEFORCE RTX 3070",
+            "shopName": "DNS",
+            "vendorName": "ZOTAC",
+            "cardPrice": 78999,
+            "cardPopularity": 262,
+            "date": "2022-11-24"
+        }
+    ]
+}
