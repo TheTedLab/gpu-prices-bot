@@ -7,6 +7,24 @@ cross_mark = u'\U0000274C'
 right_triangle = u'\U000025B6'
 memo_emoji = u'\U0001F4DD'
 loudspeaker = u'\U0001F4E2'
+blue_circle = u'\U0001F535'
+orange_circle = u'\U0001F7E0'
+green_circle = u'\U0001F7E2'
+number_one = u'\u0031'
+number_two = u'\u0032'
+number_three = u'\u0033'
+
+shops_emojis_dict = {
+    'MVIDEO': green_circle,
+    'CITILINK': blue_circle,
+    'DNS': orange_circle
+}
+
+places_emojis_dict = {
+    '1': number_one,
+    '2': number_two,
+    '3': number_three
+}
 
 # Состояния
 MENU, STATS_SUBMENU, POPULARITY_SUBMENU, SHOPS_SUBMENU, VENDORS_SUBMENU, GPU_SUBMENU, \
@@ -84,8 +102,10 @@ select_graph_text = "Выберите вид графика:"
 select_gpu_text = "Напишите название интересующей вас видеокарты:"
 help_text = "/start - начать разговор\n" \
             "/help - помощь\n" \
-            "Чтобы получить информацию, просто напиши название игры\n" \
-            "или воспользуйся кнопками меню!"
+            "Чтобы получить информацию, воспользуйся кнопками меню!\n" \
+            "Если бот не отвечает и не реагирует на кнопки попробуйте подождать " \
+            "или перезапустите его с помощью\n /start"
+no_data_text = "Нет данных по выбранным параметрам"
 
 # Список текстов кнопок для поиска игр
 gpu_search_list = []

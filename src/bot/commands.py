@@ -2,6 +2,7 @@ import ast
 import datetime
 import json
 import logging
+import colorsys
 
 import matplotlib.pyplot as plt
 import numpy
@@ -186,23 +187,9 @@ def popularity_shops_graph(update: Update, context: CallbackContext) -> int:
     response = requests.get(url=url)
     graph_data = json.loads(response.text)
 
-    popularity_places = []
-    for offer in graph_data:
-        popularity_places.append(graph_data[offer]['cardName'])
+    card_names, places = define_card_names_places(graph_data)
 
-    popularity_places.reverse()
-
-    fig = plt.figure(figsize=(8, 6))
-    num_places = numpy.arange(10, 0, -1)
-    plt.barh(popularity_places, num_places, align='center')
-    plt.xticks(num_places)
-    plt.grid(axis='x', linestyle='--')
-    plt.title(f'Popularity for {shop} store')
-    plt.xlabel('Places')
-    plt.ylabel('GPUs')
-    plt.savefig('graphic.png', bbox_inches='tight')
-    plt.clf()
-    plt.close(fig)
+    draw_popularity_cards_places(card_names, places, shop)
 
     query.answer()
     reply_markup_keyboard = InlineKeyboardMarkup(keyboard_POPULARITY_GRAPH)
@@ -215,11 +202,84 @@ def popularity_shops_graph(update: Update, context: CallbackContext) -> int:
     )
 
     query.edit_message_caption(
-        caption='Популярность по магазину',
+        caption=f'Популярность по магазину {shop}',
         reply_markup=reply_markup_keyboard
     )
 
     return POPULARITY_SHOPS_GRAPH_SUBMENU
+
+
+def draw_popularity_cards_places(card_names, places, shop):
+    graph_days = get_days_list()
+    days_mode = 30
+    plt.set_loglevel('WARNING')
+    fig = plt.figure(figsize=(23.83, 11.68), dpi=100)
+    num_days = range(len(graph_days[-days_mode:]))
+    line_styles = ['solid', 'dashed']
+    count = 0
+    for card_name in card_names:
+        lines = plt.plot(
+            num_days,
+            places[card_name][-days_mode:],
+            label=card_name,
+            color=get_random_color()
+        )
+        lines[0].set_linestyle(line_styles[count % len(line_styles)])
+        plt.gca().invert_yaxis()
+        count += 1
+    plt.legend(bbox_to_anchor=(0.5, -0.11), loc='upper center', ncols=4)
+    plt.xlim('2022-11-20', str(datetime.date.today()))
+    plt.xticks(num_days, graph_days[-days_mode:], rotation=45, ha='right')
+    plt.yticks(numpy.arange(10, 0, -1))
+    plt.grid(axis='x', linestyle='--')
+    plt.title(f'Popularity for {shop} store', fontdict={'size': 16})
+    plt.xlabel(f'Period: {days_mode} days', fontdict={'size': 14})
+    plt.ylabel(f'Places', fontdict={'size': 14})
+    plt.savefig('graphic.png', bbox_inches='tight')
+    plt.clf()
+    plt.close(fig)
+
+
+def define_card_names_places(graph_data):
+    places, card_names = {}, []
+    for offer in graph_data:
+        if len(list(offer.keys())) > 0:
+            items_length = len(list(offer.values()))
+            if items_length == 10:
+                for card in offer.values():
+                    card_name = card['cardName']
+                    if card_name not in card_names:
+                        card_names.append(card_name)
+                        places[card_name] = []
+            elif items_length < 10:
+                print('not enough items')
+
+    for offer in graph_data:
+        if len(list(offer.keys())) > 0:
+            items_length = len(list(offer.values()))
+            if items_length == 10:
+                for name in card_names:
+                    is_not_card_today = True
+                    for card in offer.values():
+                        card_name = card['cardName']
+                        card_popularity = card['cardPopularity']
+                        if card_name == name:
+                            is_not_card_today = False
+                            places[card_name].append(card_popularity)
+                    if is_not_card_today:
+                        places[name].append(numpy.NaN)
+            elif items_length < 10:
+                print('not enough items')
+
+    return card_names, places
+
+
+def get_random_color():
+    return colorsys.hsv_to_rgb(
+        numpy.random.uniform(0.0, 1),
+        numpy.random.uniform(0.2, 1),
+        numpy.random.uniform(0.9, 1)
+    )
 
 
 def popularity_vendors_graph(update: Update, context: CallbackContext) -> int:
@@ -271,33 +331,46 @@ def popularity_vendors_graph(update: Update, context: CallbackContext) -> int:
     response = requests.get(url=url)
     graph_data = json.loads(response.text)
 
-    shops_names = ['MVIDEO', 'CITILINK', 'DNS']
     places = ['1', '2', '3']
+
+    message_caption = f'Популярность по производителю {vendor}:\n'
+
     popularity_places_shops = {}
-    for offer in graph_data:
-        popularity_places_shops[offer] = []
-        for gpu in places:
-            popularity_places_shops[offer].append(graph_data[offer][gpu]['cardName'])
+    for shop in graph_data:
+        message_caption += shops_emojis_dict.get(shop) + f' {shop}\n'
+        popularity_places_shops[shop] = []
+        for place in places:
+            if graph_data[shop].get(place) is not None:
+                card_name = graph_data[shop][place]['cardName']
+                message_caption += f'{place}. {card_name}\n'
+                popularity_places_shops[shop].append(card_name)
+            else:
+                message_caption += f'{place}. No Data\n'
+                popularity_places_shops[shop].append('No Data')
+        popularity_places_shops[shop].reverse()
+        message_caption += '\n'
 
-    print(popularity_places_shops[shops_names[0]])
+    x = [1.0, 2.0, 3.0]
 
-    x = numpy.arange(len(shops_names))
-    width = 0.35
+    fig = plt.figure(figsize=(22, 6))
 
-    fig, ax = plt.subplots()
-    rects1 = ax.bar(x - width / 2, popularity_places_shops[shops_names[0]], width, label=shops_names[0])
-    rects2 = ax.bar(x + width / 2, popularity_places_shops[shops_names[1]], width, label=shops_names[1])
-    rects3 = ax.bar(x + width + width / 2, popularity_places_shops[shops_names[2]], width, label=shops_names[2])
-    ax.set_xticks(x, shops_names)
+    rects1 = plt.bar([tick + 1.0 for tick in x], [int(i) for i in places], width=0.2, label='CITILINK')
+    rects2 = plt.bar([tick + 4.0 for tick in x], [int(i) for i in places], width=0.2, label='DNS')
+    rects3 = plt.bar([tick + 7.0 for tick in x], [int(i) for i in places], width=0.2, label='MVIDEO')
 
-    ax.bar_label(rects1, padding=3)
-    ax.bar_label(rects2, padding=3)
-    ax.bar_label(rects3, padding=3)
+    plt.ylim(0, 4)
+    plt.xticks(numpy.arange(1, 12, 1), ['', '', 'CITILINK', '', '', 'DNS', '', '', 'MVIDEO', '', ''])
+    plt.yticks(numpy.arange(1, 4, 1))
+
+    plt.bar_label(rects1, popularity_places_shops['CITILINK'], padding=3)
+    plt.bar_label(rects2, popularity_places_shops['DNS'], padding=3)
+    plt.bar_label(rects3, popularity_places_shops['MVIDEO'], padding=3)
 
     plt.grid(axis='y', linestyle='--')
     plt.title(f'Popularity for {vendor}')
-    plt.xlabel('Places')
-    plt.ylabel('GPUs')
+    plt.xlabel('Shops')
+    plt.ylabel('Places')
+    plt.legend(bbox_to_anchor=(0.5, -0.11), loc='upper center', ncols=3)
     plt.savefig('graphic.png', bbox_inches='tight')
     plt.clf()
     plt.close(fig)
@@ -313,7 +386,7 @@ def popularity_vendors_graph(update: Update, context: CallbackContext) -> int:
     )
 
     query.edit_message_caption(
-        caption='Популярность по производителю',
+        caption=message_caption,
         reply_markup=reply_markup_keyboard
     )
 
@@ -1128,9 +1201,7 @@ def graph_for_gpu_func(update: Update, context: CallbackContext) -> int:
     graph_data = json.loads(response.text)
 
     offers, prices = {}, []
-    base = datetime.date(2022, 11, 20)
-    now = datetime.datetime.today().date()
-    days = [str(base + datetime.timedelta(days=x)) for x in range((now - base).days + 1)]
+    days = get_days_list()
 
     for offer in graph_data:
         card_price = offer['cardPrice']
@@ -1168,7 +1239,9 @@ def define_gpu_days_prices(days, offers, prices):
         choosing_day = day
         while offers.get(choosing_day) is None:
             if choosing_day == '2022-11-20':
-                choosing_day = list(offers.keys())[0]
+                choose_days_list = list(offers.keys())
+                if len(choose_days_list) > 0:
+                    choosing_day = list(offers.keys())[0]
                 is_from_begin = False
                 break
             date_year, date_month, date_day = [int(i) for i in choosing_day.split('-')]
@@ -1284,90 +1357,111 @@ def graph_func(update: Update, context: CallbackContext) -> int:
     vendor = vendors_dict.get(int(vendor)) if vendor != '' else ''
     series = series_dict.get(int(series)).replace(" ", "+")
 
+    is_graph_data_empty = True
     if submenu_title == 'for_shop':
         url = f'http://173.18.0.3:8080/price/for-shop?seriesName={series}&shopName={shop}'
         response = requests.get(url=url)
         graph_data = json.loads(response.text)
 
-        offers, prices, days, vendors_names = {}, {}, [], []
-        for offer in graph_data:
-            card_vendor = offer['vendorName']
-            if card_vendor not in vendors_names:
-                vendors_names.append(card_vendor)
-            if card_vendor not in offers:
-                offers[card_vendor] = {}
-            date = offer['date'].split('T')[0]
-            if date not in days:
-                days.append(date)
-            if date not in offers[card_vendor]:
-                offers[card_vendor][date] = {}
-            offers[card_vendor][date][offer['cardName']] = offer['cardPrice']
+        if graph_data:
+            is_graph_data_empty = False
+            offers, prices, vendors_names = {}, {}, []
+            days = get_days_list()
+            for offer in graph_data:
+                card_vendor = offer['vendorName']
+                if card_vendor not in vendors_names:
+                    vendors_names.append(card_vendor)
+                allocate_names_and_dates(card_vendor, offer, offers)
 
-        if graph_level == 'min':
-            define_names_days_prices(vendors_names, days, offers, prices, mode='min')
-        elif graph_level == 'max':
-            define_names_days_prices(vendors_names, days, offers, prices, mode='max')
-        elif graph_level == 'average':
-            define_names_days_prices(vendors_names, days, offers, prices, mode='average')
-        else:
-            print('unknown graph level')
+            define_prices_by_graph_level(days, graph_level, offers, prices, vendors_names)
 
-        draw_graph(vendors_names, days, prices, series, shop, graph_mode='shop', days_mode=graph_days)
+            draw_graph(vendors_names, days, prices, series, shop, graph_mode='shop', days_mode=graph_days)
     elif submenu_title == 'for_vendor':
         url = f'http://173.18.0.3:8080/price/for-vendor?seriesName={series}&vendorName={vendor}'
         response = requests.get(url=url)
         graph_data = json.loads(response.text)
 
-        offers, prices, days, shops_names = {}, {}, [], ['MVIDEO', 'CITILINK', 'DNS']
-        for offer in graph_data:
-            shop_name = offer['shopName']
-            if shop_name not in offers:
-                offers[shop_name] = {}
-            date = offer['date'].split('T')[0]
-            if date not in days:
-                days.append(date)
-            if date not in offers[shop_name]:
-                offers[shop_name][date] = {}
-            offers[shop_name][date][offer['cardName']] = offer['cardPrice']
+        if graph_data:
+            is_graph_data_empty = False
+            offers, prices, shops_names = {}, {}, ['MVIDEO', 'CITILINK', 'DNS']
+            days = get_days_list()
 
-        if graph_level == 'min':
-            define_names_days_prices(shops_names, days, offers, prices, mode='min')
-        elif graph_level == 'max':
-            define_names_days_prices(shops_names, days, offers, prices, mode='max')
-        elif graph_level == 'average':
-            define_names_days_prices(shops_names, days, offers, prices, mode='average')
-        else:
-            print('unknown graph level')
+            for shop in shops_names:
+                offers[shop] = {}
 
-        draw_graph(shops_names, days, prices, series, vendor, graph_mode='vendor', days_mode=graph_days)
+            for offer in graph_data:
+                shop_name = offer['shopName']
+                allocate_names_and_dates(shop_name, offer, offers)
+
+            define_prices_by_graph_level(days, graph_level, offers, prices, shops_names)
+
+            draw_graph(shops_names, days, prices, series, vendor, graph_mode='vendor', days_mode=graph_days)
     else:
         print('unknown_submenu')
 
     query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH)
 
-    with open('graphic.png', 'rb') as photo:
-        image = telegram.InputMediaPhoto(photo)
+    if is_graph_data_empty:
+        reply_markup_keyboard = InlineKeyboardMarkup(keyboard_ONLY_BACK)
+        with open('images/no_search_results.png', 'rb') as photo:
+            image = telegram.InputMediaPhoto(photo)
+    else:
+        reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH)
+        with open('graphic.png', 'rb') as photo:
+            image = telegram.InputMediaPhoto(photo)
 
     query.edit_message_media(
         media=image
     )
 
-    series = series.replace('+', ' ')
+    if is_graph_data_empty:
+        query.edit_message_caption(
+            caption=no_data_text,
+            reply_markup=reply_markup_keyboard
+        )
+    else:
+        series = series.replace('+', ' ')
 
-    query.edit_message_caption(
-        caption=f'submenu: {submenu_title}\n'
-                f'shop: {shop}\n'
-                f'vendor: {vendor}\n'
-                f'arch: {arch}\n'
-                f'series: {series}\n'
-                f'days: {str(graph_days)}\n'
-                f'level: {graph_level}\n' + select_graph_text,
-        reply_markup=reply_markup_keyboard
-    )
+        query.edit_message_caption(
+            caption=f'submenu: {submenu_title}\n'
+                    f'shop: {shop}\n'
+                    f'vendor: {vendor}\n'
+                    f'arch: {arch}\n'
+                    f'series: {series}\n'
+                    f'days: {str(graph_days)}\n'
+                    f'level: {graph_level}\n' + select_graph_text,
+            reply_markup=reply_markup_keyboard
+        )
 
     # Переход в состояние GRAPH_SUBMENU
     return GRAPH_SUBMENU
+
+
+def define_prices_by_graph_level(days, graph_level, offers, prices, shops_names):
+    if graph_level == 'min':
+        define_names_days_prices(shops_names, days, offers, prices, mode='min')
+    elif graph_level == 'max':
+        define_names_days_prices(shops_names, days, offers, prices, mode='max')
+    elif graph_level == 'average':
+        define_names_days_prices(shops_names, days, offers, prices, mode='average')
+    else:
+        print('unknown graph level')
+
+
+def allocate_names_and_dates(card_vendor, offer, offers):
+    if card_vendor not in offers:
+        offers[card_vendor] = {}
+    date = offer['date'].split('T')[0]
+    if date not in offers[card_vendor]:
+        offers[card_vendor][date] = {}
+    offers[card_vendor][date][offer['cardName']] = offer['cardPrice']
+
+
+def get_days_list():
+    base = datetime.date(2022, 11, 20)
+    now = datetime.datetime.today().date()
+    days = [str(base + datetime.timedelta(days=x)) for x in range((now - base).days + 1)]
+    return days
 
 
 def draw_graph(vendors, days, prices, series, shop, graph_mode='shop', days_mode=30):
@@ -1402,7 +1496,9 @@ def define_names_days_prices(vendors, days, offers, prices, mode='min'):
             choosing_day = day
             while offers[card_vendor].get(choosing_day) is None:
                 if choosing_day == '2022-11-20':
-                    choosing_day = list(offers[card_vendor].keys())[0]
+                    choose_days_list = list(offers[card_vendor].keys())
+                    if len(choose_days_list) > 0:
+                        choosing_day = list(offers[card_vendor].keys())[0]
                     is_from_begin = False
                     break
                 date_year, date_month, date_day = [int(i) for i in choosing_day.split('-')]
