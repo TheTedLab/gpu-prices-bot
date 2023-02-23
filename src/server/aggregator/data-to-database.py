@@ -10,5 +10,5 @@ for i in range(path_len):
         data = json.load(file)
 
     response = requests.post(url='http://localhost:8080/insert-new-data', json=data)
-    print(i, this_date, response)
+    print((i + 1), this_date, response)
     

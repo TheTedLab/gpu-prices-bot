@@ -14,10 +14,12 @@ fonttools==4.38.0
 h11==0.14.0
 idna==3.4
 kiwisolver==1.4.4
+loguru==0.6.0
 matplotlib==3.6.2
 numpy==1.24.0
 outcome==1.2.0
 packaging==22.0
+pendulum==2.1.2
 Pillow==9.3.0
 pycparser==2.21
 pyparsing==3.0.9

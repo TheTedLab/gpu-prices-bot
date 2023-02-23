@@ -14,7 +14,6 @@ from constants import *
 def main() -> None:
     """Start the bot."""
     # Создание Updater и связывание с токеном бота
-    # token = os.getenv('TOKEN')
     updater = Updater(token)
 
     # Получение dispatcher и регистрация handlers
@@ -32,7 +31,6 @@ def main() -> None:
                 CallbackQueryHandler(graph_for_gpu_func, pattern='^' + str(SHOW_90_DAYS_GPU) + '$'),
             ],
             ON_GPU_QUESTION: [
-                CallbackQueryHandler(gpu_again, pattern='^' + str(YES_ON_GPU) + '$'),
             ],
             GPU_SUBMENU: [
                 MessageHandler(Filters.text, gpu_search_func),
@@ -52,17 +50,17 @@ def main() -> None:
         entry_points=[CommandHandler('start', start)],
         states={
             MENU: [
-                CallbackQueryHandler(stats, pattern='^' + str(STATS) + '$'),
-                CallbackQueryHandler(popularity, pattern='^' + str(POPULARITY) + '$'),
+                CallbackQueryHandler(stats_popularity_func, pattern='^' + str(STATS) + '$'),
+                CallbackQueryHandler(stats_popularity_func, pattern='^' + str(POPULARITY) + '$'),
             ],
             STATS_SUBMENU: [
-                CallbackQueryHandler(for_shop, pattern='^' + str(FOR_SHOP) + '$'),
-                CallbackQueryHandler(for_vendor, pattern='^' + str(FOR_VENDOR) + '$'),
+                CallbackQueryHandler(for_shop_vendor_stats, pattern='^' + str(FOR_SHOP) + '$'),
+                CallbackQueryHandler(for_shop_vendor_stats, pattern='^' + str(FOR_VENDOR) + '$'),
                 for_gpu_handler,
             ],
             POPULARITY_SUBMENU: [
-                CallbackQueryHandler(for_shop_popularity, pattern='^'+ str(POPULARITY_FOR_SHOP) + '$'),
-                CallbackQueryHandler(for_vendor_popularity, pattern='^' + str(POPULARITY_FOR_VENDOR) + '$'),
+                CallbackQueryHandler(for_shop_vendor_popularity, pattern='^'+ str(POPULARITY_FOR_SHOP) + '$'),
+                CallbackQueryHandler(for_shop_vendor_popularity, pattern='^' + str(POPULARITY_FOR_VENDOR) + '$'),
             ],
             POPULARITY_SHOPS_SUBMENU: [
                 CallbackQueryHandler(popularity_shops_graph, pattern='^' + str(DNS_SHOP) + '$'),
@@ -125,25 +123,25 @@ def main() -> None:
                 CallbackQueryHandler(arch_func, pattern='^' + str(VENDOR_ZOTAC) + '$'),
             ],
             ARCHITECTURE_SUBMENU: [
-                CallbackQueryHandler(nvidia_func, pattern='^' + str(NVIDIA) + '$'),
-                CallbackQueryHandler(amd_func, pattern='^' + str(AMD) + '$'),
-                CallbackQueryHandler(other_func, pattern='^' + str(OTHER_ARCH) + '$'),
+                CallbackQueryHandler(nvidia_amd_other_func, pattern='^' + str(NVIDIA) + '$'),
+                CallbackQueryHandler(nvidia_amd_other_func, pattern='^' + str(AMD) + '$'),
+                CallbackQueryHandler(nvidia_amd_other_func, pattern='^' + str(OTHER_ARCH) + '$'),
             ],
             OTHER_ARCH_SUBMENU: [
-                CallbackQueryHandler(intel_func, pattern='^' + str(INTEL) + '$'),
-                CallbackQueryHandler(matrox_func, pattern='^' + str(MATROX) + '$'),
+                CallbackQueryHandler(nvidia_amd_other_func, pattern='^' + str(INTEL) + '$'),
+                CallbackQueryHandler(nvidia_amd_other_func, pattern='^' + str(MATROX) + '$'),
             ],
             NVIDIA_SERIES_SUBMENU: [
-                CallbackQueryHandler(nvidia_10XX_series, pattern='^' + str(NVIDIA_10XX_SERIES) + '$'),
-                CallbackQueryHandler(nvidia_16XX_series, pattern='^' + str(NVIDIA_16XX_SERIES) + '$'),
-                CallbackQueryHandler(nvidia_20XX_series, pattern='^' + str(NVIDIA_20XX_SERIES) + '$'),
-                CallbackQueryHandler(nvidia_30XX_series, pattern='^' + str(NVIDIA_30XX_SERIES) + '$'),
-                CallbackQueryHandler(nvidia_40XX_series, pattern='^' + str(NVIDIA_40XX_SERIES) + '$'),
-                CallbackQueryHandler(nvidia_other_func, pattern='^' + str(NVIDIA_OTHER_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_10XX_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_16XX_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_20XX_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_30XX_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_40XX_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_OTHER_SERIES) + '$'),
             ],
             NVIDIA_OTHER_SUBMENU: [
-                CallbackQueryHandler(nvidia_quadro_series, pattern='^' + str(NVIDIA_QUADRO_SERIES) + '$'),
-                CallbackQueryHandler(nvidia_tesla_series, pattern='^' + str(NVIDIA_TESLA_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_QUADRO_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_TESLA_SERIES) + '$'),
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_GT_710_SERIES) + '$'),
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_GT_730_SERIES) + '$'),
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_210_SERIES) + '$'),
@@ -152,7 +150,7 @@ def main() -> None:
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_QUADRO_P2000_SERIES) + '$'),
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_QUADRO_T400_SERIES) + '$'),
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_QUADRO_RTX_6000_SERIES) + '$'),
-                CallbackQueryHandler(quadro_AXXXX, pattern='^' + str(NVIDIA_QUADRO_RTX_AXXXX_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_QUADRO_RTX_AXXXX_SERIES) + '$'),
             ],
             NVIDIA_QUADRO_RTX_AXXXX_SERIES_SUBMENU: [
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_QUADRO_RTX_A2000_SERIES) + '$'),
@@ -170,8 +168,8 @@ def main() -> None:
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_1030_SERIES) + '$'),
             ],
             NVIDIA_16XX_SERIES_SUBMENU: [
-                CallbackQueryHandler(nvidia_1660X_series, pattern='^' + str(NVIDIA_1660X_SERIES) + '$'),
-                CallbackQueryHandler(nvidia_1650X_series, pattern='^' + str(NVIDIA_1650X_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_1660X_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_1650X_SERIES) + '$'),
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_1630_SERIES) + '$'),
             ],
             NVIDIA_1650X_SERIES_SUBMENU: [
@@ -184,8 +182,8 @@ def main() -> None:
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_1660_SUPER_SERIES) + '$'),
             ],
             NVIDIA_20XX_SERIES_SUBMENU: [
-                CallbackQueryHandler(nvidia_2060X_series, pattern='^' + str(NVIDIA_2060X_SERIES) + '$'),
-                CallbackQueryHandler(nvidia_2080X_series, pattern='^' + str(NVIDIA_2080X_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_2060X_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_2080X_SERIES) + '$'),
             ],
             NVIDIA_2060X_SERIES_SUBMENU: [
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_2060_SERIES) + '$'),
@@ -197,10 +195,10 @@ def main() -> None:
             ],
             NVIDIA_30XX_SERIES_SUBMENU: [
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_3050_SERIES) + '$'),
-                CallbackQueryHandler(nvidia_3060X_series, pattern='^' + str(NVIDIA_3060X_SERIES) + '$'),
-                CallbackQueryHandler(nvidia_3070X_series, pattern='^' + str(NVIDIA_3070X_SERIES) + '$'),
-                CallbackQueryHandler(nvidia_3080X_series, pattern='^' + str(NVIDIA_3080X_SERIES) + '$'),
-                CallbackQueryHandler(nvidia_3090X_series, pattern='^' + str(NVIDIA_3090X_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_3060X_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_3070X_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_3080X_SERIES) + '$'),
+                CallbackQueryHandler(nvidia_series_func, pattern='^' + str(NVIDIA_3090X_SERIES) + '$'),
             ],
             NVIDIA_3060X_SERIES_SUBMENU: [
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_3060_SERIES) + '$'),
