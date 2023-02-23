@@ -48,7 +48,7 @@ STATS, POPULARITY, FOR_SHOP, FOR_VENDOR, FOR_GPU,\
     CURRENT_GRAPH_LEVEL, CURRENT_GRAPH_DAYS, CURRENT_GRAPH_STATE, CURRENT_GRAPH_START, \
     CURRENT_GRAPH_GPU_LEVEL, CURRENT_GRAPH_GPU_DAYS, CURRENT_GRAPH_GPU_STATE, CURRENT_GRAPH_GPU_START, \
     CURRENT_GAME_SUBMENU, ON_GPU, ON_GPU_QUESTION, CURRENT_DATA, CURRENT_SERIES, GRAPH_SUBMENU_ON_GPU, \
-    YES_ON_GPU, NO_ON_GPU, ON_SEARCH, SEARCH = range(30)
+    YES_ON_GPU, NO_ON_GPU, ON_SEARCH, SEARCH, CURRENT_USER_NAME, CURRENT_TEMP_DATA = range(32)
 # Варианты ответа для SHOPS
 DNS_SHOP, MVIDEO_SHOP, CITILINK_SHOP = range(3)
 # Варианты ответа для ARCHITECTURES
@@ -91,6 +91,7 @@ SHOW_30_DAYS_GPU, SHOW_60_DAYS_GPU, SHOW_90_DAYS_GPU, GRAPH_MIN_GPU, GRAPH_AVERA
 greetings_text = "Я информационный бот, который поможет тебе узнать цены " \
                  "на видеокарты в различных магазинах!"
 
+hello_text = hand_emoji + "Привет, "
 using_buttons_text = "Чтобы получить информацию, воспользуйся кнопками:"
 select_stats_text = "Выберите вид статистики:"
 select_popularity_text = "Выберите вид популярности:"
@@ -106,6 +107,8 @@ help_text = "/start - начать разговор\n" \
             "Если бот не отвечает и не реагирует на кнопки попробуйте подождать " \
             "или перезапустите его с помощью\n /start"
 no_data_text = "Нет данных по выбранным параметрам"
+popularity_shop_text = "Популярность по магазину "
+popularity_vendor_text = "Популярность по производителю "
 
 # Список текстов кнопок для поиска игр
 gpu_search_list = []
@@ -437,4 +440,7 @@ keyboard_ON_GAME_QUESTION = [
         InlineKeyboardButton("Да", callback_data=str(YES_ON_GPU)),
         InlineKeyboardButton("Нет", callback_data=str(NO_ON_GPU)),
     ]
+]
+
+keyboard_EMPTY = [
 ]
