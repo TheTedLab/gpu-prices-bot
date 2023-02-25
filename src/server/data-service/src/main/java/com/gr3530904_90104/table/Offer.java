@@ -8,8 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.Date;
 
-@
-Table(name = "offers")
+@Table(name = "offers")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
