@@ -2,8 +2,8 @@ package com.gr3530904_90104.controller;
 
 import com.gr3530904_90104.service.DataService;
 import com.gr3530904_90104.table.dto.OfferDto;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,10 +12,9 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@AllArgsConstructor
 @Slf4j
 public class RequestController {
-
-    @Autowired
     private DataService dataService;
 
     @PostMapping("/insert-new-data")
