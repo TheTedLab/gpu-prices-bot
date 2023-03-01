@@ -109,6 +109,10 @@ help_text = "/start - начать разговор\n" \
 no_data_text = "Нет данных по выбранным параметрам"
 popularity_shop_text = "Популярность по магазину "
 popularity_vendor_text = "Популярность по производителю "
+error_enter_text = "Ошибка! Необходимо выбрать кнопку."
+
+# Константы путей к изображениям
+shops_logo_dir = 'images/shops_logo.jpg'
 
 # Список текстов кнопок для поиска игр
 gpu_search_list = []

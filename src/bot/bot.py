@@ -221,10 +221,10 @@ def main() -> None:
                 CallbackQueryHandler(graph_func, pattern='^' + str(NVIDIA_4090_SERIES) + '$'),
             ],
             AMD_SERIES_SUBMENU: [
-                CallbackQueryHandler(amd_rx_5XX_series, pattern='^' + str(AMD_RX5XX_SERIES) + '$'),
-                CallbackQueryHandler(amd_rx_5XXX_series, pattern='^' + str(AMD_RX5XXX_SERIES) + '$'),
-                CallbackQueryHandler(amd_rx_6XXX_series, pattern='^' + str(AMD_RX6XXX_SERIES) + '$'),
-                CallbackQueryHandler(amd_other_func, pattern='^' + str(AMD_OTHER_SERIES) + '$'),
+                CallbackQueryHandler(amd_series_func, pattern='^' + str(AMD_RX5XX_SERIES) + '$'),
+                CallbackQueryHandler(amd_series_func, pattern='^' + str(AMD_RX5XXX_SERIES) + '$'),
+                CallbackQueryHandler(amd_series_func, pattern='^' + str(AMD_RX6XXX_SERIES) + '$'),
+                CallbackQueryHandler(amd_series_func, pattern='^' + str(AMD_OTHER_SERIES) + '$'),
             ],
             AMD_OTHER_SUBMENU: [
                 CallbackQueryHandler(graph_func, pattern='^' + str(AMD_R7_240_SERIES) + '$'),
@@ -241,10 +241,10 @@ def main() -> None:
             AMD_RX_6XXX_SERIES_SUBMENU: [
                 CallbackQueryHandler(graph_func, pattern='^' + str(AMD_RX_6400_SERIES) + '$'),
                 CallbackQueryHandler(graph_func, pattern='^' + str(AMD_RX_6500_XT_SERIES) + '$'),
-                CallbackQueryHandler(amd_rx_66XX_series, pattern='^' + str(AMD_RX_66XX_SERIES) + '$'),
-                CallbackQueryHandler(amd_rx_67XX_series, pattern='^' + str(AMD_RX_67XX_SERIES) + '$'),
-                CallbackQueryHandler(amd_rx_68XX_series, pattern='^' + str(AMD_RX_68XX_SERIES) + '$'),
-                CallbackQueryHandler(amd_rx_69XX_series, pattern='^' + str(AMD_RX_69XX_SERIES) + '$'),
+                CallbackQueryHandler(amd_series_func, pattern='^' + str(AMD_RX_66XX_SERIES) + '$'),
+                CallbackQueryHandler(amd_series_func, pattern='^' + str(AMD_RX_67XX_SERIES) + '$'),
+                CallbackQueryHandler(amd_series_func, pattern='^' + str(AMD_RX_68XX_SERIES) + '$'),
+                CallbackQueryHandler(amd_series_func, pattern='^' + str(AMD_RX_69XX_SERIES) + '$'),
             ],
             AMD_RX_66XX_SERIES_SUBMENU: [
                 CallbackQueryHandler(graph_func, pattern='^' + str(AMD_RX_6600_SERIES) + '$'),
