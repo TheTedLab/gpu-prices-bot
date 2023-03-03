@@ -22,3 +22,32 @@ def shops_logo_path(tmp_path_factory):
             dest_image.write(image_string)
 
     return image_path
+
+@pytest.fixture()
+def graph_data():
+
+    return {
+        "MVIDEO": {
+            "1": {
+                "cardName": "Product A"
+            },
+            "2": {
+                "cardName": "Product B"
+            },
+            "3": None
+        },
+        "CITILINK": {
+            "1": None,
+            "2": {
+                "cardName": "Product C"
+            },
+            "3": {
+                "cardName": "Product D"
+            }
+        }
+    }
+
+
+@pytest.fixture()
+def vendor():
+    return "Vendor A"

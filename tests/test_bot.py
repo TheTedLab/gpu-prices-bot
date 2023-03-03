@@ -2,6 +2,7 @@ import pytest
 from src.bot.commands import *
 from src.bot.constants import *
 from telegram import InlineKeyboardMarkup
+import colorsys
 
 
 @pytest.mark.bot
@@ -491,3 +492,244 @@ def test_gpu_search_func(mocked_update_context, mocker,
 
     assert reply_markup_keyboard == mocked_update.message.reply_photo.call_args.kwargs['reply_markup']
     assert caption_text == mocked_update.message.reply_photo.call_args.kwargs['caption']
+    
+params_stats_popularity_func_try = (
+    (STATS, STATS_SUBMENU, select_stats_text, keyboard_STATS),
+    (POPULARITY, POPULARITY_SUBMENU, select_popularity_text, keyboard_POPULARITY),
+    (FOR_GPU, MENU, using_buttons_text, keyboard_MENU)
+)
+
+params_stats_popularity_func_ids = [
+    f'submenu:{par[0]}, r_val:{par[1]},' \
+    f' caption:{params_stats_popularity_func_try.index(par)},' \
+    f' keyboard:{params_stats_popularity_func_try.index(par)}' for par in params_stats_popularity_func_try
+]
+
+
+@pytest.mark.bot
+@pytest.mark.parametrize('submenu, r_val, caption, keyboard',
+                         params_stats_popularity_func_try, ids=params_stats_popularity_func_ids)
+def test_stats_popularity_func(mocked_update_context, mocker,
+                               submenu, r_val, caption, keyboard):
+    mocked_update, mocked_context = mocked_update_context
+    mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
+    mocked_update.callback_query.data = str(submenu)
+
+    return_value = stats_popularity_func(mocked_update, mocked_context)
+    assert return_value == r_val
+
+    expected_context_calls = [
+        mocker.call.__setitem__(CURRENT_USER_NAME, 'Tester'),
+        mocker.call.__getitem__(CURRENT_USER_NAME)
+    ]
+
+    mocked_context.user_data.assert_has_calls(expected_context_calls)
+
+    with open(shops_logo_dir, 'rb') as photo:
+        image = telegram.InputMediaPhoto(photo)
+
+    reply_markup_keyboard = InlineKeyboardMarkup(keyboard)
+
+    expected_update_calls = [
+        mocker.call.answer(),
+        mocker.call.edit_message_media(media=image),
+        mocker.call.edit_message_caption(
+            caption=caption,
+            reply_markup=reply_markup_keyboard
+        )
+    ]
+
+    mocked_update.callback_query.assert_has_calls(expected_update_calls)
+
+
+@pytest.mark.bot
+def test_get_random_color():
+    r_val = get_random_color()
+
+    assert isinstance(r_val, tuple)
+
+    hsv = colorsys.rgb_to_hsv(r_val[0], r_val[1], r_val[2])
+    for col in hsv:
+        assert col <= 1
+    assert hsv[0] >= 0.0
+    assert hsv[1] >= 0.2
+    assert hsv[2] >= 0.9
+
+@pytest.mark.bot
+def test_define_popularity_places_shops(graph_data, vendor):
+
+    expected_message_caption = "Популярность по производителю Vendor A:\n"
+    expected_message_caption += shops_emojis_dict.get("MVIDEO") + " MVIDEO\n"
+    expected_message_caption += "1. Product A\n"
+    expected_message_caption += "2. Product B\n"
+    expected_message_caption += "3. No Data\n\n"
+    expected_message_caption += shops_emojis_dict.get("CITILINK") + " CITILINK\n"
+    expected_message_caption += "1. No Data\n"
+    expected_message_caption += "2. Product C\n"
+    expected_message_caption += "3. Product D\n\n"
+
+    expected_popularity_places_shops = {
+        "CITILINK": ["Product D", "Product C", "No Data"],
+        "MVIDEO": ["No Data", "Product B", "Product A"]
+    }
+
+    result_message_caption, result_popularity_places_shops = define_popularity_places_shops(graph_data, vendor)
+
+    assert result_message_caption == expected_message_caption
+    assert result_popularity_places_shops == expected_popularity_places_shops
+
+
+params_nvidia_amd_other_func_try = (
+    (NVIDIA, NVIDIA_SERIES_SUBMENU, CURRENT_ARCH, select_series_text, keyboard_NVIDIA_SERIES),
+    (AMD, AMD_SERIES_SUBMENU, CURRENT_ARCH, select_series_text, keyboard_AMD_SERIES),
+    (OTHER_ARCH, OTHER_ARCH_SUBMENU, CURRENT_TEMP_DATA, select_arch_text, keyboard_OTHER_ARCH),
+    (INTEL, INTEL_SERIES_SUBMENU, CURRENT_ARCH, select_series_text, keyboard_INTEL_SERIES),
+    (MATROX, MATROX_SERIES_SUBMENU, CURRENT_ARCH, select_series_text, keyboard_MATROX_SERIES),
+    (AMD_RX_67XX_SERIES, MENU, CURRENT_TEMP_DATA, using_buttons_text, keyboard_MENU)
+)
+
+params_nvidia_amd_other_func_ids = [
+    f'submenu:{par[0]}, r_val:{par[1]}, const:{par[2]},' \
+    f' caption:{params_nvidia_amd_other_func_try.index(par)},' \
+    f' keyboard:{params_nvidia_amd_other_func_try.index(par)}' for par in params_nvidia_amd_other_func_try
+]
+@pytest.mark.bot
+@pytest.mark.parametrize('submenu, r_val, current_const, caption, keyboard',
+                         params_nvidia_amd_other_func_try, ids=params_nvidia_amd_other_func_ids)
+def test_nvidia_amd_other_func(mocked_update_context, mocker,
+                               submenu, r_val, current_const, caption, keyboard):
+    mocked_update, mocked_context = mocked_update_context
+    mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
+    mocked_update.callback_query.data = str(submenu)
+
+    return_value = nvidia_amd_other_func(mocked_update, mocked_context)
+    assert return_value == r_val
+
+    expected_context_calls = [
+        mocker.call.__setitem__(CURRENT_USER_NAME, 'Tester'),
+        mocker.call.__getitem__(CURRENT_USER_NAME),
+        mocker.call.__setitem__(current_const, str(submenu))
+    ]
+
+    mocked_context.user_data.assert_has_calls(expected_context_calls)
+
+    with open(shops_logo_dir, 'rb') as photo:
+        image = telegram.InputMediaPhoto(photo)
+
+    reply_markup_keyboard = InlineKeyboardMarkup(keyboard)
+
+    expected_update_calls = [
+        mocker.call.answer(),
+        mocker.call.edit_message_media(media=image),
+        mocker.call.edit_message_caption(
+            caption=caption,
+            reply_markup=reply_markup_keyboard
+        )
+    ]
+
+    mocked_update.callback_query.assert_has_calls(expected_update_calls)
+
+
+# params_arch_func_try = (
+#     (FOR_SHOP, ARCHITECTURE_SUBMENU, CURRENT_SHOP, select_arch_text, keyboard_ARCHITECTURES),
+#     (FOR_VENDOR, ARCHITECTURE_SUBMENU, CURRENT_VENDOR, select_arch_text, keyboard_ARCHITECTURES),
+#     (AMD_RX_67XX_SERIES, MENU, CURRENT_TEMP_DATA, using_buttons_text, keyboard_MENU)
+# )
+# 
+# params_arch_func_ids = [
+#     f'submenu:{par[0]}, r_val:{par[1]}, const:{par[2]},' \
+#     f' caption:{params_arch_func_try.index(par)},' \
+#     f' keyboard:{params_arch_func_try.index(par)}' for par in params_arch_func_try
+# ]
+# @pytest.mark.bot
+# @pytest.mark.parametrize('submenu, r_val, current_const, caption, keyboard',
+#                          params_arch_func_try, ids=params_arch_func_ids)
+# def test_arch_func(mocked_update_context, mocker,
+#                    submenu, r_val, current_const, caption, keyboard):
+#     mocked_update, mocked_context = mocked_update_context
+#     mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
+#     mocked_update.callback_query.data = str(submenu)
+# 
+#     return_value = arch_func(mocked_update, mocked_context)
+#     assert return_value == r_val
+# 
+#     expected_context_calls = [
+#         mocker.call.__setitem__(CURRENT_USER_NAME, 'Tester'),
+#         mocker.call.__getitem__(CURRENT_USER_NAME),
+#         mocker.call.__setitem__(current_const, str(submenu))
+#     ]
+# 
+#     mocked_context.user_data.assert_has_calls(expected_context_calls)
+# 
+#     with open(shops_logo_dir, 'rb') as photo:
+#         image = telegram.InputMediaPhoto(photo)
+# 
+#     reply_markup_keyboard = InlineKeyboardMarkup(keyboard)
+# 
+#     expected_update_calls = [
+#         mocker.call.answer(),
+#         mocker.call.edit_message_media(media=image),
+#         mocker.call.edit_message_caption(
+#             caption=caption,
+#             reply_markup=reply_markup_keyboard
+#         )
+#     ]
+# 
+#     mocked_update.callback_query.assert_has_calls(expected_update_calls)
+
+@pytest.mark.bot
+def test_help_func(mocked_update_context, mocker):
+    mocked_update, mocked_context = mocked_update_context
+    help_func(mocked_update, mocked_context)
+
+    assert mocked_update.message.reply_text.called_once_with(text=help_text)
+
+@pytest.mark.bot
+def test_end_on_gpu(mocked_update_context, mocker):
+    mocked_update, mocked_context = mocked_update_context
+    mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
+
+    assert end_on_gpu(mocked_update, mocked_context) == BACK_TO_MENU # assuming the function returns BACK_TO_MENU
+    assert mocked_update.called_once_with(mocked_update, mocked_context)
+
+@pytest.mark.bot
+def test_start_fallback(mocked_update_context, mocker):
+    mocked_update, mocked_context = mocked_update_context
+    assert start_fallback(mocked_update, mocked_context) == BACK_TO_MENU
+
+
+
+
+
+
+# @pytest.mark.bot
+# def test_new_start(mocked_update_context, mocker):
+#     mocked_update, mocked_context = mocked_update_context
+#     mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
+# 
+#     return_value = new_start(mocked_update, mocked_context)
+#     assert return_value == MENU
+# 
+#     expected_context_calls = [
+#         mocker.call.__setitem__(CURRENT_USER_NAME, 'Tester'),
+#         mocker.call.__getitem__(CURRENT_USER_NAME),
+#         mocker.call.__setitem__(CURRENT_TEMP_DATA)
+#     ]
+# 
+#     mocked_context.user_data.assert_has_calls(expected_context_calls)
+# 
+#     with open(shops_logo_dir, 'rb') as photo:
+#         image = telegram.InputMediaPhoto(photo)
+# 
+#     reply_markup_keyboard = InlineKeyboardMarkup(keyboard_MENU)
+# 
+#     expected_update_calls = [
+#         mocker.call.answer(),
+#         mocker.call.edit_message_media(media=image),
+#         mocker.call.edit_message_caption(
+#             caption=using_buttons_text,
+#             reply_markup=reply_markup_keyboard
+#         )
+#     ]
+# 
+#     mocked_update.callback_query.assert_has_calls(expected_update_calls)
