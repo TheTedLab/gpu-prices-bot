@@ -1011,9 +1011,8 @@ def help_func(update: Update, context: CallbackContext):
 
 def gpu_search_func(update: Update, context: CallbackContext) -> int:
     """Возвращает информацию поиска по конкретной видеокарте."""
-    user_data = context.user_data
-    user_data[CURRENT_DATA] = update.message.text
-    gpu_name = user_data[CURRENT_DATA]
+    context.user_data[CURRENT_DATA] = update.message.text
+    gpu_name = context.user_data[CURRENT_DATA]
     user = update.message.from_user.full_name
     logger.info(f'User {user} entered gpu name {gpu_name}.')
     gpu_search_list.clear()
@@ -1026,22 +1025,21 @@ def gpu_search_func(update: Update, context: CallbackContext) -> int:
         gpu_search_list.append(gpu_name)
 
     if len(gpu_search_list) != 0:
-        gpu_search_list.reverse()
         inline_keyboard_gpu_search_buttons(gpu_search_list)
         reply_markup_keyboard = InlineKeyboardMarkup(keyboard_ON_SEARCH)
-        with open('images/search.png', 'rb') as photo:
+        with open(search_dir, 'rb') as photo:
             update.message.reply_photo(
                 photo=photo,
-                caption="Результаты поиска для " + gpu_name + ": ",
+                caption=search_results_for_text + gpu_name + ": ",
                 reply_markup=reply_markup_keyboard
             )
         # Переход в состояние ON_SEARCH
         return ON_SEARCH
     else:
-        with open('images/no_search_results.png', 'rb') as photo:
+        with open(no_search_results_dir, 'rb') as photo:
             update.message.reply_photo(
                 photo=photo,
-                caption="Нет результатов поиска",
+                caption=no_search_results_text,
                 reply_markup=InlineKeyboardMarkup(keyboard_ONLY_BACK)
             )
         # Переход в состояние ON_GPU_QUESTION -> выход в меню
@@ -1053,11 +1051,7 @@ def gpu_info(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
     if query.data.startswith("['gpu'"):
         gpu_index = ast.literal_eval(query.data)[1]
-        buttons = InlineKeyboardMarkup(keyboard_ON_SEARCH).to_dict()
-        buttons_list = buttons["inline_keyboard"]
-        buttons_list.reverse()
-
-        gpu_name = buttons["inline_keyboard"][int(gpu_index)][0]["text"]
+        gpu_name = keyboard_ON_SEARCH[int(gpu_index)][0].text
         context.user_data[CURRENT_DATA] = gpu_name
         user = context.user_data[CURRENT_USER_NAME]
         logger.info(f'User {user} chose gpu name {gpu_name}.')
@@ -1088,8 +1082,7 @@ def inline_keyboard_gpu_search_buttons(gpu_search: []):
     # Очистка клавиатуры
     keyboard_ON_SEARCH.clear()
     for gpu in unique_gpu:
-        keyboard_ON_SEARCH.insert(
-            0,
+        keyboard_ON_SEARCH.append(
             [InlineKeyboardButton(
                 gpu, callback_data="['gpu', '" + str(unique_gpu.index(gpu)) + "']"
             )]
