@@ -65,7 +65,7 @@ def start_over(update: Update, context: CallbackContext) -> int:
         update=update,
         context=context,
         keyboard=keyboard_MENU,
-        image_path='images/shops_logo.jpg',
+        image_path=shops_logo_dir,
         caption_text=using_buttons_text
     )
 
@@ -122,7 +122,7 @@ def stats_popularity_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_STATS,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_stats_text
         )
 
@@ -134,7 +134,7 @@ def stats_popularity_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_POPULARITY,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_popularity_text
         )
 
@@ -146,7 +146,7 @@ def stats_popularity_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_MENU,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=using_buttons_text
         )
 
@@ -166,7 +166,7 @@ def for_shop_vendor_stats(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_SHOPS,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_shop_text,
             current_const=CURRENT_SUBMENU
         )
@@ -179,7 +179,7 @@ def for_shop_vendor_stats(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_VENDORS,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_vendor_text,
             current_const=CURRENT_SUBMENU
         )
@@ -192,7 +192,7 @@ def for_shop_vendor_stats(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_MENU,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=using_buttons_text
         )
 
@@ -211,7 +211,7 @@ def for_shop_vendor_popularity(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_SHOPS,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_shop_text
         )
 
@@ -223,7 +223,7 @@ def for_shop_vendor_popularity(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_VENDORS,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_vendor_text
         )
 
@@ -235,7 +235,7 @@ def for_shop_vendor_popularity(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_MENU,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=using_buttons_text
         )
 
@@ -454,7 +454,7 @@ def for_gpu(update: Update, context: CallbackContext) -> int:
         update=update,
         context=context,
         keyboard=keyboard_EMPTY,
-        image_path='images/shops_logo.jpg',
+        image_path=shops_logo_dir,
         caption_text=select_gpu_text
     )
 
@@ -470,7 +470,7 @@ def arch_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_ARCHITECTURES,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_arch_text,
             current_const=CURRENT_SHOP
         )
@@ -485,7 +485,7 @@ def arch_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_ARCHITECTURES,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_arch_text,
             current_const=CURRENT_VENDOR
         )
@@ -502,7 +502,7 @@ def arch_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_MENU,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=using_buttons_text
         )
 
@@ -519,7 +519,7 @@ def nvidia_amd_other_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_NVIDIA_SERIES,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_series_text,
             current_const=CURRENT_ARCH
         )
@@ -532,7 +532,7 @@ def nvidia_amd_other_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_AMD_SERIES,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_series_text,
             current_const=CURRENT_ARCH
         )
@@ -545,7 +545,7 @@ def nvidia_amd_other_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_OTHER_ARCH,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_arch_text
         )
 
@@ -557,7 +557,7 @@ def nvidia_amd_other_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_INTEL_SERIES,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_series_text,
             current_const=CURRENT_ARCH
         )
@@ -570,7 +570,7 @@ def nvidia_amd_other_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_MATROX_SERIES,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_series_text,
             current_const=CURRENT_ARCH
         )
@@ -583,7 +583,7 @@ def nvidia_amd_other_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_MENU,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=using_buttons_text
         )
 
@@ -604,7 +604,7 @@ def nvidia_series_func(update: Update, context: CallbackContext) -> int:
         update=update,
         context=context,
         keyboard=keyboard,
-        image_path='images/shops_logo.jpg',
+        image_path=shops_logo_dir,
         caption_text=select_series_text,
     )
 
@@ -625,7 +625,7 @@ def amd_series_func(update: Update, context: CallbackContext) -> int:
         update=update,
         context=context,
         keyboard=keyboard,
-        image_path='images/shops_logo.jpg',
+        image_path=shops_logo_dir,
         caption_text=select_series_text,
     )
 
@@ -868,7 +868,7 @@ def graph_func(update: Update, context: CallbackContext) -> int:
 
     if is_graph_data_empty:
         reply_markup_keyboard = InlineKeyboardMarkup(keyboard_ONLY_BACK)
-        with open('images/no_search_results.png', 'rb') as photo:
+        with open(no_search_results_dir, 'rb') as photo:
             image = telegram.InputMediaPhoto(photo)
     else:
         reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH)
@@ -1059,7 +1059,7 @@ def gpu_info(update: Update, context: CallbackContext) -> int:
 
         reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH_PERIODS)
 
-        with open('images/shops_logo.jpg', 'rb') as photo:
+        with open(shops_logo_dir, 'rb') as photo:
             image = telegram.InputMediaPhoto(photo)
 
         query.edit_message_media(
@@ -1123,7 +1123,7 @@ def new_start(update: Update, context: CallbackContext):
         update=update,
         context=context,
         keyboard=keyboard_MENU,
-        image_path='images/shops_logo.jpg',
+        image_path=shops_logo_dir,
         caption_text=using_buttons_text,
     )
 

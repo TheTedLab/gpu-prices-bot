@@ -26,7 +26,7 @@ services:
   bot:
     image: bot:latest
     volumes:
-      - log_volume:/bot/logs
+      - log_volume:/logs
     networks:
       vpcbr:
         ipv4_address: 173.18.0.5

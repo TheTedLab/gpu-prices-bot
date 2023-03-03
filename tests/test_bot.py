@@ -53,7 +53,7 @@ def test_start(mocked_update_context, mocker):
 
 
 @pytest.mark.bot
-def test_start_over(mocked_update_context, mocker, shops_logo_path):
+def test_start_over(mocked_update_context, mocker):
     mocked_update, mocked_context = mocked_update_context
     mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
 

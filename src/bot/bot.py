@@ -6,9 +6,9 @@ from telegram.ext import (
     MessageHandler, Filters,
 )
 
-from autorization import token
-from commands import *
-from constants import *
+from src.bot.autorization import token
+from src.bot.commands import *
+from src.bot.constants import *
 
 
 def main() -> None:

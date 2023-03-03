@@ -13,7 +13,7 @@ def mocked_update_context(mocker):
     return mocked_update, mocked_context
 
 
-@pytest.fixture(autouse=True)
+@pytest.fixture()
 def shops_logo_path(tmp_path_factory):
     image_path = tmp_path_factory.mktemp('test_images') / "shops_logo.jpg"
     with open(shops_logo_dir, 'rb') as image:
