@@ -1,4 +1,10 @@
+import json
+
 import pytest
+import filecmp
+import pathlib
+import requests_mock
+
 from src.bot.commands import *
 from src.bot.constants import *
 from telegram import InlineKeyboardMarkup
@@ -822,3 +828,186 @@ def test_error_attention(mocked_update_context, mocker):
     ]
 
     mocked_update.message.reply_text.assert_has_calls(expected_update_calls)
+
+
+params_popularity_shops_graph = [
+    (DNS_SHOP, 'DNS'),
+    (MVIDEO_SHOP, 'MVIDEO'),
+    (CITILINK_SHOP, 'CITILINK')
+]
+
+@pytest.mark.bot
+@pytest.mark.parametrize('shop_const, shop_name', params_popularity_shops_graph)
+def test_popularity_shops_graph(mocked_update_context, mocker, requests_mock,
+                                shop_const, shop_name):
+    mocked_update, mocked_context = mocked_update_context
+    mocked_update.callback_query.data = str(shop_const)
+    mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
+
+    url = f'http://173.18.0.3:8080/popularity/for-shop?shopName={shop_name}'
+
+    with open(f'resources/popularity-shops-graph-data-{shop_name}.json', 'r', encoding='utf-8') as file:
+        json_data = json.load(file)
+
+    requests_mock.get(url, json=json_data)
+
+    return_value = popularity_shops_graph(mocked_update, mocked_context)
+    assert return_value == POPULARITY_SHOPS_GRAPH_SUBMENU
+
+    expected_context_calls = [
+        mocker.call.__setitem__(CURRENT_USER_NAME, 'Tester'),
+        mocker.call.__getitem__(CURRENT_USER_NAME),
+        mocker.call.__setitem__(CURRENT_TEMP_DATA, str(shop_const))
+    ]
+
+    mocked_context.user_data.assert_has_calls(expected_context_calls)
+
+    with open('graphic.png', 'rb') as photo:
+        image = telegram.InputMediaPhoto(photo)
+
+    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_POPULARITY_GRAPH)
+
+    expected_update_calls = [
+        mocker.call.answer(),
+        mocker.call.edit_message_media(media=image),
+        mocker.call.edit_message_caption(
+            caption=popularity_shop_text + shop_name,
+            reply_markup=reply_markup_keyboard
+        )
+    ]
+
+    mocked_update.callback_query.assert_has_calls(expected_update_calls)
+
+
+params_popularity_vendors_graph = [
+    (VENDOR_MSI, 'MSI'),
+    (VENDOR_ASUS, 'ASUS'),
+    (VENDOR_PALIT, 'PALIT')
+]
+
+
+@pytest.mark.bot
+@pytest.mark.parametrize('vendor_const, vendor_name', params_popularity_vendors_graph)
+def test_popularity_vendors_graph(mocked_update_context, mocker, requests_mock,
+                                vendor_const, vendor_name):
+    mocked_update, mocked_context = mocked_update_context
+    mocked_update.callback_query.data = str(vendor_const)
+    mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
+
+    url = f'http://173.18.0.3:8080/popularity/for-vendor?vendorName={vendor_name}'
+
+    with open(f'resources/popularity-vendors-graph-data-{vendor_name}.json', 'r', encoding='utf-8') as file:
+        json_data = json.load(file)
+
+    requests_mock.get(url, json=json_data)
+
+    return_value = popularity_vendors_graph(mocked_update, mocked_context)
+    assert return_value == POPULARITY_VENDORS_GRAPH_SUBMENU
+
+    expected_context_calls = [
+        mocker.call.__setitem__(CURRENT_USER_NAME, 'Tester'),
+        mocker.call.__getitem__(CURRENT_USER_NAME),
+        mocker.call.__setitem__(CURRENT_TEMP_DATA, str(vendor_const))
+    ]
+
+    mocked_context.user_data.assert_has_calls(expected_context_calls)
+
+    with open('graphic.png', 'rb') as photo:
+        image = telegram.InputMediaPhoto(photo)
+
+    expected_message_caption = popularity_vendor_text + vendor_name + ':\n'
+    for shop in json_data:
+        expected_message_caption += shops_emojis_dict.get(shop) + f" {shop}\n"
+        for place in ['1', '2', '3']:
+            if json_data[shop].get(place) is not None:
+                card_name = json_data[shop][place]['cardName']
+                expected_message_caption += f'{place}. {card_name}\n'
+        expected_message_caption += '\n'
+
+    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_POPULARITY_GRAPH)
+
+    expected_update_calls = [
+        mocker.call.answer(),
+        mocker.call.edit_message_media(media=image),
+        mocker.call.edit_message_caption(
+            caption=expected_message_caption,
+            reply_markup=reply_markup_keyboard
+        )
+    ]
+
+    mocked_update.callback_query.assert_has_calls(expected_update_calls)
+
+
+params_graph_for_gpu_func = [
+    (SHOW_30_DAYS_GPU, 'PALIT GEFORCE RTX 3070 TI GAMINGPRO', 30),
+    (SHOW_60_DAYS_GPU, 'GEFORCE RTX 3060 RTX3060 DUAL OC 12G', 60),
+    (SHOW_90_DAYS_GPU, 'GEFORCE RTX 4080 EAGLE OC 16GB', 90)
+]
+
+
+@pytest.mark.bot
+@pytest.mark.parametrize('graph_state, card_name, days', params_graph_for_gpu_func)
+def test_graph_for_gpu_func(mocked_update_context, mocker, requests_mock,
+                            graph_state, card_name, days):
+    mocked_update, mocked_context = mocked_update_context
+    mocked_update.callback_query.data = str(graph_state)
+    mocked_context.user_data[CURRENT_GPU] = card_name
+    mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
+
+    url = f'http://173.18.0.3:8080/price?cardName={card_name}'
+
+    with open(f'resources/graph-for-gpu-data-{card_name.replace(" ", "-")}.json', 'r', encoding='utf-8') as file:
+        json_data = json.load(file)
+
+    requests_mock.get(url, json=json_data)
+
+    return_value = graph_for_gpu_func(mocked_update, mocked_context)
+    assert return_value == GRAPH_SUBMENU_ON_GPU
+
+    expected_context_calls = [
+        mocker.call.__setitem__(CURRENT_GPU, card_name),
+        mocker.call.__setitem__(CURRENT_USER_NAME, 'Tester'),
+        mocker.call.__setitem__(CURRENT_GRAPH_GPU_DAYS, days),
+        mocker.call.__getitem__(CURRENT_GRAPH_GPU_DAYS),
+        mocker.call.__getitem__(CURRENT_GPU),
+        mocker.call.__getitem__(CURRENT_USER_NAME),
+        mocker.call.__setitem__(CURRENT_TEMP_DATA, str(graph_state))
+    ]
+
+    mocked_context.user_data.assert_has_calls(expected_context_calls)
+
+    with open('graphic.png', 'rb') as photo:
+        image = telegram.InputMediaPhoto(photo)
+
+    expected_message_caption = f'submenu: for_gpu\n' \
+                           f'gpu: {card_name}\n' \
+                           f'days: {str(days)}\n' + select_graph_text
+
+    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH_PERIODS)
+
+    expected_update_calls = [
+        mocker.call.answer(),
+        mocker.call.edit_message_media(media=image),
+        mocker.call.edit_message_caption(
+            caption=expected_message_caption,
+            reply_markup=reply_markup_keyboard
+        )
+    ]
+
+    mocked_update.callback_query.assert_has_calls(expected_update_calls)
+
+
+params_draw_graph = [
+    (["PALIT", "ASUS"], get_days_list(), {}, 'GEFORCE RTX 3090', 'MVIDEO', 30, 'min')
+]
+
+@pytest.mark.bot
+@pytest.mark.parametrize('vendors_names, days, prices, series, shop, days_mode, graph_level', params_draw_graph)
+def test_draw_graph(vendors_names, days, prices, series, shop, days_mode, graph_level, graph_offers_vendors_data):
+    define_prices_by_graph_level(days, graph_level, graph_offers_vendors_data, prices, ["PALIT", "ASUS"])
+
+    draw_graph(vendors_names, days, prices, series, shop, 'vendor', days_mode)
+
+    expected_file = pathlib.Path('resources/graphic-MVIDEO.png')
+    actual_file = pathlib.Path('graphic.png')
+    assert filecmp.cmp(expected_file, actual_file, shallow=False) == True
