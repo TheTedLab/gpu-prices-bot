@@ -646,14 +646,6 @@ def graph_for_gpu_func(update: Update, context: CallbackContext) -> int:
         context.user_data[CURRENT_GRAPH_GPU_DAYS] = 60
     elif graph_state == str(SHOW_90_DAYS_GPU):
         context.user_data[CURRENT_GRAPH_GPU_DAYS] = 90
-    elif graph_state == str(GRAPH_MIN_GPU):
-        context.user_data[CURRENT_GRAPH_GPU_LEVEL] = 0
-    elif graph_state == str(GRAPH_AVERAGE_GPU):
-        context.user_data[CURRENT_GRAPH_GPU_LEVEL] = 1
-    elif graph_state == str(GRAPH_MAX_GPU):
-        context.user_data[CURRENT_GRAPH_GPU_LEVEL] = 2
-    elif graph_state == 16:
-        context.user_data[CURRENT_SERIES] = query.data
 
     graph_days = context.user_data[CURRENT_GRAPH_GPU_DAYS]
 

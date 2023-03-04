@@ -630,109 +630,117 @@ def test_nvidia_amd_other_func(mocked_update_context, mocker,
     mocked_update.callback_query.assert_has_calls(expected_update_calls)
 
 
-# params_arch_func_try = (
-#     (FOR_SHOP, ARCHITECTURE_SUBMENU, CURRENT_SHOP, select_arch_text, keyboard_ARCHITECTURES),
-#     (FOR_VENDOR, ARCHITECTURE_SUBMENU, CURRENT_VENDOR, select_arch_text, keyboard_ARCHITECTURES),
-#     (AMD_RX_67XX_SERIES, MENU, CURRENT_TEMP_DATA, using_buttons_text, keyboard_MENU)
-# )
-# 
-# params_arch_func_ids = [
-#     f'submenu:{par[0]}, r_val:{par[1]}, const:{par[2]},' \
-#     f' caption:{params_arch_func_try.index(par)},' \
-#     f' keyboard:{params_arch_func_try.index(par)}' for par in params_arch_func_try
-# ]
-# @pytest.mark.bot
-# @pytest.mark.parametrize('submenu, r_val, current_const, caption, keyboard',
-#                          params_arch_func_try, ids=params_arch_func_ids)
-# def test_arch_func(mocked_update_context, mocker,
-#                    submenu, r_val, current_const, caption, keyboard):
-#     mocked_update, mocked_context = mocked_update_context
-#     mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
-#     mocked_update.callback_query.data = str(submenu)
-# 
-#     return_value = arch_func(mocked_update, mocked_context)
-#     assert return_value == r_val
-# 
-#     expected_context_calls = [
-#         mocker.call.__setitem__(CURRENT_USER_NAME, 'Tester'),
-#         mocker.call.__getitem__(CURRENT_USER_NAME),
-#         mocker.call.__setitem__(current_const, str(submenu))
-#     ]
-# 
-#     mocked_context.user_data.assert_has_calls(expected_context_calls)
-# 
-#     with open(shops_logo_dir, 'rb') as photo:
-#         image = telegram.InputMediaPhoto(photo)
-# 
-#     reply_markup_keyboard = InlineKeyboardMarkup(keyboard)
-# 
-#     expected_update_calls = [
-#         mocker.call.answer(),
-#         mocker.call.edit_message_media(media=image),
-#         mocker.call.edit_message_caption(
-#             caption=caption,
-#             reply_markup=reply_markup_keyboard
-#         )
-#     ]
-# 
-#     mocked_update.callback_query.assert_has_calls(expected_update_calls)
+params_arch_func_try = (
+    (FOR_SHOP, ARCHITECTURE_SUBMENU, CURRENT_SHOP, select_arch_text, keyboard_ARCHITECTURES, DNS_SHOP),
+    (FOR_SHOP, ARCHITECTURE_SUBMENU, CURRENT_SHOP, select_arch_text, keyboard_ARCHITECTURES, CITILINK_SHOP),
+    (FOR_SHOP, ARCHITECTURE_SUBMENU, CURRENT_SHOP, select_arch_text, keyboard_ARCHITECTURES, MVIDEO_SHOP),
+    (FOR_VENDOR, ARCHITECTURE_SUBMENU, CURRENT_VENDOR, select_arch_text, keyboard_ARCHITECTURES, VENDOR_PALIT),
+    (FOR_VENDOR, ARCHITECTURE_SUBMENU, CURRENT_VENDOR, select_arch_text, keyboard_ARCHITECTURES, VENDOR_ASUS),
+    (FOR_VENDOR, ARCHITECTURE_SUBMENU, CURRENT_VENDOR, select_arch_text, keyboard_ARCHITECTURES, VENDOR_MSI),
+    (FOR_GPU, MENU, CURRENT_TEMP_DATA, using_buttons_text, keyboard_MENU, 0)
+)
+
+params_arch_func_ids = [
+    f'submenu:{par[0]}, r_val:{par[1]}, const:{par[2]},' \
+    f' caption:{params_arch_func_try.index(par)},' \
+    f' keyboard:{params_arch_func_try.index(par)}' \
+    f' shop:{par[5]}' for par in params_arch_func_try
+]
+@pytest.mark.bot
+@pytest.mark.parametrize('submenu, r_val, current_const, caption, keyboard, query_data',
+                         params_arch_func_try, ids=params_arch_func_ids)
+def test_arch_func(mocked_update_context, mocker,
+                   submenu, r_val, current_const, caption, keyboard, query_data):
+    mocked_update, mocked_context = mocked_update_context
+    mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
+    mocked_context.user_data[CURRENT_SUBMENU] = str(submenu)
+    mocked_update.callback_query.data = str(query_data)
+
+    return_value = arch_func(mocked_update, mocked_context)
+    assert return_value == r_val
+
+    expected_context_calls = [
+        mocker.call.__setitem__(CURRENT_USER_NAME, 'Tester'),
+        mocker.call.__setitem__(CURRENT_SUBMENU, str(submenu)),
+        mocker.call.__getitem__(CURRENT_USER_NAME),
+        mocker.call.__getitem__(CURRENT_SUBMENU),
+        mocker.call.__setitem__(current_const, str(query_data))
+    ]
+
+    if submenu in [FOR_SHOP, FOR_VENDOR]:
+        expected_context_calls.append(mocker.call.__getitem__(current_const))
+
+    mocked_context.user_data.assert_has_calls(expected_context_calls)
+
+    with open(shops_logo_dir, 'rb') as photo:
+        image = telegram.InputMediaPhoto(photo)
+
+    reply_markup_keyboard = InlineKeyboardMarkup(keyboard)
+
+    expected_update_calls = [
+        mocker.call.answer(),
+        mocker.call.edit_message_media(media=image),
+        mocker.call.edit_message_caption(
+            caption=caption,
+            reply_markup=reply_markup_keyboard
+        )
+    ]
+
+    mocked_update.callback_query.assert_has_calls(expected_update_calls)
 
 @pytest.mark.bot
-def test_help_func(mocked_update_context, mocker):
+def test_help_func(mocked_update_context):
     mocked_update, mocked_context = mocked_update_context
     help_func(mocked_update, mocked_context)
 
     assert mocked_update.message.reply_text.called_once_with(text=help_text)
 
 @pytest.mark.bot
-def test_end_on_gpu(mocked_update_context, mocker):
+def test_end_on_gpu(mocked_update_context):
     mocked_update, mocked_context = mocked_update_context
     mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
 
-    assert end_on_gpu(mocked_update, mocked_context) == BACK_TO_MENU # assuming the function returns BACK_TO_MENU
+    assert end_on_gpu(mocked_update, mocked_context) == BACK_TO_MENU
     assert mocked_update.called_once_with(mocked_update, mocked_context)
 
 @pytest.mark.bot
-def test_start_fallback(mocked_update_context, mocker):
+def test_start_fallback(mocked_update_context):
     mocked_update, mocked_context = mocked_update_context
     assert start_fallback(mocked_update, mocked_context) == BACK_TO_MENU
 
 
+@pytest.mark.bot
+def test_new_start(mocked_update_context, mocker):
+    mocked_update, mocked_context = mocked_update_context
+    mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
 
+    return_value = new_start(mocked_update, mocked_context)
+    assert return_value == MENU
 
+    expected_context_calls = [
+        mocker.call.__setitem__(CURRENT_USER_NAME, 'Tester'),
+        mocker.call.__getitem__(CURRENT_USER_NAME),
+        mocker.call.__setitem__(CURRENT_TEMP_DATA, mocked_update.callback_query.data)
+    ]
 
+    mocked_context.user_data.assert_has_calls(expected_context_calls)
 
-# @pytest.mark.bot
-# def test_new_start(mocked_update_context, mocker):
-#     mocked_update, mocked_context = mocked_update_context
-#     mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
-# 
-#     return_value = new_start(mocked_update, mocked_context)
-#     assert return_value == MENU
-# 
-#     expected_context_calls = [
-#         mocker.call.__setitem__(CURRENT_USER_NAME, 'Tester'),
-#         mocker.call.__getitem__(CURRENT_USER_NAME),
-#         mocker.call.__setitem__(CURRENT_TEMP_DATA)
-#     ]
-# 
-#     mocked_context.user_data.assert_has_calls(expected_context_calls)
-# 
-#     with open(shops_logo_dir, 'rb') as photo:
-#         image = telegram.InputMediaPhoto(photo)
-# 
-#     reply_markup_keyboard = InlineKeyboardMarkup(keyboard_MENU)
-# 
-#     expected_update_calls = [
-#         mocker.call.answer(),
-#         mocker.call.edit_message_media(media=image),
-#         mocker.call.edit_message_caption(
-#             caption=using_buttons_text,
-#             reply_markup=reply_markup_keyboard
-#         )
-#     ]
-# 
-#     mocked_update.callback_query.assert_has_calls(expected_update_calls)
+    with open(shops_logo_dir, 'rb') as photo:
+        image = telegram.InputMediaPhoto(photo)
+
+    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_MENU)
+
+    expected_update_calls = [
+        mocker.call.answer(),
+        mocker.call.edit_message_media(media=image),
+        mocker.call.edit_message_caption(
+            caption=using_buttons_text,
+            reply_markup=reply_markup_keyboard
+        )
+    ]
+
+    mocked_update.callback_query.assert_has_calls(expected_update_calls)
+
 
 params_update_data_nvidia = [
     str(i) for i in [
