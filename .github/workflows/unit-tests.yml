@@ -1,0 +1,33 @@
+name: Python Unit Tests
+on:
+  push:
+    branches:
+      - master
+      - dev
+      - vendors-fixes
+  pull_request:
+    branches:
+      - master
+      - dev
+
+jobs:
+  pytest:
+    name: pytest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run tests with pytest
+        run: |
+          cd tests
+          pytest -m bot
+      - name: Generate coverage badge
+        run: |
+          coverage-badge -o coverage.svg

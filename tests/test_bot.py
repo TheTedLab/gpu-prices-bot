@@ -998,7 +998,9 @@ def test_graph_for_gpu_func(mocked_update_context, mocker, requests_mock,
 
 
 params_draw_graph = [
-    (["PALIT", "ASUS"], get_days_list(), {}, 'GEFORCE RTX 3090', 'MVIDEO', 30, 'min')
+    (["PALIT", "ASUS"], get_days_list(), {}, 'GEFORCE RTX 3090', 'MVIDEO', 30, 'min'),
+    (["PALIT", "ASUS"], get_days_list(), {}, 'GEFORCE RTX 3090', 'DNS', 60, 'max'),
+    (["PALIT", "ASUS"], get_days_list(), {}, 'GEFORCE RTX 3090', 'CITILINK', 90, 'average')
 ]
 
 @pytest.mark.bot
@@ -1008,6 +1010,18 @@ def test_draw_graph(vendors_names, days, prices, series, shop, days_mode, graph_
 
     draw_graph(vendors_names, days, prices, series, shop, 'vendor', days_mode)
 
-    expected_file = pathlib.Path('resources/graphic-MVIDEO.png')
+    expected_file = pathlib.Path(f'resources/graphic-{shop}-{days_mode}-{graph_level}.png')
     actual_file = pathlib.Path('graphic.png')
     assert filecmp.cmp(expected_file, actual_file, shallow=False) == True
+
+
+@pytest.mark.bot
+def test_allocate_names_and_dates():
+    offer = {'cardName': 'GEFORCE GTX 3060 TI VENTUS OC', 'date': '2023-01-01', 'cardPrice': '30000'}
+    offers = {}
+    vendor = 'ASUS'
+    allocate_names_and_dates(vendor, offer, offers)
+    assert vendor in offers
+    assert '2023-01-01' in offers[vendor]
+    assert 'GEFORCE GTX 3060 TI VENTUS OC' in offers[vendor]['2023-01-01']
+    assert '30000' == offers[vendor]['2023-01-01']['GEFORCE GTX 3060 TI VENTUS OC']
