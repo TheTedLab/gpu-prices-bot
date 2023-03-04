@@ -2,11 +2,13 @@ package com.gr3530904_90104.service.impl;
 
 import com.gr3530904_90104.repository.*;
 import com.gr3530904_90104.service.DataService;
-import com.gr3530904_90104.table.*;
+import com.gr3530904_90104.table.Card;
+import com.gr3530904_90104.table.Offer;
+import com.gr3530904_90104.table.Shop;
+import com.gr3530904_90104.table.Vendor;
 import com.gr3530904_90104.table.dto.OfferDto;
 import com.gr3530904_90104.table.dto.OfferDtoMapper;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -17,7 +19,6 @@ import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
-@Getter
 @Slf4j
 public class DataServiceImpl implements DataService {
     private static final long ONE_DAY = 24L * 60 * 60 * 1000; // hours-minutes-seconds-milliseconds
