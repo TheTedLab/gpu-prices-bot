@@ -740,3 +740,56 @@ def test_new_start(mocked_update_context, mocker):
     ]
 
     mocked_update.callback_query.assert_has_calls(expected_update_calls)
+
+
+params_update_data_nvidia = [
+    str(i) for i in [
+        NVIDIA_10XX_SERIES, NVIDIA_16XX_SERIES, NVIDIA_20XX_SERIES, NVIDIA_30XX_SERIES,
+        NVIDIA_40XX_SERIES, NVIDIA_OTHER_SERIES, NVIDIA_QUADRO_SERIES, NVIDIA_TESLA_SERIES,
+        ''
+    ]
+]
+
+
+@pytest.mark.bot
+@pytest.mark.parametrize('update_data', params_update_data_nvidia)
+def test_nvidia_series_func(mocked_update_context, mocker, update_data):
+    mocked_update, mocked_context = mocked_update_context
+    mocked_context.user_data[CURRENT_USER_NAME] = 'Tester'
+    mocked_update.callback_query.data = update_data
+
+    return_value = nvidia_series_func(mocked_update, mocked_context)
+    r_val = series_buttons_dict.get(int(update_data))['returning'] if update_data != '' else MENU
+    assert return_value == r_val
+
+    expected_context_calls = [
+        mocker.call.__setitem__(CURRENT_USER_NAME, 'Tester'),
+        mocker.call.__getitem__(CURRENT_USER_NAME),
+        mocker.call.__setitem__(CURRENT_TEMP_DATA, update_data)
+    ]
+
+    mocked_context.user_data.assert_has_calls(expected_context_calls)
+
+    with open(shops_logo_dir, 'rb') as photo:
+        image = telegram.InputMediaPhoto(photo)
+
+    keyboard = series_buttons_dict.get(int(update_data))['keyboard'] if update_data != '' else keyboard_ONLY_BACK
+    reply_markup_keyboard = InlineKeyboardMarkup(keyboard)
+
+    expected_update_calls = [
+        mocker.call.answer(),
+        mocker.call.edit_message_media(media=image),
+        mocker.call.edit_message_caption(
+            caption=select_series_text,
+            reply_markup=reply_markup_keyboard
+        )
+    ]
+
+    mocked_update.callback_query.assert_has_calls(expected_update_calls)
+
+@pytest.mark.bot
+def test_get_days_list():
+    base = datetime.date(2022, 11, 20)
+    now = datetime.datetime.today().date()
+    days = [str(base + datetime.timedelta(days=x)) for x in range((now - base).days + 1)]
+    assert get_days_list() == days
