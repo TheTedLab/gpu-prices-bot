@@ -28,6 +28,4 @@ jobs:
         run: |
           cd tests
           pytest -m bot
-      - name: Generate coverage badge
-        run: |
           coverage-badge -o coverage.svg
