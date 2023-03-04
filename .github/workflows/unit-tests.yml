@@ -28,15 +28,14 @@ jobs:
         run: |
           cd tests
           pytest -m bot
-          mkdir -p docs
+          mkdir docs
           coverage-badge -o docs/coverage.svg
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: coverage_artifact
-          path: 'docs'
+          path: docs
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
