@@ -10,10 +10,17 @@ on:
       - master
       - dev
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   pytest:
     name: pytest
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python 3.9
@@ -35,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: docs
+          path: tests/docs
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
