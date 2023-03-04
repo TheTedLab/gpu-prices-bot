@@ -51,3 +51,29 @@ def graph_data():
 @pytest.fixture()
 def vendor():
     return "Vendor A"
+
+
+@pytest.fixture()
+def graph_offers_vendors_data():
+    return {
+            "PALIT": {
+                "2022-12-06": {
+                    "GEFORCE PALIT RTX 3090 GAMINGPRO 24G": 109999,
+                    "GEFORCE RTX 3070 TI GAMEROCK 8GB": 52499
+                },
+                "2022-12-12": {
+                    "GEFORCE RTX 4080 GAMEROCK OC 16GB": 108499,
+                    "GEFORCE RTX 4090 GAMEROCK 24GB": 174999,
+                }
+            },
+            "ASUS": {
+                "2022-12-05": {
+                    "RADEON RX 6650 XT DUAL-RX6650XT-O8G OC": 34190,
+                    "GEFORCE RTX 3060 PH-RTX3060-12G-V2": 35990
+                },
+                "2022-12-19": {
+                    "GEFORCE RTX 3060 TI DUAL-RTX3060TI-O8G-V2 OC": 47690,
+                    "RADEON RX 6400 DUAL-RX6400-4G": 15790
+                }
+            }
+        }

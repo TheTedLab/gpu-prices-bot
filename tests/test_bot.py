@@ -793,3 +793,32 @@ def test_get_days_list():
     now = datetime.datetime.today().date()
     days = [str(base + datetime.timedelta(days=x)) for x in range((now - base).days + 1)]
     assert get_days_list() == days
+
+
+params_define_prices = (
+    (get_days_list(), 'min', {}, ["PALIT", "ASUS"]),
+    (get_days_list(), 'max', {}, ["PALIT", "ASUS"]),
+    (get_days_list(), 'average', {}, ["PALIT", "ASUS"]),
+    (get_days_list(), 'hello', {}, ["PALIT", "ASUS"]),
+)
+
+
+@pytest.mark.bot
+@pytest.mark.parametrize('days, graph_level, prices, shops_names', params_define_prices)
+def test_define_prices_by_graph_level(days, graph_level, graph_offers_vendors_data, prices, shops_names):
+    r_mode = define_prices_by_graph_level(days, graph_level, graph_offers_vendors_data, prices, shops_names)
+    assert r_mode == graph_level
+
+
+@pytest.mark.bot
+def test_error_attention(mocked_update_context, mocker):
+    mocked_update, mocked_context = mocked_update_context
+    mocked_update.message.from_user.full_name = 'Tester'
+
+    error_attention(mocked_update, mocked_context)
+
+    expected_update_calls = [
+        mocker.call(text=error_enter_text)
+    ]
+
+    mocked_update.message.reply_text.assert_has_calls(expected_update_calls)

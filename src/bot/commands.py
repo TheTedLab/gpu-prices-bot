@@ -902,14 +902,17 @@ def graph_func(update: Update, context: CallbackContext) -> int:
 def define_prices_by_graph_level(days, graph_level, offers, prices, shops_names):
     """Передать записи о видеокартах (offers) по уровню графика (graph_level)
     для дальнейшего распределения."""
+    result_mode = ''
     if graph_level == 'min':
-        define_names_days_prices(shops_names, days, offers, prices, mode='min')
+        result_mode = define_names_days_prices(shops_names, days, offers, prices, mode='min')
     elif graph_level == 'max':
-        define_names_days_prices(shops_names, days, offers, prices, mode='max')
+        result_mode = define_names_days_prices(shops_names, days, offers, prices, mode='max')
     elif graph_level == 'average':
-        define_names_days_prices(shops_names, days, offers, prices, mode='average')
+        result_mode = define_names_days_prices(shops_names, days, offers, prices, mode='average')
     else:
-        print('unknown graph level')
+        result_mode = graph_level
+        logger.warning(f'Unknown graph level {graph_level}!')
+    return result_mode
 
 
 def allocate_names_and_dates(card_vendor, offer, offers):
@@ -994,6 +997,7 @@ def define_names_days_prices(vendors, days, offers, prices, mode='min'):
                     print('unknown mode')
             else:
                 prices[card_vendor].append(numpy.NaN)
+    return mode
 
 
 def help_func(update: Update, context: CallbackContext):
