@@ -109,6 +109,14 @@ help_text = "/start - начать разговор\n" \
 no_data_text = "Нет данных по выбранным параметрам"
 popularity_shop_text = "Популярность по магазину "
 popularity_vendor_text = "Популярность по производителю "
+error_enter_text = "Ошибка! Необходимо выбрать кнопку."
+no_search_results_text = "Нет результатов поиска"
+search_results_for_text = "Результаты поиска для "
+
+# Константы путей к изображениям
+shops_logo_dir = 'images/shops_logo.jpg'
+search_dir = 'images/search.png'
+no_search_results_dir = 'images/no_search_results.png'
 
 # Список текстов кнопок для поиска игр
 gpu_search_list = []

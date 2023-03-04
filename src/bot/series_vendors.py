@@ -1,4 +1,4 @@
-from constants import *
+from src.bot.constants import *
 
 series_dict = {
     0: "",
@@ -196,6 +196,46 @@ series_buttons_dict = {
         "keyboard": keyboard_NVIDIA_3090X_SERIES,
         "returning": NVIDIA_3090X_SERIES_SUBMENU,
         "name": "NVIDIA 3090X SERIES"
+    },
+    43: {
+        "keyboard": keyboard_AMD_RX_5XX_SERIES,
+        "returning": AMD_RX_5XX_SERIES_SUBMENU,
+        "name": "AMD RX 5XX SERIES"
+    },
+    44: {
+        "keyboard": keyboard_AMD_RX_5XXX_SERIES,
+        "returning": AMD_RX_5XXX_SERIES_SUBMENU,
+        "name": "AMD RX 5XXX SERIES"
+    },
+    45: {
+        "keyboard": keyboard_AMD_RX_6XXX_SERIES,
+        "returning": AMD_RX_6XXX_SERIES_SUBMENU,
+        "name": "AMD RX 6XXX SERIES"
+    },
+    46: {
+        "keyboard": keyboard_AMD_OTHER_SERIES,
+        "returning": AMD_OTHER_SUBMENU,
+        "name": "AMD OTHER SERIES"
+    },
+    55: {
+        "keyboard": keyboard_AMD_RX_66XX_SERIES,
+        "returning": AMD_RX_66XX_SERIES_SUBMENU,
+        "name": "AMD RX 66XX SERIES"
+    },
+    56: {
+        "keyboard": keyboard_AMD_RX_67XX_SERIES,
+        "returning": AMD_RX_67XX_SERIES_SUBMENU,
+        "name": "AMD RX 67XX SERIES"
+    },
+    57: {
+        "keyboard": keyboard_AMD_RX_68XX_SERIES,
+        "returning": AMD_RX_68XX_SERIES_SUBMENU,
+        "name": "AMD RX 68XX SERIES"
+    },
+    58: {
+        "keyboard": keyboard_AMD_RX_69XX_SERIES,
+        "returning": AMD_RX_69XX_SERIES_SUBMENU,
+        "name": "AMD RX 69XX SERIES"
     },
     73: {
         "keyboard": keyboard_NVIDIA_QUADRO_RTX_AXXXX_SERIES,

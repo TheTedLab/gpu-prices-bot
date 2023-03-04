@@ -10,10 +10,10 @@ import telegram
 from telegram import Update, InlineKeyboardMarkup
 from telegram.ext import CallbackContext
 from loguru import logger
-from constants import *
-from series_vendors import series_dict, vendors_dict, shops_dict, series_buttons_dict
+from src.bot.constants import *
+from src.bot.series_vendors import series_dict, vendors_dict, shops_dict, series_buttons_dict
 def set_datetime(record):
-    record['extra']['datetime'] = pendulum.now('Europe/Moscow')
+    record['extra']['datetime'] = pendulum.now('Europe/Moscow').strftime('%Y-%m-%dT%H:%M:%S')
 
 logger.configure(patcher=set_datetime)
 logger.add(
@@ -41,7 +41,7 @@ def start(update: Update, context: CallbackContext) -> int:
     reply_markup_keyboard = InlineKeyboardMarkup(keyboard_MENU)
 
     # Отправка сообщения с текстом и добавлением InlineKeyboard
-    with open('images/shops_logo.jpg', 'rb') as photo:
+    with open(shops_logo_dir, 'rb') as photo:
         update.message.reply_photo(
             photo=photo,
             caption=using_buttons_text,
@@ -65,11 +65,10 @@ def start_over(update: Update, context: CallbackContext) -> int:
         update=update,
         context=context,
         keyboard=keyboard_MENU,
-        image_path='images/shops_logo.jpg',
+        image_path=shops_logo_dir,
         caption_text=using_buttons_text
     )
 
-    # Переход в состояние MENU
     return MENU
 
 
@@ -123,7 +122,7 @@ def stats_popularity_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_STATS,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_stats_text
         )
 
@@ -135,7 +134,7 @@ def stats_popularity_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_POPULARITY,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_popularity_text
         )
 
@@ -147,7 +146,7 @@ def stats_popularity_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_MENU,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=using_buttons_text
         )
 
@@ -167,7 +166,7 @@ def for_shop_vendor_stats(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_SHOPS,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_shop_text,
             current_const=CURRENT_SUBMENU
         )
@@ -180,7 +179,7 @@ def for_shop_vendor_stats(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_VENDORS,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_vendor_text,
             current_const=CURRENT_SUBMENU
         )
@@ -193,7 +192,7 @@ def for_shop_vendor_stats(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_MENU,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=using_buttons_text
         )
 
@@ -212,7 +211,7 @@ def for_shop_vendor_popularity(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_SHOPS,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_shop_text
         )
 
@@ -224,7 +223,7 @@ def for_shop_vendor_popularity(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_VENDORS,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_vendor_text
         )
 
@@ -236,7 +235,7 @@ def for_shop_vendor_popularity(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_MENU,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=using_buttons_text
         )
 
@@ -455,7 +454,7 @@ def for_gpu(update: Update, context: CallbackContext) -> int:
         update=update,
         context=context,
         keyboard=keyboard_EMPTY,
-        image_path='images/shops_logo.jpg',
+        image_path=shops_logo_dir,
         caption_text=select_gpu_text
     )
 
@@ -471,7 +470,7 @@ def arch_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_ARCHITECTURES,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_arch_text,
             current_const=CURRENT_SHOP
         )
@@ -486,7 +485,7 @@ def arch_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_ARCHITECTURES,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_arch_text,
             current_const=CURRENT_VENDOR
         )
@@ -503,7 +502,7 @@ def arch_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_MENU,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=using_buttons_text
         )
 
@@ -520,7 +519,7 @@ def nvidia_amd_other_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_NVIDIA_SERIES,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_series_text,
             current_const=CURRENT_ARCH
         )
@@ -533,7 +532,7 @@ def nvidia_amd_other_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_AMD_SERIES,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_series_text,
             current_const=CURRENT_ARCH
         )
@@ -546,7 +545,7 @@ def nvidia_amd_other_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_OTHER_ARCH,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_arch_text
         )
 
@@ -558,7 +557,7 @@ def nvidia_amd_other_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_INTEL_SERIES,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_series_text,
             current_const=CURRENT_ARCH
         )
@@ -571,7 +570,7 @@ def nvidia_amd_other_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_MATROX_SERIES,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=select_series_text,
             current_const=CURRENT_ARCH
         )
@@ -584,7 +583,7 @@ def nvidia_amd_other_func(update: Update, context: CallbackContext) -> int:
             update=update,
             context=context,
             keyboard=keyboard_MENU,
-            image_path='images/shops_logo.jpg',
+            image_path=shops_logo_dir,
             caption_text=using_buttons_text
         )
 
@@ -605,186 +604,32 @@ def nvidia_series_func(update: Update, context: CallbackContext) -> int:
         update=update,
         context=context,
         keyboard=keyboard,
-        image_path='images/shops_logo.jpg',
+        image_path=shops_logo_dir,
         caption_text=select_series_text,
     )
 
     return series_buttons_dict.get(int(series_button))['returning'] if series_button != '' else MENU
 
-def amd_other_func(update: Update, context: CallbackContext) -> int:
+
+def amd_series_func(update: Update, context: CallbackContext) -> int:
     """Показать кнопки выбора серии видеокарт AMD"""
-    query = update.callback_query
-    query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_AMD_OTHER_SERIES)
+    user = context.user_data[CURRENT_USER_NAME]
+    series_button = update.callback_query.data
+    logger.info(
+        f'User {user} chose '
+        f'{series_buttons_dict.get(int(series_button))["name"] if series_button != "" else "incorrect name"} button.'
+    )
+    keyboard = series_buttons_dict.get(int(series_button))['keyboard'] if series_button != '' else keyboard_ONLY_BACK
 
-    with open('images/shops_logo.jpg', 'rb') as photo:
-        image = telegram.InputMediaPhoto(photo)
-
-    query.edit_message_media(
-        media=image
+    update_query_message_with_keyboard(
+        update=update,
+        context=context,
+        keyboard=keyboard,
+        image_path=shops_logo_dir,
+        caption_text=select_series_text,
     )
 
-    query.edit_message_caption(
-        caption=select_series_text,
-        reply_markup=reply_markup_keyboard
-    )
-
-    # Переход в состояние AMD_OTHER_SUBMENU
-    return AMD_OTHER_SUBMENU
-
-
-def amd_rx_5XX_series(update: Update, context: CallbackContext) -> int:
-    """Показать кнопки выбора серии видеокарт AMD"""
-    query = update.callback_query
-    query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_AMD_RX_5XX_SERIES)
-
-    with open('images/shops_logo.jpg', 'rb') as photo:
-        image = telegram.InputMediaPhoto(photo)
-
-    query.edit_message_media(
-        media=image
-    )
-
-    query.edit_message_caption(
-        caption=select_series_text,
-        reply_markup=reply_markup_keyboard
-    )
-
-    # Переход в состояние AMD_RX_5XX_SERIES_SUBMENU
-    return AMD_RX_5XX_SERIES_SUBMENU
-
-
-def amd_rx_5XXX_series(update: Update, context: CallbackContext) -> int:
-    """Показать кнопки выбора серии видеокарт AMD"""
-    query = update.callback_query
-    query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_AMD_RX_5XXX_SERIES)
-
-    with open('images/shops_logo.jpg', 'rb') as photo:
-        image = telegram.InputMediaPhoto(photo)
-
-    query.edit_message_media(
-        media=image
-    )
-
-    query.edit_message_caption(
-        caption=select_series_text,
-        reply_markup=reply_markup_keyboard
-    )
-
-    # Переход в состояние AMD_RX_5XXX_SERIES_SUBMENU
-    return AMD_RX_5XXX_SERIES_SUBMENU
-
-
-def amd_rx_6XXX_series(update: Update, context: CallbackContext) -> int:
-    """Показать кнопки выбора серии видеокарт AMD"""
-    query = update.callback_query
-    query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_AMD_RX_6XXX_SERIES)
-
-    with open('images/shops_logo.jpg', 'rb') as photo:
-        image = telegram.InputMediaPhoto(photo)
-
-    query.edit_message_media(
-        media=image
-    )
-
-    query.edit_message_caption(
-        caption=select_series_text,
-        reply_markup=reply_markup_keyboard
-    )
-
-    # Переход в состояние AMD_RX_6XXX_SERIES_SUBMENU
-    return AMD_RX_6XXX_SERIES_SUBMENU
-
-
-def amd_rx_66XX_series(update: Update, context: CallbackContext) -> int:
-    """Показать кнопки выбора серии видеокарт AMD"""
-    query = update.callback_query
-    query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_AMD_RX_66XX_SERIES)
-
-    with open('images/shops_logo.jpg', 'rb') as photo:
-        image = telegram.InputMediaPhoto(photo)
-
-    query.edit_message_media(
-        media=image
-    )
-
-    query.edit_message_caption(
-        caption=select_series_text,
-        reply_markup=reply_markup_keyboard
-    )
-
-    # Переход в состояние AMD_RX_66XX_SERIES_SUBMEN
-    return AMD_RX_66XX_SERIES_SUBMENU
-
-
-def amd_rx_67XX_series(update: Update, context: CallbackContext) -> int:
-    """Показать кнопки выбора серии видеокарт AMD"""
-    query = update.callback_query
-    query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_AMD_RX_67XX_SERIES)
-
-    with open('images/shops_logo.jpg', 'rb') as photo:
-        image = telegram.InputMediaPhoto(photo)
-
-    query.edit_message_media(
-        media=image
-    )
-
-    query.edit_message_caption(
-        caption=select_series_text,
-        reply_markup=reply_markup_keyboard
-    )
-
-    # Переход в состояние AMD_RX_67XX_SERIES_SUBMENU
-    return AMD_RX_67XX_SERIES_SUBMENU
-
-
-def amd_rx_68XX_series(update: Update, context: CallbackContext) -> int:
-    """Показать кнопки выбора серии видеокарт AMD"""
-    query = update.callback_query
-    query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_AMD_RX_68XX_SERIES)
-
-    with open('images/shops_logo.jpg', 'rb') as photo:
-        image = telegram.InputMediaPhoto(photo)
-
-    query.edit_message_media(
-        media=image
-    )
-
-    query.edit_message_caption(
-        caption=select_series_text,
-        reply_markup=reply_markup_keyboard
-    )
-
-    # Переход в состояние AMD_RX_68XX_SERIES_SUBMENU
-    return AMD_RX_68XX_SERIES_SUBMENU
-
-
-def amd_rx_69XX_series(update: Update, context: CallbackContext) -> int:
-    """Показать кнопки выбора серии видеокарт AMD"""
-    query = update.callback_query
-    query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_AMD_RX_69XX_SERIES)
-
-    with open('images/shops_logo.jpg', 'rb') as photo:
-        image = telegram.InputMediaPhoto(photo)
-
-    query.edit_message_media(
-        media=image
-    )
-
-    query.edit_message_caption(
-        caption=select_series_text,
-        reply_markup=reply_markup_keyboard
-    )
-
-    # Переход в состояние AMD_RX_69XX_SERIES_SUBMENU
-    return AMD_RX_69XX_SERIES_SUBMENU
+    return series_buttons_dict.get(int(series_button))['returning'] if series_button != '' else MENU
 
 
 def graph_for_gpu_func(update: Update, context: CallbackContext) -> int:
@@ -801,14 +646,6 @@ def graph_for_gpu_func(update: Update, context: CallbackContext) -> int:
         context.user_data[CURRENT_GRAPH_GPU_DAYS] = 60
     elif graph_state == str(SHOW_90_DAYS_GPU):
         context.user_data[CURRENT_GRAPH_GPU_DAYS] = 90
-    elif graph_state == str(GRAPH_MIN_GPU):
-        context.user_data[CURRENT_GRAPH_GPU_LEVEL] = 0
-    elif graph_state == str(GRAPH_AVERAGE_GPU):
-        context.user_data[CURRENT_GRAPH_GPU_LEVEL] = 1
-    elif graph_state == str(GRAPH_MAX_GPU):
-        context.user_data[CURRENT_GRAPH_GPU_LEVEL] = 2
-    elif graph_state == 16:
-        context.user_data[CURRENT_SERIES] = query.data
 
     graph_days = context.user_data[CURRENT_GRAPH_GPU_DAYS]
 
@@ -1023,7 +860,7 @@ def graph_func(update: Update, context: CallbackContext) -> int:
 
     if is_graph_data_empty:
         reply_markup_keyboard = InlineKeyboardMarkup(keyboard_ONLY_BACK)
-        with open('images/no_search_results.png', 'rb') as photo:
+        with open(no_search_results_dir, 'rb') as photo:
             image = telegram.InputMediaPhoto(photo)
     else:
         reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH)
@@ -1063,17 +900,24 @@ def graph_func(update: Update, context: CallbackContext) -> int:
 
 
 def define_prices_by_graph_level(days, graph_level, offers, prices, shops_names):
+    """Передать записи о видеокартах (offers) по уровню графика (graph_level)
+    для дальнейшего распределения."""
+    result_mode = ''
     if graph_level == 'min':
-        define_names_days_prices(shops_names, days, offers, prices, mode='min')
+        result_mode = define_names_days_prices(shops_names, days, offers, prices, mode='min')
     elif graph_level == 'max':
-        define_names_days_prices(shops_names, days, offers, prices, mode='max')
+        result_mode = define_names_days_prices(shops_names, days, offers, prices, mode='max')
     elif graph_level == 'average':
-        define_names_days_prices(shops_names, days, offers, prices, mode='average')
+        result_mode = define_names_days_prices(shops_names, days, offers, prices, mode='average')
     else:
-        print('unknown graph level')
+        result_mode = graph_level
+        logger.warning(f'Unknown graph level {graph_level}!')
+    return result_mode
 
 
 def allocate_names_and_dates(card_vendor, offer, offers):
+    """Распределить запись о видеокарте (offer) по словарю записей (offers)
+     с указанием производителя (card_vendor)."""
     if card_vendor not in offers:
         offers[card_vendor] = {}
     date = offer['date'].split('T')[0]
@@ -1091,6 +935,9 @@ def get_days_list():
 
 
 def draw_graph(vendors, days, prices, series, shop, graph_mode='shop', days_mode=30):
+    """Построить график по статистики по дням (days) и ценам (prices) для имен (vendors/shops)
+    с указанием серии (series), магазина (shop), режима отображения (graph_mode)
+     и количества дней (days_mode)."""
 
     series = series.replace('+', ' ')
 
@@ -1115,6 +962,8 @@ def draw_graph(vendors, days, prices, series, shop, graph_mode='shop', days_mode
 
 
 def define_names_days_prices(vendors, days, offers, prices, mode='min'):
+    """Распределить записи о видеокартах (offers) по дням (days) и ценам (prices)
+    с указанием имен и режима отображения (mode) по умолчанию min."""
     for card_vendor in vendors:
         prices[card_vendor] = []
         for day in days:
@@ -1148,18 +997,18 @@ def define_names_days_prices(vendors, days, offers, prices, mode='min'):
                     print('unknown mode')
             else:
                 prices[card_vendor].append(numpy.NaN)
+    return mode
 
 
 def help_func(update: Update, context: CallbackContext):
-    """Возвращает информацию о всех командах и функциях"""
+    """Возвращает информацию о всех командах и функциях."""
     update.message.reply_text(text=help_text)
 
 
 def gpu_search_func(update: Update, context: CallbackContext) -> int:
-    """Возвращает информацию поиска по конкретной видеокарте"""
-    user_data = context.user_data
-    user_data[CURRENT_DATA] = update.message.text
-    gpu_name = user_data[CURRENT_DATA]
+    """Возвращает информацию поиска по конкретной видеокарте."""
+    context.user_data[CURRENT_DATA] = update.message.text
+    gpu_name = context.user_data[CURRENT_DATA]
     user = update.message.from_user.full_name
     logger.info(f'User {user} entered gpu name {gpu_name}.')
     gpu_search_list.clear()
@@ -1172,22 +1021,21 @@ def gpu_search_func(update: Update, context: CallbackContext) -> int:
         gpu_search_list.append(gpu_name)
 
     if len(gpu_search_list) != 0:
-        gpu_search_list.reverse()
         inline_keyboard_gpu_search_buttons(gpu_search_list)
         reply_markup_keyboard = InlineKeyboardMarkup(keyboard_ON_SEARCH)
-        with open('images/search.png', 'rb') as photo:
+        with open(search_dir, 'rb') as photo:
             update.message.reply_photo(
                 photo=photo,
-                caption="Результаты поиска для " + gpu_name + ": ",
+                caption=search_results_for_text + gpu_name + ": ",
                 reply_markup=reply_markup_keyboard
             )
         # Переход в состояние ON_SEARCH
         return ON_SEARCH
     else:
-        with open('images/no_search_results.png', 'rb') as photo:
+        with open(no_search_results_dir, 'rb') as photo:
             update.message.reply_photo(
                 photo=photo,
-                caption="Нет результатов поиска",
+                caption=no_search_results_text,
                 reply_markup=InlineKeyboardMarkup(keyboard_ONLY_BACK)
             )
         # Переход в состояние ON_GPU_QUESTION -> выход в меню
@@ -1195,15 +1043,11 @@ def gpu_search_func(update: Update, context: CallbackContext) -> int:
 
 
 def gpu_info(update: Update, context: CallbackContext) -> int:
-    """Возвращает информацию по видеокарте"""
+    """Возвращает информацию по видеокарте."""
     query = update.callback_query
     if query.data.startswith("['gpu'"):
         gpu_index = ast.literal_eval(query.data)[1]
-        buttons = InlineKeyboardMarkup(keyboard_ON_SEARCH).to_dict()
-        buttons_list = buttons["inline_keyboard"]
-        buttons_list.reverse()
-
-        gpu_name = buttons["inline_keyboard"][int(gpu_index)][0]["text"]
+        gpu_name = keyboard_ON_SEARCH[int(gpu_index)][0].text
         context.user_data[CURRENT_DATA] = gpu_name
         user = context.user_data[CURRENT_USER_NAME]
         logger.info(f'User {user} chose gpu name {gpu_name}.')
@@ -1211,7 +1055,7 @@ def gpu_info(update: Update, context: CallbackContext) -> int:
 
         reply_markup_keyboard = InlineKeyboardMarkup(keyboard_GRAPH_PERIODS)
 
-        with open('images/shops_logo.jpg', 'rb') as photo:
+        with open(shops_logo_dir, 'rb') as photo:
             image = telegram.InputMediaPhoto(photo)
 
         query.edit_message_media(
@@ -1228,13 +1072,13 @@ def gpu_info(update: Update, context: CallbackContext) -> int:
 
 
 def inline_keyboard_gpu_search_buttons(gpu_search: []):
+    """Вставка кнопок в клавиатуру из найденных видеокарт (gpu_search) по запросу из БД."""
     # Получаем только уникальные видеокарты из поиска
     unique_gpu = list({gpu: gpu for gpu in gpu_search}.values())
     # Очистка клавиатуры
     keyboard_ON_SEARCH.clear()
     for gpu in unique_gpu:
-        keyboard_ON_SEARCH.insert(
-            0,
+        keyboard_ON_SEARCH.append(
             [InlineKeyboardButton(
                 gpu, callback_data="['gpu', '" + str(unique_gpu.index(gpu)) + "']"
             )]
@@ -1242,40 +1086,41 @@ def inline_keyboard_gpu_search_buttons(gpu_search: []):
 
 
 def end_on_gpu(update: Update, context: CallbackContext) -> int:
-    """Конец разговора по видеокарте, возврат к основному разговору"""
+    """Конец разговора по видеокарте, возврат к основному разговору."""
     user = context.user_data[CURRENT_USER_NAME]
-    logger.info(f'User {user} in end_on_gpu')
+    logger.info(f'User {user} ended for gpu searching.')
     new_start(update, context)
     return BACK_TO_MENU
 
 
 def start_fallback(update, context) -> int:
+    """Функция обертка для start, чтобы сделать fallback
+     по нажатию /start в любом состоянии разговора."""
     start(update, context)
     return BACK_TO_MENU
 
 
 def error_attention(update: Update, context: CallbackContext):
+    """Вывод сообщения об ошибке, если пользователь ввел текст не выбирая кнопок."""
+    user = update.message.from_user.full_name.encode(encoding='utf-8').decode()
+    logger.info(f'User {user} entered message without a reason.')
+
     update.message.reply_text(
-        'Ошибка! Необходимо выбрать кнопку'
+        text=error_enter_text
     )
 
 
 def new_start(update: Update, context: CallbackContext):
-    """Возвращает текст и клавиатуру к главному меню"""
-    query = update.callback_query
-    query.answer()
-    reply_markup_keyboard = InlineKeyboardMarkup(keyboard_MENU)
+    """Возвращает текст и клавиатуру к главному меню."""
+    user = context.user_data[CURRENT_USER_NAME]
+    logger.info(f'User {user} returned to the menu.')
 
-    with open('images/shops_logo.jpg', 'rb') as photo:
-        image = telegram.InputMediaPhoto(photo)
-
-    query.edit_message_media(
-        media=image
+    update_query_message_with_keyboard(
+        update=update,
+        context=context,
+        keyboard=keyboard_MENU,
+        image_path=shops_logo_dir,
+        caption_text=using_buttons_text,
     )
 
-    query.edit_message_caption(
-        caption=using_buttons_text,
-        reply_markup=reply_markup_keyboard
-    )
-    # Переход в состояние MENU
     return MENU
