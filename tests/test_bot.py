@@ -1006,6 +1006,8 @@ params_draw_graph = [
 @pytest.mark.bot
 @pytest.mark.parametrize('vendors_names, days, prices, series, shop, days_mode, graph_level', params_draw_graph)
 def test_draw_graph(vendors_names, days, prices, series, shop, days_mode, graph_level, graph_offers_vendors_data):
+    diff_days = (datetime.datetime.today().date() - datetime.date(2023, 3, 4)).days
+    days = days[:-diff_days]
     define_prices_by_graph_level(days, graph_level, graph_offers_vendors_data, prices, ["PALIT", "ASUS"])
 
     draw_graph(vendors_names, days, prices, series, shop, 'vendor', days_mode)
