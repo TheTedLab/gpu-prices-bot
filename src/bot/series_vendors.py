@@ -1,3 +1,5 @@
+from src.bot.constants import *
+
 series_dict = {
     0: "",
     1: "",
@@ -79,9 +81,9 @@ series_dict = {
     77: "TESLA A2",
     78: "TESLA T4",
     79: "QUADRO RTX A5000",
-    80: "ARC_A310",
-    81: "ARC_A380",
-    82: "MATROX_M9120",
+    80: "ARC A310",
+    81: "ARC A380",
+    82: "MATROX M9120",
 }
 
 vendors_dict = {
@@ -106,4 +108,138 @@ vendors_dict = {
     18: "XFX",
     19: "ZOTAC",
     20: "",
+}
+
+shops_dict = {
+    0: "DNS",
+    1: "MVIDEO",
+    2: "CITILINK",
+}
+
+series_buttons_dict = {
+    0: {
+        "keyboard": keyboard_NVIDIA_10XX_SERIES,
+        "returning": NVIDIA_10XX_SERIES_SUBMENU,
+        "name": "NVIDIA 10XX SERIES"
+    },
+    1: {
+        "keyboard": keyboard_NVIDIA_16XX_SERIES,
+        "returning": NVIDIA_16XX_SERIES_SUBMENU,
+        "name": "NVIDIA 16XX SERIES"
+    },
+    2: {
+        "keyboard": keyboard_NVIDIA_20XX_SERIES,
+        "returning": NVIDIA_20XX_SERIES_SUBMENU,
+        "name": "NVIDIA 20XX SERIES"
+    },
+    3: {
+        "keyboard": keyboard_NVIDIA_30XX_SERIES,
+        "returning": NVIDIA_30XX_SERIES_SUBMENU,
+        "name": "NVIDIA 30XX SERIES"
+    },
+    4: {
+        "keyboard": keyboard_NVIDIA_40XX_SERIES,
+        "returning": NVIDIA_40XX_SERIES_SUBMENU,
+        "name": "NVIDIA 40XX SERIES"
+    },
+    5: {
+        "keyboard": keyboard_NVIDIA_OTHER_SERIES,
+        "returning": NVIDIA_OTHER_SUBMENU,
+        "name": "NVIDIA OTHER SERIES"
+    },
+    6: {
+        "keyboard": keyboard_NVIDIA_QUADRO_SERIES,
+        "returning": NVIDIA_QUADRO_SERIES_SUBMENU,
+        "name": "NVIDIA QUADRO SERIES"
+    },
+    7: {
+        "keyboard": keyboard_NVIDIA_TESLA_SERIES,
+        "returning": NVIDIA_TESLA_SERIES_SUBMENU,
+        "name": "NVIDIA TESLA SERIES"
+    },
+    14: {
+        "keyboard": keyboard_NVIDIA_1650X_SERIES,
+        "returning": NVIDIA_1650X_SERIES_SUBMENU,
+        "name": "NVIDIA 1650X SERIES"
+    },
+    15: {
+        "keyboard": keyboard_NVIDIA_1660X_SERIES,
+        "returning": NVIDIA_1660X_SERIES_SUBMENU,
+        "name": "NVIDIA 1660X SERIES"
+    },
+    22: {
+        "keyboard": keyboard_NVIDIA_2060X_SERIES,
+        "returning": NVIDIA_2060X_SERIES_SUBMENU,
+        "name": "NVIDIA 2060X SERIES"
+    },
+    23: {
+        "keyboard": keyboard_NVIDIA_2080X_SERIES,
+        "returning": NVIDIA_2080X_SERIES_SUBMENU,
+        "name": "NVIDIA 2080X SERIES"
+    },
+    29: {
+        "keyboard": keyboard_NVIDIA_3060X_SERIES,
+        "returning": NVIDIA_3060X_SERIES_SUBMENU,
+        "name": "NVIDIA 3060X SERIES"
+    },
+    30: {
+        "keyboard": keyboard_NVIDIA_3070X_SERIES,
+        "returning": NVIDIA_3070X_SERIES_SUBMENU,
+        "name": "NVIDIA 3070X SERIES"
+    },
+    31: {
+        "keyboard": keyboard_NVIDIA_3080X_SERIES,
+        "returning": NVIDIA_3080X_SERIES_SUBMENU,
+        "name": "NVIDIA 3080X SERIES"
+    },
+    32: {
+        "keyboard": keyboard_NVIDIA_3090X_SERIES,
+        "returning": NVIDIA_3090X_SERIES_SUBMENU,
+        "name": "NVIDIA 3090X SERIES"
+    },
+    43: {
+        "keyboard": keyboard_AMD_RX_5XX_SERIES,
+        "returning": AMD_RX_5XX_SERIES_SUBMENU,
+        "name": "AMD RX 5XX SERIES"
+    },
+    44: {
+        "keyboard": keyboard_AMD_RX_5XXX_SERIES,
+        "returning": AMD_RX_5XXX_SERIES_SUBMENU,
+        "name": "AMD RX 5XXX SERIES"
+    },
+    45: {
+        "keyboard": keyboard_AMD_RX_6XXX_SERIES,
+        "returning": AMD_RX_6XXX_SERIES_SUBMENU,
+        "name": "AMD RX 6XXX SERIES"
+    },
+    46: {
+        "keyboard": keyboard_AMD_OTHER_SERIES,
+        "returning": AMD_OTHER_SUBMENU,
+        "name": "AMD OTHER SERIES"
+    },
+    55: {
+        "keyboard": keyboard_AMD_RX_66XX_SERIES,
+        "returning": AMD_RX_66XX_SERIES_SUBMENU,
+        "name": "AMD RX 66XX SERIES"
+    },
+    56: {
+        "keyboard": keyboard_AMD_RX_67XX_SERIES,
+        "returning": AMD_RX_67XX_SERIES_SUBMENU,
+        "name": "AMD RX 67XX SERIES"
+    },
+    57: {
+        "keyboard": keyboard_AMD_RX_68XX_SERIES,
+        "returning": AMD_RX_68XX_SERIES_SUBMENU,
+        "name": "AMD RX 68XX SERIES"
+    },
+    58: {
+        "keyboard": keyboard_AMD_RX_69XX_SERIES,
+        "returning": AMD_RX_69XX_SERIES_SUBMENU,
+        "name": "AMD RX 69XX SERIES"
+    },
+    73: {
+        "keyboard": keyboard_NVIDIA_QUADRO_RTX_AXXXX_SERIES,
+        "returning": NVIDIA_QUADRO_RTX_AXXXX_SERIES_SUBMENU,
+        "name": "NVIDIA QUADRO RTX AXXXX SERIES"
+    },
 }

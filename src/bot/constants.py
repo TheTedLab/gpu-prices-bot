@@ -7,6 +7,24 @@ cross_mark = u'\U0000274C'
 right_triangle = u'\U000025B6'
 memo_emoji = u'\U0001F4DD'
 loudspeaker = u'\U0001F4E2'
+blue_circle = u'\U0001F535'
+orange_circle = u'\U0001F7E0'
+green_circle = u'\U0001F7E2'
+number_one = u'\u0031'
+number_two = u'\u0032'
+number_three = u'\u0033'
+
+shops_emojis_dict = {
+    'MVIDEO': green_circle,
+    'CITILINK': blue_circle,
+    'DNS': orange_circle
+}
+
+places_emojis_dict = {
+    '1': number_one,
+    '2': number_two,
+    '3': number_three
+}
 
 # Состояния
 MENU, STATS_SUBMENU, POPULARITY_SUBMENU, SHOPS_SUBMENU, VENDORS_SUBMENU, GPU_SUBMENU, \
@@ -30,7 +48,7 @@ STATS, POPULARITY, FOR_SHOP, FOR_VENDOR, FOR_GPU,\
     CURRENT_GRAPH_LEVEL, CURRENT_GRAPH_DAYS, CURRENT_GRAPH_STATE, CURRENT_GRAPH_START, \
     CURRENT_GRAPH_GPU_LEVEL, CURRENT_GRAPH_GPU_DAYS, CURRENT_GRAPH_GPU_STATE, CURRENT_GRAPH_GPU_START, \
     CURRENT_GAME_SUBMENU, ON_GPU, ON_GPU_QUESTION, CURRENT_DATA, CURRENT_SERIES, GRAPH_SUBMENU_ON_GPU, \
-    YES_ON_GPU, NO_ON_GPU, ON_SEARCH, SEARCH = range(30)
+    YES_ON_GPU, NO_ON_GPU, ON_SEARCH, SEARCH, CURRENT_USER_NAME, CURRENT_TEMP_DATA = range(32)
 # Варианты ответа для SHOPS
 DNS_SHOP, MVIDEO_SHOP, CITILINK_SHOP = range(3)
 # Варианты ответа для ARCHITECTURES
@@ -73,6 +91,7 @@ SHOW_30_DAYS_GPU, SHOW_60_DAYS_GPU, SHOW_90_DAYS_GPU, GRAPH_MIN_GPU, GRAPH_AVERA
 greetings_text = "Я информационный бот, который поможет тебе узнать цены " \
                  "на видеокарты в различных магазинах!"
 
+hello_text = hand_emoji + "Привет, "
 using_buttons_text = "Чтобы получить информацию, воспользуйся кнопками:"
 select_stats_text = "Выберите вид статистики:"
 select_popularity_text = "Выберите вид популярности:"
@@ -84,8 +103,20 @@ select_graph_text = "Выберите вид графика:"
 select_gpu_text = "Напишите название интересующей вас видеокарты:"
 help_text = "/start - начать разговор\n" \
             "/help - помощь\n" \
-            "Чтобы получить информацию, просто напиши название игры\n" \
-            "или воспользуйся кнопками меню!"
+            "Чтобы получить информацию, воспользуйся кнопками меню!\n" \
+            "Если бот не отвечает и не реагирует на кнопки попробуйте подождать " \
+            "или перезапустите его с помощью\n /start"
+no_data_text = "Нет данных по выбранным параметрам"
+popularity_shop_text = "Популярность по магазину "
+popularity_vendor_text = "Популярность по производителю "
+error_enter_text = "Ошибка! Необходимо выбрать кнопку."
+no_search_results_text = "Нет результатов поиска"
+search_results_for_text = "Результаты поиска для "
+
+# Константы путей к изображениям
+shops_logo_dir = 'images/shops_logo.jpg'
+search_dir = 'images/search.png'
+no_search_results_dir = 'images/no_search_results.png'
 
 # Список текстов кнопок для поиска игр
 gpu_search_list = []
@@ -417,4 +448,7 @@ keyboard_ON_GAME_QUESTION = [
         InlineKeyboardButton("Да", callback_data=str(YES_ON_GPU)),
         InlineKeyboardButton("Нет", callback_data=str(NO_ON_GPU)),
     ]
+]
+
+keyboard_EMPTY = [
 ]

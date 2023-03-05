@@ -133,7 +133,7 @@ replay_pid*
 
 ### PyCharm ###
 
-src/**/__init__.py
+# src/**/__init__.py
 # *.iml
 # modules.xml
 .idea/misc.xml

@@ -25,6 +25,8 @@ services:
         ipv4_address: 173.18.0.4
   bot:
     image: bot:latest
+    volumes:
+      - log_volume:/logs
     networks:
       vpcbr:
         ipv4_address: 173.18.0.5
@@ -36,3 +38,6 @@ networks:
       config:
         - subnet: 173.18.0.0/16
           gateway: 173.18.0.1
+
+volumes:
+  log_volume:
