@@ -1,6 +1,6 @@
 ![gpu-prices-bot-plane](https://user-images.githubusercontent.com/71270225/222929609-021f8784-76c9-40d2-b776-85fbf4fb9210.png)
 
-![unit tests workflow](https://github.com/TheTedLab/gpu-prices-bot/actions/workflows/unit-tests.yml/badge.svg)
+[![unit tests workflow](https://github.com/TheTedLab/gpu-prices-bot/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/TheTedLab/gpu-prices-bot/actions/workflows/unit-tests.yml)
 [![coverage status](https://thetedlab.github.io/gpu-prices-bot/coverage.svg)](https://github.com/TheTedLab/gpu-prices-bot/actions/workflows/unit-tests.yml)
 
 ## Table of contents
