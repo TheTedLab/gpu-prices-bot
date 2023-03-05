@@ -4,7 +4,6 @@ on:
     branches:
       - master
       - dev
-      - vendors-fixes
   pull_request:
     branches:
       - master
