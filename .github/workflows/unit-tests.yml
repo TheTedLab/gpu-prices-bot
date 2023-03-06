@@ -43,14 +43,10 @@ jobs:
           coverage-badge -o docs/coverage.svg
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - name: Upload artifact - coverage badge
+      - name: Upload artifacts
         uses: actions/upload-pages-artifact@v1
         with:
           path: tests/docs
-      - name: Upload artifact - html report
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: tests/htmlcov
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
