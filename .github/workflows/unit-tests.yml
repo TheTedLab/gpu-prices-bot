@@ -15,6 +15,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   pytest:
     name: pytest
@@ -43,6 +47,10 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: tests/docs
+      - name: Upload artifact - html report
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: tests/htmlcov
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
