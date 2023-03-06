@@ -43,10 +43,13 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: tests/docs
+      - name: Deploy to GitHub Pages - coverage badge
+        id: deployment
+        uses: actions/deploy-pages@v1
       - name: Upload artifact - html report
         uses: actions/upload-pages-artifact@v1
         with:
           path: tests/htmlcov
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages - html report
         id: deployment
         uses: actions/deploy-pages@v1
