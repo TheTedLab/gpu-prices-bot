@@ -2,11 +2,12 @@ name: Python Unit Tests
 on:
   push:
     branches:
-      - master
+      - main
       - dev
+      - coverage-badges
   pull_request:
     branches:
-      - master
+      - main
       - dev
 
 permissions:
@@ -38,10 +39,14 @@ jobs:
           coverage-badge -o docs/coverage.svg
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - name: Upload artifact
+      - name: Upload artifact - coverage badge
         uses: actions/upload-pages-artifact@v1
         with:
           path: tests/docs
+      - name: Upload artifact - html report
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: tests/htmlcov
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
