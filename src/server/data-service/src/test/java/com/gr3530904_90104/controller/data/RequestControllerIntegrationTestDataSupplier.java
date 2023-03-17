@@ -853,31 +853,31 @@ public class RequestControllerIntegrationTestDataSupplier {
         return """
                 [{"cardName":"GEFORCE RTX 4080 EAGLE OC 16GB","cardArchitecture":"NVIDIA",\
                 "cardSeries":"GEFORCE RTX 4080","shopName":"MVIDEO","vendorName":"GIGABYTE","cardPrice":111899,\
-                "cardPopularity":1,"date":"2023-02-28T21:00:00.000+00:00"}]""";
+                "cardPopularity":1,"date":"2023-03-01T00:00:00.000+00:00"}]""";
     }
 
     public static String testGetPriceForVendorFoundExpectedData() {
         return """
                 [{"cardName":"GEFORCE RTX 4080 EAGLE OC 16GB","cardArchitecture":"NVIDIA",\
                 "cardSeries":"GEFORCE RTX 4080","shopName":"MVIDEO","vendorName":"GIGABYTE","cardPrice":111899,\
-                "cardPopularity":1,"date":"2023-02-28T21:00:00.000+00:00"},\
+                "cardPopularity":1,"date":"2023-03-01T00:00:00.000+00:00"},\
                 {"cardName":"GEFORCE RTX 4080 GAMING OC 16GB","cardArchitecture":"NVIDIA",\
                 "cardSeries":"GEFORCE RTX 4080","shopName":"MVIDEO","vendorName":"GIGABYTE","cardPrice":116899,\
-                "cardPopularity":6,"date":"2023-02-28T21:00:00.000+00:00"}]""";
+                "cardPopularity":6,"date":"2023-03-01T00:00:00.000+00:00"}]""";
     }
 
     public static String testGetPriceForShopFoundExpectedData() {
         return """
                 [{"cardName":"GEFORCE RTX 4080 EAGLE OC 16GB","cardArchitecture":"NVIDIA",\
                 "cardSeries":"GEFORCE RTX 4080","shopName":"MVIDEO","vendorName":"GIGABYTE","cardPrice":111899,\
-                "cardPopularity":1,"date":"2023-02-28T21:00:00.000+00:00"},\
+                "cardPopularity":1,"date":"2023-03-01T00:00:00.000+00:00"},\
                 {"cardName":"GEFORCE RTX 4080 GAMING OC 16GB","cardArchitecture":"NVIDIA",\
                 "cardSeries":"GEFORCE RTX 4080","shopName":"MVIDEO","vendorName":"GIGABYTE","cardPrice":116899,\
-                "cardPopularity":6,"date":"2023-02-28T21:00:00.000+00:00"}]""";
+                "cardPopularity":6,"date":"2023-03-01T00:00:00.000+00:00"}]""";
     }
 
     public static String testGetPopularityForShopFoundExpectedData() {
-        LocalDateTime date = LocalDate.now().atStartOfDay().minusHours(3);
+        LocalDateTime date = LocalDate.now().atStartOfDay();
         return """
                 [{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},\
                 {},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},\
@@ -912,14 +912,14 @@ public class RequestControllerIntegrationTestDataSupplier {
                 "10":{"cardName":"GEFORCE RTX 4090 TRINITY OC 24GB","cardArchitecture":"NVIDIA",\
                 "cardSeries":"GEFORCE RTX 4090","shopName":"MVIDEO","vendorName":"ZOTAC","cardPrice":169999,\
                 "cardPopularity":10,"date":"to_replace"}}]"""
-                .replaceAll("to_replace", "%d-%s-%dT21:00:00.000+00:00"
+                .replaceAll("to_replace", "%d-%s-%dT00:00:00.000+00:00"
                         .formatted(date.getYear(), date.getMonth().getValue() <= 9 ?
                                 "0%d".formatted(date.getMonth().getValue()) :
                                         String.valueOf(date.getMonth().getValue()), date.getDayOfMonth()));
     }
 
     public static String testGetPopularityForVendorFoundExpectedData() {
-        LocalDateTime date = LocalDate.now().atStartOfDay().minusHours(3);
+        LocalDateTime date = LocalDate.now().atStartOfDay();
         return """
                 {"CITILINK":{"1":{"cardName":"GEFORCE RTX 3050 GAMING X 8G","cardArchitecture":"NVIDIA",\
                 "cardSeries":"GEFORCE RTX 3050","shopName":"CITILINK","vendorName":"MSI","cardPrice":31890,\
