@@ -927,7 +927,7 @@ public class RequestControllerIntegrationTestDataSupplier {
                 "MVIDEO":{"1":{"cardName":"GEFORCE RTX 3070 VENTUS 3X 8G 256B","cardArchitecture":"NVIDIA",\
                 "cardSeries":"GEFORCE RTX 3070","shopName":"MVIDEO","vendorName":"MSI","cardPrice":65999,\
                 "cardPopularity":3,"date":"to_replace"}}}"""
-                .replaceAll("to_replace", "%d-%s-%dT21:00:00.000+00:00"
+                .replaceAll("to_replace", "%d-%s-%dT00:00:00.000+00:00"
                         .formatted(date.getYear(), date.getMonth().getValue() <= 9 ?
                                 "0%d".formatted(date.getMonth().getValue()) :
                                 String.valueOf(date.getMonth().getValue()), date.getDayOfMonth()));
