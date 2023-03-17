@@ -2,11 +2,13 @@ package com.gr3530904_90104.service.impl;
 
 import com.gr3530904_90104.repository.*;
 import com.gr3530904_90104.service.DataService;
-import com.gr3530904_90104.table.*;
+import com.gr3530904_90104.table.Card;
+import com.gr3530904_90104.table.Offer;
+import com.gr3530904_90104.table.Shop;
+import com.gr3530904_90104.table.Vendor;
 import com.gr3530904_90104.table.dto.OfferDto;
 import com.gr3530904_90104.table.dto.OfferDtoMapper;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -17,7 +19,6 @@ import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
-@Getter
 @Slf4j
 public class DataServiceImpl implements DataService {
     private static final long ONE_DAY = 24L * 60 * 60 * 1000; // hours-minutes-seconds-milliseconds
@@ -97,6 +98,7 @@ public class DataServiceImpl implements DataService {
     public Map<String, Map<Integer, OfferDto>> getPopularityForVendor(String vendorName) {
         Optional<Vendor> vendor = vendorRepository.findVendorByName(vendorName);
         if (vendor.isPresent()) {
+            int total = 0;
             List<Shop> shops = shopRepository.findAll();
             Map<String, Map<Integer, OfferDto>> map = new HashMap<>();
             for (Shop shop: shops) {
@@ -107,9 +109,12 @@ public class DataServiceImpl implements DataService {
                 final Integer[] popularity = {1};
                 offers.forEach((o) -> temp.put(popularity[0]++, offerDtoMapper.mapOfferToOfferDto(o)));
                 map.put(shop.getName(), temp);
+                total += map.get(shop.getName()).size();
                 log.info("Found {} offers for shop {}", map.get(shop.getName()).size(), shop.getName());
             }
-            return map;
+            if (total > 0) {
+                return map;
+            }
         }
         log.info("No offers found");
         return new HashMap<>();
@@ -122,6 +127,7 @@ public class DataServiceImpl implements DataService {
         Date startDate = new Date(endDate.getTime() - NINETY_DAYS);
         List<Map<Integer, OfferDto>> result = new ArrayList<>();
         if (shop.isPresent()) {
+            int total = 0;
             while (startDate.compareTo(endDate) <= 0) {
                 PageRequest pageRequest = PageRequest.of(0, 10);
                 Page<Offer> offers = offerRepository.findByShopIdAndDateOrderByCardPopularityAsc(shop.get().getId(),
@@ -129,12 +135,15 @@ public class DataServiceImpl implements DataService {
                 Map<Integer, OfferDto> map = new HashMap<>();
                 offers.forEach((o) -> map.put(o.getCardPopularity(), offerDtoMapper.mapOfferToOfferDto(o)));
                 log.info("Found {} offers of 10", map.size());
+                total += map.size();
                 result.add(map);
                 startDate.setTime(startDate.getTime() + ONE_DAY);
             }
-            return result;
+            if (total > 0) {
+                return result;
+            }
         }
         log.info("No offers found");
-        return result;
+        return new ArrayList<>();
     }
 }

@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -22,13 +23,17 @@ import java.util.Properties;
 @Configuration
 @EnableJpaRepositories("com.gr3530904_90104.repository")
 @EnableTransactionManagement
-@ComponentScan(basePackages = {"com.gr3530904_90104.controller", "com.gr3530904_90104.service"})
+@ComponentScan(basePackages = {
+        "com.gr3530904_90104.controller",
+        "com.gr3530904_90104.service",
+        "com.gr3530904_90104.table"})
 @EntityScan("com.gr3530904_90104.table")
 public class Config {
     @Autowired
     private Environment env;
 
     @Bean
+    @Profile("!integrationTest")
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
@@ -44,6 +49,7 @@ public class Config {
     }
 
     @Bean
+    @Profile("!integrationTest")
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(env.getProperty("spring.datasource.driver-class-name"));
@@ -62,6 +68,7 @@ public class Config {
     }
 
     @Bean
+    @Profile("!integrationTest")
     public PlatformTransactionManager transactionManager() {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
@@ -70,7 +77,8 @@ public class Config {
     }
 
     @Bean
-    public PersistenceExceptionTranslationPostProcessor exceptionTranslation(){
+    @Profile("!integrationTest")
+    public PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
         return new PersistenceExceptionTranslationPostProcessor();
     }
 }
