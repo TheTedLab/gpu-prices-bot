@@ -1,0 +1,9 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: "changelog-test.xml"
+zonky:
+  test:
+    database:
+      provider: zonky
+      type: postgres
