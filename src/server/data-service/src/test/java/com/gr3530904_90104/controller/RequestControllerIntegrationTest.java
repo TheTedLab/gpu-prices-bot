@@ -83,6 +83,16 @@ public class RequestControllerIntegrationTest {
     }
 
     @Test
+    public void testPutNewDataWithWrongRequestBody() throws Exception {
+        String url = "/insert-new-data";
+        mockMvc.perform(
+                        post(url)
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content("json{}"))
+                .andExpect(status().is4xxClientError());
+    }
+
+    @Test
     public void testIsCardPresentPositive() throws Exception {
         prepareDateBase(defaultDataBasePrepareData());
         String url = "/is-card-present?cardName=GEFORCE RTX 4080 EAGLE OC 16GB";
