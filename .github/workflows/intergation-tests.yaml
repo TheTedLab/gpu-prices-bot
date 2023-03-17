@@ -16,4 +16,4 @@ jobs:
         run: |
           cd ./src/server/data-service
           chmod +x gradlew
-          ./gradlew test --tests "*"
+          ./gradlew build
