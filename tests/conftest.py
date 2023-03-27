@@ -1,5 +1,39 @@
+import os
+import asyncio
 import pytest
+import pytest_asyncio
 from src.bot.constants import shops_logo_dir
+from telethon import TelegramClient
+from telethon.sessions import StringSession
+
+
+@pytest_asyncio.fixture(scope="session")
+def event_loop():
+    loop = asyncio.get_event_loop()
+    yield loop
+    loop.close()
+
+@pytest_asyncio.fixture(scope="session")
+async def client():
+    api_id = int(os.getenv('API_ID'))
+    api_hash = os.getenv('API_HASH')
+    session_str = os.getenv('SESSION_STRING')
+    telegram_client: TelegramClient = TelegramClient(
+        StringSession(session_str), api_id, api_hash,
+        sequential_updates=True
+    )
+    # Connect to the server
+    await telegram_client.connect()
+    # Issue a high level command to start receiving message
+    await telegram_client.get_me()
+    # Fill the entity cache
+    await telegram_client.get_dialogs()
+
+    yield telegram_client
+
+    await telegram_client.disconnect()
+    await telegram_client.disconnected
+
 
 @pytest.fixture(autouse=True)
 def mocked_update_context(mocker):
