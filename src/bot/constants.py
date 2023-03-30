@@ -26,6 +26,12 @@ places_emojis_dict = {
     '3': number_three
 }
 
+level_dict = {
+    "Мин": "min",
+    "Среднее": "average",
+    "Макс": "max"
+}
+
 # Состояния
 MENU, STATS_SUBMENU, POPULARITY_SUBMENU, SHOPS_SUBMENU, VENDORS_SUBMENU, GPU_SUBMENU, \
     POPULARITY_SHOPS_SUBMENU, POPULARITY_VENDORS_SUBMENU, \
