@@ -188,9 +188,9 @@ async def test_specific_gpu_statistics(client: TelegramClient):
         await check_keyboard(resp, keyboard_MENU, using_buttons_text)
 
 params_vendor_statistics_existing_gpu = (
-    ("MSI", "NVIDIA", "", "GeForse 30XX", "GeForse RTX 3060X", "GeForse RTX 3060", "Мин", "60", "90",
+    ("MSI", "NVIDIA", "", "GeForce 30XX", "GeForce RTX 3060X", "GeForce RTX 3060", "Мин", "60", "90",
      keyboard_NVIDIA_SERIES, keyboard_NVIDIA_30XX_SERIES, keyboard_NVIDIA_3060X_SERIES, "min"),
-    ("Zotac", "NVIDIA", "", "GeForse 16XX", "GeForse GTX 1650X", "GeForse GTX 1650", "Среднее", "30", "60",
+    ("Zotac", "NVIDIA", "", "GeForce 16XX", "GeForce GTX 1650X", "GeForce GTX 1650", "Среднее", "30", "60",
      keyboard_NVIDIA_SERIES, keyboard_NVIDIA_16XX_SERIES, keyboard_NVIDIA_1650X_SERIES, "average"),
     ("PowerColor", "AMD", "", "Radeon RX 6XXX", "Radeon RX 66XX", "Radeon RX 6600", "Макс", "60", "30",
      keyboard_AMD_SERIES, keyboard_AMD_RX_6XXX_SERIES, keyboard_AMD_RX_66XX_SERIES, "max"),
@@ -326,9 +326,9 @@ async def test_vendor_statistics_existing_gpu(client: TelegramClient, vendor_nam
         await check_keyboard(resp, keyboard_MENU, using_buttons_text)
 
 params_vendor_statistics_non_existing_gpu = (
-    ("PNY", "NVIDIA", "", "GeForse 30XX", "GeForse RTX 3060X", "GeForse RTX 3060",
+    ("PNY", "NVIDIA", "", "GeForce 30XX", "GeForce RTX 3060X", "GeForce RTX 3060",
      keyboard_NVIDIA_SERIES, keyboard_NVIDIA_30XX_SERIES, keyboard_NVIDIA_3060X_SERIES),
-    ("Sinotex", "NVIDIA", "", "GeForse 16XX", "GeForse GTX 1650X", "GeForse GTX 1650",
+    ("Sinotex", "NVIDIA", "", "GeForce 16XX", "GeForce GTX 1650X", "GeForce GTX 1650",
      keyboard_NVIDIA_SERIES, keyboard_NVIDIA_16XX_SERIES, keyboard_NVIDIA_1650X_SERIES),
     ("XFX", "AMD", "", "Radeon RX 6XXX", "Radeon RX 66XX", "Radeon RX 6600",
      keyboard_AMD_SERIES, keyboard_AMD_RX_6XXX_SERIES, keyboard_AMD_RX_66XX_SERIES),
