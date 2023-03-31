@@ -89,7 +89,7 @@ public class RequestControllerIntegrationTest {
                         post(url)
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content("json{}"))
-                .andExpect(status().is4xxClientError());
+                .andExpect(status().is(400));
     }
 
     @Test
