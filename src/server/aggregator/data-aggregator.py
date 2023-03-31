@@ -390,7 +390,7 @@ def collect_items_citilink(driver, page_limit, popularity_limit, page, date, off
         name_title = \
             driver.find_element(
                 By.XPATH,
-                f'/html/body/div[2]/div/main/section/div[2]'
+                f'/html/body/div[3]/div/main/section/div[2]'
                 f'/div/div/section/div[2]/div[2]/div[{elem_id + 1}]'
                 f'/div/div[3]/div[1]/a'
             ).text.split()
@@ -434,7 +434,7 @@ def collect_items_citilink(driver, page_limit, popularity_limit, page, date, off
         vendor = name_title[1]
         properties_title = driver.find_element(
             By.XPATH,
-            f'/html/body/div[2]/div/main/section/div[2]'
+            f'/html/body/div[3]/div/main/section/div[2]'
             f'/div/div/section/div[2]/div[2]/div[{elem_id + 1}]'
             f'/div/div[6]/ul/li[1]'
         )
@@ -459,7 +459,7 @@ def collect_items_citilink(driver, page_limit, popularity_limit, page, date, off
         try:
             price_title = driver.find_element(
                 By.XPATH,
-                f'/html/body/div[2]/div/main/section/div[2]'
+                f'/html/body/div[3]/div/main/section/div[2]'
                 f'/div/div/section/div[2]/div[2]/div[{elem_id + 1}]'
                 f'/div/div[7]/div[1]/div[2]/span/span/span[1]'
             )
